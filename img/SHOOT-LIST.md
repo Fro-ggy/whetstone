@@ -235,6 +235,57 @@ The 86 images in the dojo-tips channel were **all community Q&A** (players posti
 
 ---
 
+## Batch review — June 2, 2026
+
+**8 new screenshots captured and saved to img/ folders.**
+
+### Images saved this session
+
+| Saved as | Guide | Notes |
+|---|---|---|
+| `stigmata/stig-overview.jpg` | D-10 | Stigmata menu — all slots with equipped stigmata |
+| `stigmata/stig-upgrade-cost.jpg` | D-10 | Upgrade screen — star-up shard cost table |
+| `stigmata/stig-potential.jpg` | D-10 | Potential screen — stone options (ATK/DEF/HP) |
+| `soul-orbs/orb-overview.jpg` | D-17 | Soul Orb menu — all equipped orbs, enhancement levels, stars |
+| `loc-totems/loc-lobby.jpg` | D-12 | Land of Chaos lobby/entry screen |
+| `loc-totems/loc-weekly-rewards.jpg` | D-12 | LOC weekly reward track |
+| `loc-totems/totem-overview.jpg` | D-12 | Totem collection overview |
+| `loc-totems/totem-upgrade.jpg` | D-12 | Totem upgrade screen — materials and resonance |
+
+### Updated status — D-10 Stigmata
+
+| Target | Status |
+|---|---|
+| `stig-overview.jpg` | ✅ captured |
+| `stig-upgrade-cost.jpg` | ✅ captured |
+| `stig-potential.jpg` | ✅ captured |
+| `stig-shop.jpg` | ❌ still needed — stigmata event shop |
+| `stig-fragment-cost.jpg` | ❌ still needed — 1030 ATK total cost breakdown |
+
+### Updated status — D-17 Soul Orbs
+
+| Target | Status |
+|---|---|
+| `orb-ephenia-shop.jpg` | ❌ still needed — Shop → Soul Orb purchase screen (26 CD) |
+| `orb-overview.jpg` | ✅ captured |
+| `orb-swap-step1.jpg` | ❌ still needed |
+| `orb-swap-step2.jpg` | ❌ still needed |
+| `orb-too-contribution.jpg` | ❌ still needed |
+
+### Updated status — D-12 LOC & Totems
+
+| Target | Status |
+|---|---|
+| `loc-lobby.jpg` | ✅ captured |
+| `totem-overview.jpg` | ✅ captured |
+| `totem-upgrade.jpg` | ✅ captured |
+| `totem-guild-shop.jpg` | ❌ still needed — Guild shop → Totem fragment costs |
+| `loc-weekly-rewards.jpg` | ✅ captured |
+
+**Running image count: 43 / ~80 shots placed on site**
+
+---
+
 ## Batch review — IMG_6829–IMG_6901 (May 2026)
 
 **68 PNGs + 3 MP4s uploaded. 3 files missing from sequence (6887, 6893, 6894).**
