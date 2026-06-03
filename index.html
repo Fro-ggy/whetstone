@@ -57,7 +57,15 @@
         <span><strong>House voice</strong> Skeptical, formal, verified</span>
         <span><strong>Search</strong> Press <kbd style="font-family:'Press Start 2P',monospace;font-size:8px;background:var(--surface-2);border:1px solid var(--line);padding:2px 6px;color:var(--amber);">/</kbd> from any page</span>
         <span><strong>Data vintage</strong> Core guides Sep–Dec 2023 · Some content extended via JP server Jan 2026 · SEA patch parity not guaranteed</span>
+        <span><strong>Server 0002</strong> <span id="s0002-day" style="font-family:'JetBrains Mono',monospace;color:var(--amber)">D—</span></span>
       </div>
+      <script>
+        (function(){
+          var start = new Date('2026-04-23T00:00:00');
+          var day = Math.floor((new Date() - start) / 86400000) + 1;
+          document.getElementById('s0002-day').textContent = 'D' + day;
+        })();
+      </script>
     </div>
   <div class="hero-float" aria-hidden="true">🍄</div>
   <!-- Mushroom silhouette -->
