@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>El Nath Training · Whetstone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ---- DIFFICULTY SCALE ---- */
+.diff-bar { display: flex; gap: 0; border: 1px solid var(--line); overflow: hidden; margin: 16px 0; }
+.diff-segment { flex: 1; padding: 12px 14px; border-right: 1px solid var(--line); }
+.diff-segment:last-child { border-right: none; }
+.diff-segment .ds-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 4px; }
+.diff-segment .ds-val { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; }
+.diff-segment.easy .ds-val { color: #6fa86a; }
+.diff-segment.hard .ds-val { color: #e89e3d; }
+.diff-segment.apex .ds-val { color: #c7503f; }
+
+/* ---- ABILITY CARDS ---- */
+.ability-list { border: 1px solid var(--line); }
+.ability-row { display: grid; grid-template-columns: 160px 1fr; border-bottom: 1px solid var(--line-soft); }
+.ability-row:last-child { border-bottom: none; }
+.ability-name { padding: 14px 16px; background: var(--bg-2); border-right: 1px solid var(--line-soft); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .05em; color: var(--amber); display: flex; align-items: center; }
+.ability-desc { padding: 14px 16px; font-size: 13px; color: var(--ink); }
+.ability-desc .tactic { display: block; margin-top: 6px; font-size: 12px; color: var(--ink-soft); border-left: 2px solid var(--amber); padding-left: 8px; }
+
+/* ---- SCHEDULE TABLE ---- */
+.sched-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.sched-table th { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--amber); text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); background: var(--bg-2); }
+.sched-table td { padding: 11px 12px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+.sched-table tr:last-child td { border-bottom: none; }
+.sched-table .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); white-space: nowrap; }
+
+/* ---- RANKING PILL ---- */
+.rank-rule { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; border: 1px solid var(--line); background: var(--surface); margin-bottom: 10px; }
+.rank-rule .rr-num { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--amber); min-width: 32px; line-height: 1; }
+.rank-rule .rr-body { font-size: 13px; }
+.rank-rule .rr-body strong { display: block; margin-bottom: 3px; color: var(--paper); font-size: 14px; }
+</style>
+</head>
+<body>
+<nav class="site-nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span class="wordmark">Whet<em>stone</em></span></a><div class="nav-links"><a href="index.html">Index</a><a href="index.html#catalog" class="active">Guides</a><a href="about.html">About</a></div></div></nav>
+
+<div class="wrap wrap-narrow"><div class="breadcrumb"><a href="index.html">Whetstone</a><span class="sep">/</span><a href="index.html#catalog">Guides</a><span class="sep">/</span><span>El Nath Training</span></div></div>
+
+<header class="article-head"><div class="wrap wrap-narrow">
+  <div class="dossier">Dossier No. 22</div>
+  <h1>El Nath <em>Training</em></h1>
+  <p class="deck">The Weather (Boss Challenge) event featuring Von Leon. How the difficulty and Weather system works, how ranking is decided, Von Leon's mechanics and when to burst, and how to extract full value from the weekly task track.</p>
+  <div class="article-meta">
+    <span><strong>Source</strong> In-game UI · Server 0002 observation at D42</span>
+    <span><strong>Filed</strong> Jun 2026</span>
+  </div>
+</div></header>
+
+<article class="wrap wrap-narrow article-body">
+
+  <p>El Nath Training is a weekly Boss Challenge event that runs under the Weather system. Unlike cultivation ranking events — which ask you to spend fragments — this event asks you to solo-clear a boss (Von Leon) at the highest difficulty level you can manage before time runs out. Ranking is purely based on how high a difficulty you cleared, then by how much time you had remaining when you cleared it.</p>
+
+  <div class="skeptic"><span class="label">Caveat</span>First observed on Server 0002 at D42. This is a new event type with no prior reference data. All mechanics are sourced directly from in-game UI text. Verify current-cycle details before spending resources.</div>
+
+  <div class="tldr">
+    <div class="tldr-cell"><span class="n">01</span><span class="t">Only <strong>solo clears</strong> count for ranking. Inviting a top-10 mirror ally helps with tasks, not rank.</span></div>
+    <div class="tldr-cell"><span class="n">02</span><span class="t">Von Leon's <strong>Raging Rend exhaustion window is 12 seconds</strong> — this is your primary burst window. Have Rage Rune ready.</span></div>
+    <div class="tldr-cell"><span class="n">03</span><span class="t">Ranked by <strong>highest difficulty cleared</strong>, then by <strong>remaining time</strong>. Clearing fast matters when tied on difficulty.</span></div>
+    <div class="tldr-cell"><span class="n">04</span><span class="t"><strong>Daily limit</strong> on clearance rewards. Daily ranking settled at <strong>06:00</strong> each day; full weekly reset every Monday 06:00.</span></div>
+    <div class="tldr-cell"><span class="n">05</span><span class="t">Clearance reward thresholds are <strong>difficulty 29</strong> and <strong>difficulty 40</strong>. Apex difficulty unlocks after you max Hard mode weather selection.</span></div>
+  </div>
+
+  <div class="toc" style="border:1px solid var(--line);background:var(--surface);padding:22px;margin-bottom:28px">
+    <h4 style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 12px">Contents</h4>
+    <ol style="margin:0;padding:0 0 0 18px">
+      <li style="font-size:14px;color:var(--ink-soft);margin:5px 0"><a href="#overview" style="color:var(--ink-soft);text-decoration:none">Event overview and schedule</a></li>
+      <li style="font-size:14px;color:var(--ink-soft);margin:5px 0"><a href="#difficulty" style="color:var(--ink-soft);text-decoration:none">Difficulty and the Weather system</a></li>
+      <li style="font-size:14px;color:var(--ink-soft);margin:5px 0"><a href="#ranking" style="color:var(--ink-soft);text-decoration:none">Ranking rules</a></li>
+      <li style="font-size:14px;color:var(--ink-soft);margin:5px 0"><a href="#vonleon" style="color:var(--ink-soft);text-decoration:none">Von Leon — mechanics and tactics</a></li>
+      <li style="font-size:14px;color:var(--ink-soft);margin:5px 0"><a href="#tasks" style="color:var(--ink-soft);text-decoration:none">Tasks, rewards, and Apex difficulty</a></li>
+    </ol>
+  </div>
+
+  <!-- § 01 OVERVIEW -->
+  <section class="guide-section" id="overview">
+    <div class="section-head">
+      <div class="section-num">§ 01</div>
+      <h2 class="section-title">Event overview and <em>schedule</em></h2>
+      <div class="section-tag">When things happen</div>
+    </div>
+
+    <p style="color:var(--ink-soft);margin:0 0 18px;">El Nath Training runs on a strict weekly clock. The event lasts one week per cycle, with daily and weekly reward settlements both tied to 06:00 server time.</p>
+
+    <figure class="figure expandable" style="margin-bottom:20px;max-width:380px;">
+      <img src="img/el-nath-training/overview-ui.jpg" alt="El Nath Training event UI showing Weather selection, difficulty 50, and Von Leon" onerror="this.closest('.figure').style.display='none'"/>
+      <figcaption><strong>El Nath Training UI</strong> — Weather selection screen with Von Leon, difficulty 50 observed, and Theater ranking panel</figcaption>
+    </figure>
+
+    <table class="sched-table">
+      <thead><tr><th>When</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="mono">Every day · 06:00</td>
+          <td>Daily ranking settled. Daily ranking reward from the <em>previous day</em> is distributed to qualifying players.</td>
+        </tr>
+        <tr>
+          <td class="mono">Every Monday · 05:55–06:05</td>
+          <td><strong>Pre-settlement window.</strong> No challenges can be started during this 10-minute window. Plan around it — attempting a run right before weekly reset will be blocked.</td>
+        </tr>
+        <tr>
+          <td class="mono">Every Monday · 06:00</td>
+          <td>Weekly settlement. Ranking list is cleared. Weekly ranking rewards distributed to all qualifying players.</td>
+        </tr>
+        <tr>
+          <td class="mono">Daily cap</td>
+          <td>Clearance rewards (from defeating Von Leon at difficulty 29 and difficulty 40) have a daily upper limit. Once hit, further clears that day yield no clearance reward — but still count for ranking.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="margin-top:20px">
+      <h3>What "the Gameplay" actually is</h3>
+      <p class="lede">You enter the El Nath snowfield, face Von Leon at a chosen difficulty level, and attempt to defeat him solo. Your highest successful difficulty within the week determines your ranking tier. You can attempt runs daily and improve your rank at any point before Monday 05:55 settlement. Unclaimed task rewards are mailed to your in-game mailbox after the next reset.</p>
+    </div>
+  </section>
+
+  <!-- § 02 DIFFICULTY -->
+  <section class="guide-section" id="difficulty">
+    <div class="section-head">
+      <div class="section-num">§ 02</div>
+      <h2 class="section-title">Difficulty and the <em>Weather system</em></h2>
+      <div class="section-tag">How to push higher</div>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+      <figure class="figure expandable" style="flex:1;min-width:200px;max-width:340px;margin:0;">
+        <img src="img/el-nath-training/rules-boss-challenge.jpg" alt="El Nath Training rules — Boss Challenge tab showing Easy/Hard mode difficulty levels and solo-only ranking rule" onerror="this.closest('.figure').style.display='none'"/>
+        <figcaption><strong>Rules — Boss Challenge tab</strong> · Easy base D1, Hard base D29, solo clears only for ranking</figcaption>
+      </figure>
+      <figure class="figure expandable" style="flex:1;min-width:200px;max-width:340px;margin:0;">
+        <img src="img/el-nath-training/rules-schedule.jpg" alt="El Nath Training rules — Gameplay Time and Weather tabs" onerror="this.closest('.figure').style.display='none'"/>
+        <figcaption><strong>Rules — Gameplay Time &amp; Weather tabs</strong> · Weekly cycle, daily 06:00 settlement, Weather difficulty selection</figcaption>
+      </figure>
+    </div>
+
+    <p style="color:var(--ink-soft);margin:0 0 16px;">You choose a Weather effect before each run. Weather effects are of varying difficulty — selecting a harder weather increases your challenge difficulty level. The higher the difficulty you clear, the better your ranking position.</p>
+
+    <div class="diff-bar">
+      <div class="diff-segment easy">
+        <div class="ds-label">Easy mode</div>
+        <div class="ds-val">1</div>
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px">Base difficulty level. Starting point for all players.</div>
+      </div>
+      <div class="diff-segment hard">
+        <div class="ds-label">Hard mode</div>
+        <div class="ds-val">29</div>
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px">Base difficulty level in Hard. Where competitive ranking begins.</div>
+      </div>
+      <div class="diff-segment apex">
+        <div class="ds-label">Apex (observed max)</div>
+        <div class="ds-val">50+</div>
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px">Unlocked after maxing Hard weather selection. No observed ceiling yet.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <h3>Weather selection strategy</h3>
+      <p class="lede">Always select the hardest Weather effect you can reliably clear. A failed run — quitting or dying before Von Leon is defeated — gives zero ranking points and wastes the attempt. It is better to clear difficulty 35 consistently than to attempt difficulty 50 and fail.</p>
+      <p style="font-size:13px;color:var(--ink-soft);">Use your earlier runs in the week to calibrate. Start at the highest difficulty where you feel confident, then push one step higher if you succeed. The final day before Monday reset is the right time to make a risky attempt at maximum difficulty — you have already banked a ranking score.</p>
+    </div>
+
+    <div class="caveat">
+      <strong class="lab">Easy mode and ranking</strong>
+      Easy mode clears (difficulty 1–28) do count toward ranking if that is the highest difficulty you achieve. However, anyone running Hard mode will rank above any Easy mode clear regardless of remaining time. Easy mode is appropriate for learning Von Leon's mechanics before pushing Hard.
+    </div>
+
+    <h3 style="margin:24px 0 10px;font-family:'Fraunces',serif;font-size:18px;">Apex difficulty</h3>
+    <p style="font-size:14px;color:var(--ink-soft);">Once you reach the highest Weather selection available in Hard mode, Apex difficulty unlocks. Apex allows you to push beyond difficulty 50 — there is no observed ceiling in the current cycle. Apex is a late-cycle concern; focus on clearing Hard mode cleanly before trying to unlock it.</p>
+  </section>
+
+  <!-- § 03 RANKING -->
+  <section class="guide-section" id="ranking">
+    <div class="section-head">
+      <div class="section-num">§ 03</div>
+      <h2 class="section-title">Ranking <em>rules</em></h2>
+      <div class="section-tag">How your position is decided</div>
+    </div>
+
+    <figure class="figure expandable" style="margin-bottom:20px;max-width:380px;">
+      <img src="img/el-nath-training/rules-ranking.jpg" alt="El Nath Training rules — Ranking tab showing highest difficulty and remaining time tiebreaker" onerror="this.closest('.figure').style.display='none'"/>
+      <figcaption><strong>Rules — Ranking tab</strong> · Sorted by highest difficulty, then remaining time; daily + weekly reward cadence</figcaption>
+    </figure>
+
+    <p style="color:var(--ink-soft);margin:0 0 18px;">Understanding precisely how ranking works prevents two common errors: attempting runs with a mirror ally (which wastes ranking potential) and spending time farming extra clears when your rank is already locked in.</p>
+
+    <div class="rank-rule">
+      <div class="rr-num">01</div>
+      <div class="rr-body">
+        <strong>Solo clears only count for ranking</strong>
+        Runs where you invited a top-10 mirror ally are not counted in the ranking, even if you defeat Von Leon. Mirror ally runs can still complete tasks and grant clearance rewards — they simply do not affect rank. Do not use a mirror ally on your personal-best difficulty attempt.
+      </div>
+    </div>
+    <div class="rank-rule">
+      <div class="rr-num">02</div>
+      <div class="rr-body">
+        <strong>Primary sort: highest difficulty cleared</strong>
+        All players within the Theater (server) are ranked from highest to lowest by the highest difficulty level they successfully cleared in solo play. A difficulty 40 clear always ranks above a difficulty 39 clear, regardless of time.
+      </div>
+    </div>
+    <div class="rank-rule">
+      <div class="rr-num">03</div>
+      <div class="rr-body">
+        <strong>Tiebreaker: remaining time (higher is better)</strong>
+        When two players clear the same difficulty, the player with more time remaining when they defeated Von Leon ranks higher. This means clearing faster matters — use consumables, position aggressively, and burst during Von Leon's exhaustion window.
+      </div>
+    </div>
+    <div class="rank-rule">
+      <div class="rr-num">04</div>
+      <div class="rr-body">
+        <strong>Failure counts as difficulty 0</strong>
+        Quitting or dying before Von Leon is defeated scores difficulty 0. It does not preserve your previous best. Your ranking score is always your best successful solo clear from the current week.
+      </div>
+    </div>
+    <div class="rank-rule">
+      <div class="rr-num">05</div>
+      <div class="rr-body">
+        <strong>Top 10 players can be invited as mirror allies</strong>
+        Players ranked in the top 10 of your server's Theater can be invited by others to assist. This means strong players effectively help weaker players clear tasks. The top-10 player's own ranking is unaffected — the assisting run does not count for their rank either.
+      </div>
+    </div>
+  </section>
+
+  <!-- § 04 VON LEON -->
+  <section class="guide-section" id="vonleon">
+    <div class="section-head">
+      <div class="section-num">§ 04</div>
+      <h2 class="section-title">Von Leon — mechanics <em>and tactics</em></h2>
+      <div class="section-tag">Abilities and how to handle them</div>
+    </div>
+
+    <p style="color:var(--ink-soft);margin:0 0 16px;">Von Leon enters the fight in an Energetic state with high damage reduction active. The fight is structured around his Raging Rend cycle: bait the attack, wait for the exhaustion window, then burst. Understanding when damage reduction drops is the entire key to an efficient clear.</p>
+
+    <div class="card" style="margin-bottom:20px">
+      <h3>The core loop</h3>
+      <p class="lede">Von Leon enters → <strong>high DMG reduction</strong> active (Energetic state) → performs Raging Rend → enters <strong>exhausted/fatigued state for 12 seconds</strong> (DMG reduction removed) → this is your burst window → activate Rage Rune immediately → deal maximum damage → repeat until dead.</p>
+      <p style="font-size:13px;color:var(--ink-soft)">Watch for the on-screen warning message when Raging Rend is about to release. Do not waste cooldowns during the Energetic state — the hit will land but at severely reduced value.</p>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+      <figure class="figure expandable" style="flex:1;min-width:200px;max-width:340px;margin:0;">
+        <img src="img/el-nath-training/von-leon-tactics-1.jpg" alt="Von Leon Suggestion for Tactics — Raging Rend exhaustion window and Energetic state advice" onerror="this.closest('.figure').style.display='none'"/>
+        <figcaption><strong>Von Leon — Tactics (1/2)</strong> · Raging Rend warning, black vortex positioning, exhaustion window and Rage Rune timing</figcaption>
+      </figure>
+      <figure class="figure expandable" style="flex:1;min-width:200px;max-width:340px;margin:0;">
+        <img src="img/el-nath-training/von-leon-tactics-2.jpg" alt="Von Leon Raging Rend, Energetic, and Claw Assault ability descriptions" onerror="this.closest('.figure').style.display='none'"/>
+        <figcaption><strong>Von Leon — Abilities (1/2)</strong> · Raging Rend 12s exhaustion, Energetic DMG reduction, Claw Assault pull</figcaption>
+      </figure>
+    </div>
+
+    <div class="ability-list">
+      <div class="ability-row">
+        <div class="ability-name">Raging Rend</div>
+        <div class="ability-desc">
+          Von Leon teleports next to you and attacks with dual claws. After the attack sequence ends, he enters <strong>exhaustion/fatigue lasting 12 seconds</strong> — damage reduction is removed during this window.
+          <span class="tactic">When Raging Rend initiates: watch for the black vortex. When the vortex disappears, use double jump to reposition and avoid the hit. After the sequence ends, activate Rage Rune immediately and burst.</span>
+        </div>
+      </div>
+      <div class="ability-row">
+        <div class="ability-name">Energetic</div>
+        <div class="ability-desc">
+          When Von Leon enters the scene he is in a fully energized state with high damage reduction. This persists until Raging Rend ends and he transitions to the exhausted state.
+          <span class="tactic">Do not use high-cooldown abilities or consumables during the Energetic state. Hold burst for the exhaustion window. Auto-attacks and low-cost abilities to maintain stacks are fine.</span>
+        </div>
+      </div>
+      <div class="ability-row">
+        <div class="ability-name">Claw Assault</div>
+        <div class="ability-desc">
+          Von Leon extends his claws and tears at the enemy in front, pulling you to his side.
+          <span class="tactic">A positional reset — reorient immediately after being pulled. No special survival action required; it is primarily a disruption.</span>
+        </div>
+      </div>
+      <div class="ability-row">
+        <div class="ability-name">Swift Lightning</div>
+        <div class="ability-desc">
+          After a brief chant, Von Leon summons multiple swift thunder bolts that strike down.
+          <span class="tactic">Keep moving during the chant animation. Lightning bolts follow a positional pattern — lateral movement is generally sufficient to avoid most hits.</span>
+        </div>
+      </div>
+      <div class="ability-row">
+        <div class="ability-name">Polar Howl</div>
+        <div class="ability-desc">
+          Von Leon lets out a roar that pushes surrounding enemies back.
+          <span class="tactic">Another positional reset. Close the distance quickly after being pushed back to stay within melee/short-range for Rage Rune timing.</span>
+        </div>
+      </div>
+      <div class="ability-row">
+        <div class="ability-name">King's Command</div>
+        <div class="ability-desc">
+          Von Leon summons Administrator Rousseau to fight alongside him.
+          <span class="tactic">Rousseau adds pressure but is not the primary target. Maintain focus on Von Leon — hitting Raging Rend windows matters more than clearing adds.</span>
+        </div>
+      </div>
+      <div class="ability-row">
+        <div class="ability-name">Destruction Laser</div>
+        <div class="ability-desc">
+          Von Leon concentrates energy in both eyes and launches a series of laser scans sweeping to both sides.
+          <span class="tactic">The sweep pattern covers both sides — vertical positioning (jump) or staying directly in front during the animation gap may reduce hits. Observed at higher difficulty levels.</span>
+        </div>
+      </div>
+    </div>
+
+    <figure class="figure expandable" style="margin:16px 0;max-width:380px;">
+      <img src="img/el-nath-training/von-leon-abilities.jpg" alt="Von Leon Swift Lightning, Polar Howl, King's Command, and Destruction Laser ability descriptions" onerror="this.closest('.figure').style.display='none'"/>
+      <figcaption><strong>Von Leon — Abilities (2/2)</strong> · Swift Lightning, Polar Howl pushback, King's Command (Rousseau summon), Destruction Laser sweep</figcaption>
+    </figure>
+
+    <div class="card" style="margin-top:20px">
+      <h3>Watch for Bleeding</h3>
+      <p class="lede">The in-game tip explicitly calls out keeping an eye on abnormal states such as Bleeding. At higher difficulties, accumulated DoT from bleed can kill you during the Energetic state when you are otherwise waiting to burst. Have a cleanse or recovery available.</p>
+    </div>
+  </section>
+
+  <!-- § 05 TASKS AND REWARDS -->
+  <section class="guide-section" id="tasks">
+    <div class="section-head">
+      <div class="section-num">§ 05</div>
+      <h2 class="section-title">Tasks, rewards, and <em>Apex difficulty</em></h2>
+      <div class="section-tag">What you earn and how</div>
+    </div>
+
+    <p style="color:var(--ink-soft);margin:0 0 18px;">El Nath Training has three distinct reward tracks: clearance rewards (tied to specific difficulty thresholds), the daily/weekly ranking pool, and a weekly task track. All three run concurrently.</p>
+
+    <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 12px;">Clearance rewards</h3>
+    <p style="font-size:14px;color:var(--ink-soft);margin:0 0 16px;">Awarded automatically upon defeating Von Leon at or above two difficulty thresholds. Both are subject to a daily upper limit — once hit for the day, further clears yield no additional clearance reward until 06:00 the next morning.</p>
+    <div class="diff-bar" style="margin-bottom:20px">
+      <div class="diff-segment hard">
+        <div class="ds-label">Threshold 1</div>
+        <div class="ds-val">29</div>
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px">Clearing at or above difficulty 29 awards clearance reward (Hard mode baseline).</div>
+      </div>
+      <div class="diff-segment apex">
+        <div class="ds-label">Threshold 2</div>
+        <div class="ds-val">40</div>
+        <div style="font-size:12px;color:var(--ink-soft);margin-top:4px">Clearing at or above difficulty 40 awards a higher clearance reward. Daily cap applies to both tiers.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 12px;">Task track (Twilight Rehearsal &amp; Snowfield Training)</h3>
+    <div class="unlock-list" style="border:1px solid var(--line);">
+      <div style="display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--line-soft);">
+        <div style="padding:14px 16px;background:var(--bg-2);border-right:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);display:flex;align-items:center;">Daily refresh</div>
+        <div style="padding:14px 16px;font-size:13px;">2 Twilight Rehearsal tasks are added each day. Maximum of 14 tasks per week — if you miss a day, the cap is still 14 total (2 × 7), so early days are not lost.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--line-soft);">
+        <div style="padding:14px 16px;background:var(--bg-2);border-right:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);display:flex;align-items:center;">Mirror allies</div>
+        <div style="padding:14px 16px;font-size:13px;">Completing tasks using a top-10 mirror ally counts toward task completion and clearance rewards. Useful for players who cannot clear threshold difficulties solo — invite a top-10 ally and complete tasks without needing a solo clear.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--line-soft);">
+        <div style="padding:14px 16px;background:var(--bg-2);border-right:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);display:flex;align-items:center;">Task types</div>
+        <div style="padding:14px 16px;font-size:13px;">Both <em>Twilight Rehearsal</em> and <em>Snowfield Training</em> tasks contribute to the weekly reward pool. Complete both types to maximize earnings.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:160px 1fr;">
+        <div style="padding:14px 16px;background:var(--bg-2);border-right:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--amber);display:flex;align-items:center;">Unclaimed rewards</div>
+        <div style="padding:14px 16px;font-size:13px;">Any unclaimed task rewards at reset are automatically sent to your in-game mailbox. Check your mailbox after Monday 06:00 if you did not claim everything manually.</div>
+      </div>
+    </div>
+
+    <figure class="figure expandable" style="margin:16px 0;max-width:380px;">
+      <img src="img/el-nath-training/rules-tasks.jpg" alt="El Nath Training rules — Task and Apex Difficulty tabs" onerror="this.closest('.figure').style.display='none'"/>
+      <figcaption><strong>Rules — Task &amp; Apex Difficulty tabs</strong> · 14 tasks/week, Twilight Rehearsal + Snowfield Training, Apex unlock condition</figcaption>
+    </figure>
+
+    <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:24px 0 12px;">Apex difficulty unlock</h3>
+    <p style="font-size:14px;color:var(--ink-soft);">Apex difficulty unlocks after the highest-level Hard mode Weather selection has been reached. Once unlocked, Apex challenges have no observed difficulty ceiling — you can continue pushing to higher and higher levels each week. Apex is primarily relevant to top-ranked players competing on tiebreaker remaining time; for most players, consistently clearing the high-30s to 40s range in Hard mode is the practical target.</p>
+
+    <div class="caveat" style="margin-top:20px">
+      <strong class="lab">Ranking vs. rewards: different goals</strong>
+      Daily clearance rewards cap out once you hit the daily limit at difficulty 29 or 40. After that, further runs that day only serve ranking (improving your highest difficulty on record) or task completion. Do not grind extra clears expecting more clearance rewards — check whether your daily cap is already hit first.
+    </div>
+  </section>
+
+  <nav class="article-foot-nav">
+    <a class="prev" href="event-timeline.html"><div class="dir">← Previous</div><div class="title">D-03 · Event Timeline</div></a>
+    <a class="next" href="index.html#catalog"><div class="dir">Next →</div><div class="title">Back to Catalog</div></a>
+  </nav>
+
+</article>
+
+<footer class="site-footer"><div class="wrap"><div class="footer-inner"><div class="colophon"><span class="wm">Whet<em>stone</em></span><p>Unofficial field dispatches for MapleStory R: Evolution. Independent, reader-funded, and verified before posted.</p></div><div class="footer-col"><h5>Sections</h5><ul><li><a href="index.html">Index</a></li><li><a href="index.html#catalog">Catalog</a></li><li><a href="about.html">About</a></li></ul></div><div class="footer-col"><h5>Dossiers</h5><ul><li><a href="event-timeline.html">D-03 · Event Timeline</a></li><li><a href="el-nath-training.html">D-22 · El Nath Training</a></li></ul></div></div><div class="footer-base"><span>© Whetstone 2026 · No affiliation with Nexon</span><a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener" style="font-size:12px;color:var(--ink-mute);text-decoration:none;letter-spacing:.03em">GitHub ↗</a><span>Dossier No. 22</span></div></div></footer>
+</body></html>
