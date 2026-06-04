@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Reverse Pink Bean · Whetstone</title>
+<meta name="description" content="Dossier 25: Reverse Pink Bean boss event — all five entity mechanics documented, counter strategies for each status effect, and stat balancing notes." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Entity header cards */
+  .entity-head {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 20px; border-bottom: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .entity-icon {
+    font-size: 28px; line-height: 1; flex-shrink: 0; width: 36px; text-align: center;
+  }
+  .entity-name { font-family: 'Fraunces', serif; font-size: 22px; color: var(--paper); margin: 0 0 2px; }
+  .entity-role { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-mute); }
+
+  /* Ability blocks */
+  .ability-block {
+    padding: 18px 20px; border-bottom: 1px solid var(--line-soft);
+  }
+  .ability-block:last-child { border-bottom: none; }
+  .ability-name {
+    font-family: 'Fraunces', serif; font-size: 17px; color: var(--paper);
+    margin: 0 0 8px; display: flex; align-items: center; gap: 10px;
+  }
+  .ability-badge {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 2px; flex-shrink: 0;
+  }
+  .badge-danger { background: rgba(220,60,60,0.15); color: #ef9a9a; }
+  .badge-counter { background: rgba(74,179,168,0.15); color: var(--teal); }
+  .badge-hazard { background: rgba(232,158,61,0.15); color: var(--amber); }
+  .ability-desc { font-size: 14px; color: var(--ink); line-height: 1.6; margin: 0 0 10px; }
+  .ability-counter {
+    font-size: 13px; color: var(--ink-soft); line-height: 1.55;
+    border-left: 3px solid var(--teal); padding: 6px 12px; margin: 0;
+    background: rgba(74,179,168,0.04);
+  }
+  .ability-counter strong {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--teal); display: block; margin-bottom: 4px;
+  }
+  .ability-warn {
+    font-size: 13px; color: var(--ink-soft); line-height: 1.55;
+    border-left: 3px solid #ef9a9a; padding: 6px 12px; margin: 0;
+    background: rgba(220,60,60,0.04);
+  }
+  .ability-warn strong {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #ef9a9a; display: block; margin-bottom: 4px;
+  }
+
+  /* Entity card wrapper */
+  .entity-card { border: 1px solid var(--line); margin-bottom: 28px; }
+
+  /* Quick-ref table */
+  .mechanic-table { border: 1px solid var(--line); width: 100%; border-collapse: collapse; font-size: 13px; }
+  .mechanic-table th {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--amber); text-align: left;
+    padding: 8px 12px; border-bottom: 1px solid var(--line); background: var(--bg-2);
+  }
+  .mechanic-table td { padding: 9px 12px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  .mechanic-table tr:last-child td { border-bottom: none; }
+  .mechanic-table .m-source { color: var(--paper); font-weight: 600; }
+  .mechanic-table .m-effect { color: var(--ink); }
+  .mechanic-table .m-counter { color: var(--teal); }
+  .mechanic-table .m-warn { color: #ef9a9a; font-size: 12px; }
+</style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span class="wordmark">Whet<em>stone</em></span></a>
+      <div class="nav-links">
+        <a href="index.html">Index</a>
+        <a href="index.html#catalog" class="active">Guides</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap wrap-narrow">
+    <div class="breadcrumb">
+      <a href="index.html">Whetstone</a><span class="sep">/</span>
+      <a href="index.html#catalog">Guides</a><span class="sep">/</span>
+      <span>Reverse Pink Bean</span>
+    </div>
+  </div>
+
+  <header class="article-head">
+    <div class="wrap wrap-narrow">
+      <div class="dossier">Dossier No. 25</div>
+      <h1>Reverse Pink <em>Bean</em></h1>
+      <p class="deck">Boss challenge event — all five entity mechanics documented, with counter plays for each status effect. Balance Mode at 57.4–57.6%. Recommended level 170.</p>
+      <div class="article-meta">
+        <span><strong>Observed</strong> Jun 4, 2026 · ~3 days remaining</span>
+        <span><strong>Source</strong> In-game screenshots · Drive batch IMG_7062–7108</span>
+        <span><strong>Entities</strong> 5 — Pink Bean, Goddess Statue, Sage Solomon, Sage Lex, Firehawk Statue</span>
+        <span><strong>Filed</strong> 2026</span>
+        <span><strong>Read</strong> 5 min</span>
+      </div>
+    </div>
+    <div class="hero-float" aria-hidden="true">🌸</div>
+  </header>
+
+  <article class="wrap wrap-narrow article-body">
+
+    <p>Reverse Pink Bean is a Balance Mode boss event where five entities each apply unique status effects to the entire party. The central loop is mechanical: each effect has a specific counter action that removes it. Players who know the counters can manage the debuffs actively; players who don't will find their skills locked, rage drained, or stats halved for the duration of each circle.</p>
+
+    <div class="skeptic">
+      <span class="label">Event window</span>
+      Screenshots captured Jun 4, 2026 with approximately 3 days remaining. Balance Mode is set at 57.4–57.6%. LV.170 is the recommended player level shown in the entry screen. A Collab bonus of 100 activates when teaming up with Guild members or friends.
+    </div>
+
+    <!-- QUICK REF -->
+    <section class="guide-section" id="quick-ref">
+      <div class="section-head">
+        <div class="section-num">§ 00</div>
+        <h2 class="section-title">Quick <em>reference</em></h2>
+        <div class="section-tag">All 5 entities · effects and counters</div>
+      </div>
+
+      <div style="overflow-x:auto">
+        <table class="mechanic-table">
+          <thead>
+            <tr><th>Entity</th><th>Ability</th><th>Effect</th><th>Counter</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="m-source">Pink Bean</td>
+              <td>Golden Glow</td>
+              <td class="m-effect">1–2 players transformed into Pink Bean; subjected to constant attacks</td>
+              <td class="m-counter">—</td>
+            </tr>
+            <tr>
+              <td class="m-source">Pink Bean</td>
+              <td>Reverse Light Pillars</td>
+              <td class="m-effect">Many light pillars summoned throughout the map</td>
+              <td class="m-counter">Dodge pillars</td>
+            </tr>
+            <tr>
+              <td class="m-source">Pink Bean</td>
+              <td>Counter-Damage State</td>
+              <td class="m-effect">Rebounds a % of damage dealt back to attacker</td>
+              <td class="m-warn m-counter">Stop attacking — wait for state to end</td>
+            </tr>
+            <tr>
+              <td class="m-source">Pink Bean</td>
+              <td>Invincibility / Portal</td>
+              <td class="m-effect">Pink Bean becomes invincible</td>
+              <td class="m-counter">Go through portal → defeat 2 statues → removes invincibility</td>
+            </tr>
+            <tr>
+              <td class="m-source">Pink Bean</td>
+              <td>Statue Resurrection</td>
+              <td class="m-effect">Defeated statues revive every 60 seconds</td>
+              <td class="m-counter">Each defeat grants Temple Blessing + reduces Pink Bean's HP</td>
+            </tr>
+            <tr>
+              <td class="m-source">Goddess Statue</td>
+              <td>Glory Circle</td>
+              <td class="m-effect">Summons 4 Guardstones; Statue goes invincible</td>
+              <td class="m-counter">Destroy all 4 Guardstones → removes invincibility</td>
+            </tr>
+            <tr>
+              <td class="m-source">Goddess Statue</td>
+              <td>Flyleaf Rampage</td>
+              <td class="m-effect">Full-screen AoE attack</td>
+              <td class="m-warn m-counter">Triggered if Guardstones not destroyed in time — don't delay</td>
+            </tr>
+            <tr>
+              <td class="m-source">Sage Solomon</td>
+              <td>Immortality Circle</td>
+              <td class="m-effect">All players receive Immortality; healing amount reduced</td>
+              <td class="m-counter">—</td>
+            </tr>
+            <tr>
+              <td class="m-source">Sage Solomon</td>
+              <td>Flying Leaves</td>
+              <td class="m-effect">Leaves appear during Immortality Circle; hit = rage reduced + Monk Trainee (no skills)</td>
+              <td class="m-counter">Dodge leaves — do not get hit</td>
+            </tr>
+            <tr>
+              <td class="m-source">Sage Lex</td>
+              <td>Weakness Circle</td>
+              <td class="m-effect">All players: Crit Rate ↓, Damage ↓, Skill Cooldowns ↑</td>
+              <td class="m-counter">Pick up ALL meats that spawn on the map → removes Weakness</td>
+            </tr>
+            <tr>
+              <td class="m-source">Firehawk Statue</td>
+              <td>Sealing Circle</td>
+              <td class="m-effect">All players: automatic skills prohibited</td>
+              <td class="m-counter">Avoid stone hammers — each hit extends seal duration</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PINK BEAN -->
+    <section class="guide-section" id="pink-bean">
+      <div class="section-head">
+        <div class="section-num">§ 01</div>
+        <h2 class="section-title">Pink Bean — <em>main boss</em></h2>
+        <div class="section-tag">5 mechanics</div>
+      </div>
+
+      <div class="entity-card">
+        <div class="entity-head">
+          <div class="entity-icon">🟣</div>
+          <div>
+            <div class="entity-name">Pink Bean</div>
+            <div class="entity-role">Main Boss · Multiple phases</div>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Golden Glow
+            <span class="ability-badge badge-danger">Status</span>
+          </div>
+          <p class="ability-desc">Pink Bean releases Golden Glow, randomly selecting 1–2 players and transforming them into Pink Bean. Players who are transformed are immediately subjected to constant attacks for the duration of the effect.</p>
+          <p class="ability-warn"><strong>No direct counter</strong>If you are transformed, you will take continuous damage. Survive with HP management. Other players cannot easily remove this from you — endure until the effect expires.</p>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Reverse Light Pillars
+            <span class="ability-badge badge-hazard">Hazard</span>
+          </div>
+          <p class="ability-desc">Pink Bean summons a large number of light pillars intertwined throughout the map. The pillars persist for the duration of the ability and deal damage on contact.</p>
+          <p class="ability-counter"><strong>Counter</strong>Move between pillar gaps. The map becomes significantly more restricted — prioritise positioning over offensive output during this phase.</p>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Counter-Damage State
+            <span class="ability-badge badge-danger">Rebound</span>
+          </div>
+          <p class="ability-desc">Pink Bean releases counter-damage, entering a state where it rebounds a percentage of all damage dealt by players back to the attacker. Continuing to attack during this phase injures your own team.</p>
+          <p class="ability-warn"><strong>Stop attacking</strong>This is the single most important mechanic to recognise. Any damage output while the counter-damage state is active is returned to you. Wait for the state to end before resuming attacks.</p>
+          <div style="margin-top:12px">
+            <figure class="figure expandable" style="max-width:340px">
+              <img src="img/reverse-pink-bean/pb-counter-damage.jpg" alt="Pink Bean counter-damage state — damage rebound notice on screen" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Counter-damage state active — stop attacking immediately.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Invincibility + Portal Mechanic
+            <span class="ability-badge badge-danger">Phase</span>
+          </div>
+          <p class="ability-desc">Pink Bean enters an invincible state, immune to all damage. To remove the invincibility, players must go through the portal that appears on the map and defeat the two statues beyond it. Once the statues are defeated, Pink Bean removes its own invincibility.</p>
+          <p class="ability-counter"><strong>Counter</strong>Locate the portal immediately when Pink Bean goes invincible. Pass through, defeat both statues as quickly as possible, then return to the main area. Do not waste time attacking Pink Bean while it is invincible — the damage is nullified.</p>
+          <div class="figure-pair" style="margin-top:12px">
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/pb-portal-entry.jpg" alt="Pink Bean invincible state — portal appears for players to pass through" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Portal entry — defeat 2 statues beyond it.</figcaption>
+            </figure>
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/pb-invincible-removed.jpg" alt="Pink Bean invincibility removed after statues defeated" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Invincibility removed — resume attacks.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Statue Resurrection
+            <span class="ability-badge badge-hazard">Cycle</span>
+          </div>
+          <p class="ability-desc">Every 60 seconds, any defeated statues are resurrected. This is a persistent cycle throughout the encounter. Each time a statue is defeated, it gains the <strong>Temple Blessing</strong> effect — and each defeat also reduces Pink Bean's HP directly. Repeatedly killing the statues is the primary source of HP reduction on Pink Bean.</p>
+          <p class="ability-counter"><strong>Priority</strong>Statues should be killed as frequently as possible. Every kill reduces Pink Bean's HP regardless of the resurrection cycle. Do not treat the statues as secondary objectives — they are the most efficient damage path.</p>
+          <div class="figure-pair" style="margin-top:12px">
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/pb-statue-resurrection.jpg" alt="Statue resurrection notice — every 60 seconds defeated statues revive" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>60-second resurrection cycle.</figcaption>
+            </figure>
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/pb-temple-blessing.jpg" alt="Temple Blessing effect applied when a statue is defeated" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Temple Blessing — statue defeated, Pink Bean's HP reduced.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GODDESS STATUE -->
+    <section class="guide-section" id="goddess-statue">
+      <div class="section-head">
+        <div class="section-num">§ 02</div>
+        <h2 class="section-title">Goddess Statue — <em>Flyleaf defense</em></h2>
+        <div class="section-tag">Glory Circle · Guardstones</div>
+      </div>
+
+      <div class="entity-card">
+        <div class="entity-head">
+          <div class="entity-icon">🗿</div>
+          <div>
+            <div class="entity-name">Goddess Statue</div>
+            <div class="entity-role">Add — Flyleaf defense mechanism</div>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Glory Circle
+            <span class="ability-badge badge-danger">Invincible</span>
+          </div>
+          <p class="ability-desc">The Goddess Statue releases a Glory Circle — triggering the "Flyleaf defense mechanism" — summoning 4 Guardstones and entering an invincible state immune to all damage. The invincibility persists until all 4 Guardstones are destroyed.</p>
+          <p class="ability-counter"><strong>Counter</strong>Destroy all 4 Guardstones as quickly as possible. Split attention with teammates to clear them simultaneously — sequential clearing is slower than parallel. The Goddess Statue is entirely immune until all four are down.</p>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Flyleaf Rampage
+            <span class="ability-badge badge-danger">AoE</span>
+          </div>
+          <p class="ability-desc">If the Guardstones are not destroyed within the time limit, the Goddess Statue ends its invincible state by rampaging — releasing a full-screen attack that hits all players.</p>
+          <p class="ability-warn"><strong>Time pressure</strong>This is a punish mechanic for slow Guardstone clearing. The full-screen attack is unavoidable. Prioritise Guardstone kills above all other targets when the Glory Circle is active.</p>
+          <div class="figure-pair" style="margin-top:12px">
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/goddess-glory-circle.jpg" alt="Goddess Statue Glory Circle — 4 Guardstones summoned, statue invincible" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Glory Circle active — destroy all 4 Guardstones.</figcaption>
+            </figure>
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/goddess-rampage.jpg" alt="Goddess Statue rampage — full-screen attack when Guardstones not cleared in time" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Rampage punish — triggered by slow clearing.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAGE SOLOMON -->
+    <section class="guide-section" id="sage-solomon">
+      <div class="section-head">
+        <div class="section-num">§ 03</div>
+        <h2 class="section-title">Sage Solomon — <em>Immortality Circle</em></h2>
+        <div class="section-tag">Healing reduction · Flying leaves · Monk Trainee</div>
+      </div>
+
+      <div class="entity-card">
+        <div class="entity-head">
+          <div class="entity-icon">🌿</div>
+          <div>
+            <div class="entity-name">Sage Solomon</div>
+            <div class="entity-role">Add — Flyleaf defense mechanism</div>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Immortality Circle
+            <span class="ability-badge badge-hazard">Status</span>
+          </div>
+          <p class="ability-desc">Sage Solomon releases an Immortality Circle, applying Immortality to all players — while simultaneously reducing the amount of healing all players receive. The Immortality prevents instant kills but the healing reduction makes the prolonged fight more dangerous.</p>
+          <p class="ability-warn"><strong>Healing is reduced</strong>Do not rely on heals to sustain through this phase — they will not restore as much as expected. Manage your HP conservatively and avoid taking unnecessary damage while the circle persists.</p>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Flying Leaves
+            <span class="ability-badge badge-danger">Dual debuff</span>
+          </div>
+          <p class="ability-desc">While the Immortality Circle is active, a large number of flying leaves spawn across the map. Being hit by a flying leaf applies two effects simultaneously: your <strong>rage is reduced</strong>, and you are <strong>transformed into a Monk Trainee</strong>, which prevents you from releasing skills for the duration.</p>
+          <p class="ability-counter"><strong>Counter</strong>Dodge the leaves. The Monk Trainee transformation is the more severe effect — losing the ability to use skills during an active boss phase significantly reduces your output and survivability. Treat leaves as high-priority hazards, not cosmetic effects.</p>
+          <div class="figure-pair" style="margin-top:12px">
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/solomon-immortality.jpg" alt="Sage Solomon Immortality Circle active — leaves visible across map" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Immortality Circle — leaves spawn, dodge them.</figcaption>
+            </figure>
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/solomon-monk-trainee.jpg" alt="Monk Trainee status applied after being hit by a flying leaf" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Monk Trainee — hit by leaf, skills locked.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAGE LEX -->
+    <section class="guide-section" id="sage-lex">
+      <div class="section-head">
+        <div class="section-num">§ 04</div>
+        <h2 class="section-title">Sage Lex — <em>Weakness Circle</em></h2>
+        <div class="section-tag">Stat debuff · Meat counter</div>
+      </div>
+
+      <div class="entity-card">
+        <div class="entity-head">
+          <div class="entity-icon">🍖</div>
+          <div>
+            <div class="entity-name">Sage Lex</div>
+            <div class="entity-role">Add — Weakness Circle</div>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Weakness Circle
+            <span class="ability-badge badge-danger">Stat debuff</span>
+            <span class="ability-badge badge-counter">Counterable</span>
+          </div>
+          <p class="ability-desc">"Taste the weakness and powerlessness!" — Sage Lex releases a Weakness Circle that applies a Weakness status to all players simultaneously. The Weakness effect reduces Crit Rate, reduces Damage output, and increases Skill Cooldowns.</p>
+          <p class="ability-counter"><strong>Counter — collect all meats</strong>While the Weakness Circle is active, meats appear across the map. Picking up <em>all</em> of the meats removes the Weakness status entirely. This is a timed collection mechanic: your team must gather every meat before the circle expires to cleanse the debuff. Missing any meat leaves the Weakness status active.</p>
+          <div class="figure-pair" style="margin-top:12px">
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/lex-weakness-circle.jpg" alt="Sage Lex Weakness Circle — applies Weakness status to all players" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Weakness Circle — meats spawn on the map.</figcaption>
+            </figure>
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/lex-meat-counter.jpg" alt="Meats on map during Weakness Circle — collect all to remove Weakness status" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Collect ALL meats → Weakness removed.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIREHAWK STATUE -->
+    <section class="guide-section" id="firehawk-statue">
+      <div class="section-head">
+        <div class="section-num">§ 05</div>
+        <h2 class="section-title">Firehawk Statue — <em>Sealing Circle</em></h2>
+        <div class="section-tag">Auto skill lock · Stone hammer hazard</div>
+      </div>
+
+      <div class="entity-card">
+        <div class="entity-head">
+          <div class="entity-icon">🦅</div>
+          <div>
+            <div class="entity-name">Firehawk Statue</div>
+            <div class="entity-role">Add — Sealing Circle</div>
+          </div>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Sealing Circle
+            <span class="ability-badge badge-danger">Skill lock</span>
+          </div>
+          <p class="ability-desc">"Feel the pain of being sealed!" — The Firehawk Statue releases a Sealing Circle that applies a Sealing Status to all players, prohibiting the release of automatic skills for the duration. Manual skills are unaffected; only auto-triggered skills are suppressed.</p>
+        </div>
+
+        <div class="ability-block">
+          <div class="ability-name">
+            Stone Hammer
+            <span class="ability-badge badge-hazard">Duration extender</span>
+          </div>
+          <p class="ability-desc">While the Sealing Circle is active, stone hammers appear on the map as projectiles. Each time a player is hit by a stone hammer, the duration of their sealed state is extended. Accumulating multiple hammer hits significantly prolongs the skill lock.</p>
+          <p class="ability-warn"><strong>Dodge hammers</strong>Being hit once extends your seal. Being hit repeatedly can lock your auto skills for far longer than the base circle duration. The Sealing Circle is tolerable; the extended seal from hammer hits is not. Prioritise hammer avoidance over offensive positioning while sealed.</p>
+          <div class="figure-pair" style="margin-top:12px">
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/firehawk-sealing.jpg" alt="Firehawk Statue Sealing Circle — auto skills prohibited" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Sealing Circle active — automatic skills locked.</figcaption>
+            </figure>
+            <figure class="figure expandable">
+              <img src="img/reverse-pink-bean/firehawk-hammer.jpg" alt="Stone hammer projectile — being hit extends sealed state duration" onerror="this.closest('.figure').style.display='none'" />
+              <figcaption>Stone hammer — extends your seal on hit, dodge it.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENERAL NOTES -->
+    <section class="guide-section" id="notes">
+      <div class="section-head">
+        <div class="section-num">§ 06</div>
+        <h2 class="section-title">General <em>notes</em></h2>
+        <div class="section-tag">Collab · Balance Mode</div>
+      </div>
+
+      <div class="card">
+        <h3>Collab reward</h3>
+        <p class="lede">Teaming up with Guild members or friends activates the Collab reward (100 points). The Collab bonus appears to be a separate reward track from the standard clearance reward — you can earn both. Enter as a duo or group to unlock it.</p>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3>Balance Mode and recommended level</h3>
+        <p class="lede">The event runs at Balance Mode — stats are normalised to approximately 57.4–57.6% of your base power. Recommended player level is LV.170. If you are significantly below this level, you will notice disproportionate difficulty with the mechanics rather than just raw damage checks.</p>
+        <p style="font-size:13px;color:var(--ink-soft);margin:10px 0 0;">The clearance reward is 1/1 (one daily clear). Additional clears beyond the first do not yield more clearance rewards, but you may wish to replay for Collab points or practice with the mechanics.</p>
+      </div>
+    </section>
+
+    <nav class="article-foot-nav">
+      <a class="prev" href="star-dream-paradise.html"><div class="dir">← Previous</div><div class="title">D-24 · Star Dream Paradise</div></a>
+      <a class="next" href="index.html#catalog"><div class="dir">Next →</div><div class="title">Back to Catalog</div></a>
+    </nav>
+
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="colophon">
+          <span class="wm">Whet<em>stone</em></span>
+          <p>Unofficial field dispatches for MapleStory R: Evolution. Independent, reader-funded, and verified before posted.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Sections</h5>
+          <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Recent dossiers</h5>
+          <ul>
+            <li><a href="star-dream-paradise.html">D-24 · Star Dream Paradise</a></li>
+            <li><a href="reverse-pink-bean.html">D-25 · Reverse Pink Bean</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© Whetstone 2026 · No affiliation with Nexon</span>
+        <a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener" style="font-size:12px;color:var(--ink-mute);text-decoration:none;letter-spacing:.03em">GitHub ↗</a>
+        <span>Dossier No. 25</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="whetstone.js" defer></script>
+</body>
+</html>
