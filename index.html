@@ -38,6 +38,7 @@
       <div class="nav-links">
         <a href="index.html" class="active">Index</a>
         <a href="#catalog">Guides</a>
+        <a href="changelog.html">Log</a>
         <a href="about.html">About</a>
         <a href="bible.html" style="color:var(--amber)">Bible ↗</a>
       </div>
@@ -596,70 +597,4 @@
         <span style="font-size:13px;color:var(--ink-soft)"><a href="https://msrwiki.com" target="_blank" rel="noopener" style="color:var(--sky)">msrwiki.com</a> — community wiki cross-referenced for open day data, LOC reward structure, MR-tier pets, Potential Stone costs, and named wings catalog. Independent of and not affiliated with Whetstone.</span>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ============================ FOOTER ============================ -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-inner">
-        <div class="colophon">
-          <span class="wm">Whet<em>stone</em></span>
-          <p>Unofficial field dispatches for MapleStory R: Evolution. Independent, reader-funded, and verified before posted.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Sections</h5>
-          <ul>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="#catalog">Catalog</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Latest</h5>
-          <ul>
-            <li><a href="gem-cultivation.html">D-21 · Gem Cultivation &amp; Pet Competition</a></li>
-            <li><a href="class.html">D-14 · Class Guide</a></li>
-            <li><a href="dungeons.html">D-20 · Dungeon System</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-base">
-        <span>© Whetstone 2026 · No affiliation with Nexon</span>
-        <a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener" style="font-size:12px;color:var(--ink-mute);text-decoration:none;letter-spacing:.03em">GitHub ↗</a>
-        <span>Issue No. 01</span>
-      </div>
-    </div>
-  </footer>
-
-<script>
-(function(){
-  var track = document.getElementById('carouselTrack');
-  if(!track) return;
-  var slides = track.querySelectorAll('.featured');
-  var dots   = document.querySelectorAll('#carouselDots .cdot');
-  var total  = slides.length;
-  var cur    = 0;
-  var timer;
-
-  function goTo(n){
-    cur = ((n % total) + total) % total;
-    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
-    dots.forEach(function(d,i){ d.classList.toggle('active', i===cur); });
-  }
-  function startTimer(){ timer = setInterval(function(){ goTo(cur+1); }, 6000); }
-  function resetTimer(){ clearInterval(timer); startTimer(); }
-
-  document.querySelector('.carousel-next').addEventListener('click', function(){ goTo(cur+1); resetTimer(); });
-  document.querySelector('.carousel-prev').addEventListener('click', function(){ goTo(cur-1); resetTimer(); });
-  dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); resetTimer(); }); });
-
-  var outer = document.querySelector('.carousel-outer');
-  outer.addEventListener('mouseenter', function(){ clearInterval(timer); });
-  outer.addEventListener('mouseleave', startTimer);
-
-  startTimer();
-})();
-</script>
-</body>
-</html>
+    </d
