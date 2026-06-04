@@ -13,11 +13,14 @@
   /* Entry layout */
   .log-entry {
     border: 1px solid var(--line);
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.2s ease;
   }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+
   .log-header {
     display: grid;
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 80px 1fr;
     border-bottom: 1px solid var(--line);
     align-items: stretch;
   }
@@ -26,88 +29,97 @@
     border-right: 1px solid var(--line);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    padding: 14px 10px; text-align: center;
+    padding: 12px 8px; text-align: center;
+    flex-shrink: 0;
   }
   .log-date .day {
     font-family: 'Fraunces', serif; font-style: italic;
-    font-size: 36px; color: var(--amber); line-height: 1;
+    font-size: 30px; color: var(--amber); line-height: 1;
   }
   .log-date .month {
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
     letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--ink-mute); margin-top: 4px;
+    color: var(--ink-mute); margin-top: 3px;
   }
   .log-summary {
-    padding: 14px 18px;
+    padding: 12px 16px;
     background: var(--surface);
+    display: flex; flex-direction: column; justify-content: center;
   }
   .log-summary h2 {
-    font-family: 'Fraunces', serif; font-size: 20px;
-    color: var(--paper); margin: 0 0 6px;
+    font-family: 'Fraunces', serif; font-size: 17px;
+    color: var(--paper); margin: 0 0 6px; line-height: 1.3;
   }
   .log-summary .tag-row {
-    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+    display: flex; flex-wrap: wrap; gap: 5px;
   }
   .log-tag {
     font-family: 'JetBrains Mono', monospace; font-size: 9px;
     letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 2px 8px; border-radius: 2px;
+    padding: 2px 7px; border-radius: 2px;
   }
   .tag-new    { background: rgba(74,179,168,0.15); color: var(--teal); }
   .tag-images { background: rgba(232,158,61,0.12); color: var(--amber); }
   .tag-shop   { background: rgba(100,140,220,0.15); color: #90caf9; }
   .tag-fix    { background: rgba(150,150,150,0.12); color: var(--ink-mute); }
+  .tag-meta   { background: rgba(150,150,150,0.12); color: var(--ink-mute); }
 
-  /* Entry body */
-  .log-body { padding: 18px 22px; }
-  .log-section { margin-bottom: 20px; }
-  .log-section:last-child { margin-bottom: 0; }
-  .log-section-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--amber); display: block; margin-bottom: 10px;
-  }
-  .log-items { list-style: none; padding: 0; margin: 0; }
-  .log-items li {
-    font-size: 14px; color: var(--ink); line-height: 1.6;
-    padding: 6px 0; border-bottom: 1px solid var(--line-soft);
-    display: flex; gap: 10px; align-items: baseline;
-  }
-  .log-items li:last-child { border-bottom: none; }
-  .log-items li::before {
-    content: '—'; color: var(--ink-mute); font-size: 12px; flex-shrink: 0;
-  }
-  .log-items a { color: var(--amber); text-decoration: none; }
-  .log-items a:hover { text-decoration: underline; }
-  .log-items strong { color: var(--paper); }
+  /* Body */
+  .log-body { padding: 14px 18px; }
 
   /* Dossier link cards */
-  .dossier-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .dossier-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
   .dossier-link {
     border: 1px solid var(--line); background: var(--surface);
-    padding: 10px 16px; text-decoration: none; display: block;
-    transition: border-color 0.15s;
+    padding: 8px 14px; text-decoration: none; display: block;
+    transition: border-color 0.15s; min-width: 140px;
   }
   .dossier-link:hover { border-color: var(--amber); }
   .dossier-link .dl-num {
     font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    letter-spacing: 0.12em; color: var(--amber); display: block; margin-bottom: 3px;
+    letter-spacing: 0.12em; color: var(--amber); display: block; margin-bottom: 2px;
   }
-  .dossier-link .dl-title { font-size: 14px; color: var(--paper); font-weight: 600; }
-  .dossier-link .dl-sub { font-size: 12px; color: var(--ink-mute); margin-top: 2px; display: block; }
+  .dossier-link .dl-title { font-size: 13px; color: var(--paper); font-weight: 600; }
 
-  /* Anchor target highlight */
+  /* Commit detail lines */
+  .log-detail {
+    font-size: 13px; color: var(--ink-soft); line-height: 1.6;
+    white-space: pre-wrap; border-top: 1px solid var(--line-soft);
+    padding-top: 10px; margin-top: 10px;
+  }
+
+  /* SHA link */
+  .sha-link {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--ink-mute); text-decoration: none; letter-spacing: 0.05em;
+    float: right; margin-top: 2px;
+  }
+  .sha-link:hover { color: var(--amber); }
+
+  /* Loading / error states */
+  .log-loading {
+    border: 1px solid var(--line); padding: 24px 20px;
+    text-align: center; color: var(--ink-mute);
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .log-error {
+    border: 1px solid var(--line); padding: 20px;
+    color: var(--ink-soft); font-size: 13px;
+  }
+
+  /* Target highlight */
   .log-entry:target {
     border-color: rgba(232,158,61,0.5);
-    box-shadow: 0 0 0 2px rgba(232,158,61,0.12);
+    box-shadow: 0 0 0 2px rgba(232,158,61,0.08);
   }
 
-  .anchor-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 9px;
-    color: var(--ink-mute); text-decoration: none; letter-spacing: 0.1em;
-    float: right; margin-top: 4px;
+  /* Rate limit notice */
+  .rate-notice {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--ink-mute); text-align: right; margin-top: -12px;
+    margin-bottom: 20px; letter-spacing: 0.05em;
   }
-  .anchor-label:hover { color: var(--amber); }
 </style>
 </head>
 <body>
@@ -134,165 +146,16 @@
   <header class="article-head">
     <div class="wrap wrap-narrow">
       <h1>Change <em>Log</em></h1>
-      <p class="deck">New dossiers, image updates, shop records, and guide additions — newest first. Link this page instead of pasting the full update.</p>
+      <p class="deck">Every push to the site — new dossiers, images, fixes — newest first. Updates automatically from git.</p>
     </div>
     <div class="hero-float" aria-hidden="true">📋</div>
   </header>
 
-  <div class="wrap wrap-narrow" style="padding-top: 32px; padding-bottom: 48px;">
-
-    <!-- ═══════════════════════════════════════════ JUN 4 ═══ -->
-    <div class="log-entry" id="jun4-b">
-      <div class="log-header">
-        <div class="log-date">
-          <div class="day">4</div>
-          <div class="month">Jun 2026</div>
-        </div>
-        <div class="log-summary">
-          <h2>Reverse Pink Bean <em>guide + images</em>
-            <a class="anchor-label" href="#jun4-b">#jun4-b</a>
-          </h2>
-          <div class="tag-row">
-            <span class="log-tag tag-new">New dossier</span>
-            <span class="log-tag tag-images">Images placed</span>
-          </div>
-        </div>
-      </div>
-      <div class="log-body">
-        <div class="dossier-links">
-          <a class="dossier-link" href="reverse-pink-bean.html">
-            <span class="dl-num">D-25</span>
-            <span class="dl-title">Reverse Pink Bean</span>
-            <span class="dl-sub">Boss event · all 5 entity mechanics + counter plays</span>
-          </a>
-        </div>
-        <div class="log-section">
-          <span class="log-section-label">What's in it</span>
-          <ul class="log-items">
-            <li>Quick-reference table — every mechanic and its counter at a glance</li>
-            <li><strong>Pink Bean</strong> — Golden Glow (player transform), Reverse Light Pillars, Counter-Damage rebound (stop attacking!), Portal invincibility phase, 60s Statue resurrection → Temple Blessing → reduces PB HP</li>
-            <li><strong>Goddess Statue</strong> — Glory Circle summons 4 Guardstones; destroy all or it rampages with full-screen AoE</li>
-            <li><strong>Sage Solomon</strong> — Immortality Circle reduces healing; flying leaves hit = rage drained + Monk Trainee (skills locked)</li>
-            <li><strong>Sage Lex</strong> — Weakness Circle (Crit Rate ↓, DMG ↓, Cooldowns ↑); pick up ALL meats to cleanse it</li>
-            <li><strong>Firehawk Statue</strong> — Sealing Circle blocks auto skills; stone hammer hits extend seal — dodge them</li>
-            <li>49 screenshots dropped into <code>img/reverse-pink-bean/</code>, 13 wired to mechanic sections</li>
-            <li>3 Wings cultivation screenshots separated to <code>img/wings-cultivation/</code></li>
-          </ul>
-        </div>
-      </div>
+  <div class="wrap wrap-narrow" style="padding-top:28px;padding-bottom:48px;">
+    <div id="log-feed">
+      <div class="log-loading" id="log-loading">Loading commits…</div>
     </div>
-
-    <!-- ═══════════════════════════════════════════ JUN 4a ══ -->
-    <div class="log-entry" id="jun4-a">
-      <div class="log-header">
-        <div class="log-date">
-          <div class="day">4</div>
-          <div class="month">Jun 2026</div>
-        </div>
-        <div class="log-summary">
-          <h2>Mini-Games + Star Dream Paradise <em>guides</em>
-            <a class="anchor-label" href="#jun4-a">#jun4-a</a>
-          </h2>
-          <div class="tag-row">
-            <span class="log-tag tag-new">2 new dossiers</span>
-            <span class="log-tag tag-images">Drive batch reviewed</span>
-          </div>
-        </div>
-      </div>
-      <div class="log-body">
-        <div class="dossier-links">
-          <a class="dossier-link" href="minigames.html">
-            <span class="dl-num">D-23</span>
-            <span class="dl-title">Mini-Games Reference</span>
-            <span class="dl-sub">S / A / B tier ratings for all 7 mini-games</span>
-          </a>
-          <a class="dossier-link" href="star-dream-paradise.html">
-            <span class="dl-num">D-24</span>
-            <span class="dl-title">Star Dream Paradise</span>
-            <span class="dl-sub">Daily task gacha · full 30-item prize table</span>
-          </a>
-        </div>
-        <div class="log-section">
-          <span class="log-section-label">D-23 Mini-Games</span>
-          <ul class="log-items">
-            <li>Source: ハト麦茶のタヌキチ · JP official Discord #攻略情報共有, Mar 2025</li>
-            <li>Tier S: Rainbow Escape (forced-scroll + RNG enemy placement), Mystic Leap (NPC platform RNG)</li>
-            <li>Tier A: Fortitude Trial (telegraph dodging), Monster Capture (two-thumb combo, never hit stumps)</li>
-            <li>Tier B: Memory Test (≤20 moves for S — miss once, restart), Monster Operation (skip the ghost), Music Show Stage (lenient window)</li>
-            <li>Bonus: hidden practice field location via Fashion → Special Decoration → Preview</li>
-          </ul>
-        </div>
-        <div class="log-section">
-          <span class="log-section-label">D-24 Star Dream Paradise</span>
-          <ul class="log-items">
-            <li>Daily tasks → Star Dream Bears → 10 Bears = 1 draw from 30-item jackpot grid</li>
-            <li>All 9 free tasks listed; ~9 Bears/day F2P floor = ~25 draws over the event</li>
-            <li>Full prize table tagged by system: Wings Fragments, Stigmata Fragments, Orb Fragments, Class Card Fragments, Totem Fragments, Potential Stones, materials</li>
-            <li>Max-1 items flagged: Green Blessing Wing Fragment, White Yaksa Trail Fragment, Ephenia Orb Fragment, Cute Pet Fragment</li>
-            <li>Re-claim mechanic, cumulative draw milestones, Bears cleared at event end — spend before close</li>
-          </ul>
-        </div>
-        <div class="log-section">
-          <span class="log-section-label">Drive batch (IMG_7038–7054)</span>
-          <ul class="log-items">
-            <li>June 3 batch (IMG_6995–7018) — all El Nath Training supplemental angles; D-22 already fully imaged ✅</li>
-            <li>IMG_7038 → Firewing wings screen (D-15, pending placement)</li>
-            <li>IMG_7044–7045 → Event Calendar Jun 2–8 (wired into D-24)</li>
-            <li>IMG_7047–7054 → Star Dream Paradise full prize table (all 30 items documented)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════ JUN 2 ═══ -->
-    <div class="log-entry" id="jun2">
-      <div class="log-header">
-        <div class="log-date">
-          <div class="day">2</div>
-          <div class="month">Jun 2026</div>
-        </div>
-        <div class="log-summary">
-          <h2>Image batch + D-22 El Nath Training
-            <a class="anchor-label" href="#jun2">#jun2</a>
-          </h2>
-          <div class="tag-row">
-            <span class="log-tag tag-new">New dossier</span>
-            <span class="log-tag tag-images">8 images placed</span>
-            <span class="log-tag tag-shop">Shop run</span>
-          </div>
-        </div>
-      </div>
-      <div class="log-body">
-        <div class="dossier-links">
-          <a class="dossier-link" href="el-nath-training.html">
-            <span class="dl-num">D-22</span>
-            <span class="dl-title">El Nath Training</span>
-            <span class="dl-sub">Weather event · Von Leon mechanics + ranking rules</span>
-          </a>
-        </div>
-        <div class="log-section">
-          <span class="log-section-label">Guide images added (8 new shots)</span>
-          <ul class="log-items">
-            <li><a href="stigmata.html">D-10 Stigmata</a> — overview, potential stones, star-up cost</li>
-            <li><a href="soul-orbs.html">D-17 Soul Orbs</a> — orb overview (Ephenia)</li>
-            <li><a href="loc-totems.html">D-12 LOC &amp; Totems</a> — all 4 targets complete ✅ (lobby, weekly rewards, totem overview, totem detail)</li>
-            <li>Running image count: 43 / ~80 shots placed · <strong>D-18 Off-Road ✅, D-12 LOC &amp; Totems ✅</strong></li>
-          </ul>
-        </div>
-        <div class="log-section">
-          <span class="log-section-label">Weekly shop run</span>
-          <ul class="log-items">
-            <li>Origin Shop: Enchanting Stone Fragments ×56, Balrog Orb ×1</li>
-            <li>Abyss Shop: Magic Solvents ×10</li>
-            <li>Guild Shop: Gold Steak Totem Fragments ×10</li>
-            <li>ANE Exchange: Magic Crystals ×5, all MC fragments (weekly limits maxed), Flying Fish Slime ×6</li>
-            <li>Off-Road Shop: Divine Moonstone ×1</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /wrap -->
+  </div>
 
   <footer class="site-footer">
     <div class="wrap">
@@ -307,16 +170,13 @@
             <li><a href="index.html">Index</a></li>
             <li><a href="index.html#catalog">Catalog</a></li>
             <li><a href="changelog.html">Change Log</a></li>
-            <li><a href="changelog.html">Log</a>
-        <a href="about.html">About</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Recent updates</h5>
+          <h5>Repository</h5>
           <ul>
-            <li><a href="changelog.html#jun4-b">Jun 4 · D-25 Reverse Pink Bean</a></li>
-            <li><a href="changelog.html#jun4-a">Jun 4 · D-23 Mini-Games, D-24 Star Dream</a></li>
-            <li><a href="changelog.html#jun2">Jun 2 · D-22 El Nath Training</a></li>
+            <li><a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener">GitHub ↗</a></li>
           </ul>
         </div>
       </div>
@@ -328,5 +188,186 @@
   </footer>
 
 <script src="whetstone.js" defer></script>
+<script>
+(function() {
+  // ── Dossier number → filename map ──────────────────────────────────────
+  var DOSSIER_MAP = {
+    '01': 'tower-of-origins',  '02': 'moon-mining',
+    '03': 'event-timeline',    '04': 'coloured-diamonds',
+    '05': 'daily-600-prestige','06': 'build',
+    '07': 'runes-abyss',       '08': 'pets',
+    '09': 'exr-cultivation',   '10': 'stigmata',
+    '11': 'dojo-tips',         '12': 'loc-totems',
+    '13': 'devour',            '14': 'class',
+    '15': 'wings-cultivation', '16': 'monster-cards',
+    '17': 'soul-orbs',         '18': 'off-road',
+    '19': 'costumes',          '20': 'dungeons',
+    '21': 'gem-cultivation',   '22': 'el-nath-training',
+    '23': 'minigames',         '24': 'star-dream-paradise',
+    '25': 'reverse-pink-bean'
+  };
+
+  // ── Tag inference from commit message ──────────────────────────────────
+  function inferTags(msg) {
+    var tags = [];
+    var m = msg.toLowerCase();
+    if (/\bd-\d+|dossier|guide|minigame|mini-game/i.test(m)) tags.push('new');
+    if (/image|img|photo|screenshot|sprite|png|jpg/i.test(m)) tags.push('images');
+    if (/shop run|origin shop|abyss shop|guild shop|ane exchange/i.test(m)) tags.push('shop');
+    if (/fix|bug|typo|correct|update|amend|tweak|revert|resolve|conflict/i.test(m)) tags.push('fix');
+    if (/nav|changelog|index|meta|deploy|push|merge|add.*link|footer/i.test(m) && tags.length === 0) tags.push('meta');
+    return tags.length ? tags : ['meta'];
+  }
+
+  var TAG_LABELS = { new: 'New content', images: 'Images', shop: 'Shop run', fix: 'Fix', meta: 'Site' };
+
+  // ── Parse dossier refs from commit message ─────────────────────────────
+  function parseDossiers(msg) {
+    var found = [];
+    var seen = {};
+    var re = /D-(\d+)/gi;
+    var m;
+    while ((m = re.exec(msg)) !== null) {
+      var num = m[1].padStart(2, '0');
+      if (!seen[num] && DOSSIER_MAP[num]) {
+        seen[num] = true;
+        found.push({ num: 'D-' + parseInt(num), file: DOSSIER_MAP[num] });
+      }
+    }
+    return found;
+  }
+
+  // ── Format date ────────────────────────────────────────────────────────
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDate(iso) {
+    var d = new Date(iso);
+    return { day: d.getDate(), month: MONTHS[d.getMonth()], year: d.getFullYear() };
+  }
+
+  // ── Slugify for anchor IDs ─────────────────────────────────────────────
+  function slug(sha) { return 'c-' + sha.slice(0, 7); }
+
+  // ── Build dossier title from filename ─────────────────────────────────
+  function dossierTitle(file) {
+    return file.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+  }
+
+  // ── Render one commit entry ────────────────────────────────────────────
+  function renderEntry(commit) {
+    var msg   = commit.commit.message;
+    var sha   = commit.sha;
+    var date  = fmtDate(commit.commit.author.date);
+    var lines = msg.split('\n');
+    var title = lines[0];
+    var body  = lines.slice(1).join('\n').trim();
+    var tags  = inferTags(msg);
+    var doss  = parseDossiers(msg);
+    var id    = slug(sha);
+
+    var tagHtml = tags.map(function(t) {
+      return '<span class="log-tag tag-' + t + '">' + (TAG_LABELS[t] || t) + '</span>';
+    }).join('');
+
+    var dossHtml = doss.length ? '<div class="dossier-links">' + doss.map(function(d) {
+      return '<a class="dossier-link" href="' + d.file + '.html">'
+        + '<span class="dl-num">' + d.num + '</span>'
+        + '<span class="dl-title">' + dossierTitle(d.file) + '</span>'
+        + '</a>';
+    }).join('') + '</div>' : '';
+
+    var bodyHtml = body ? '<div class="log-detail">' + escHtml(body) + '</div>' : '';
+
+    var shaUrl = 'https://github.com/Fro-ggy/whetstone/commit/' + sha;
+
+    return '<div class="log-entry" id="' + id + '">'
+      + '<div class="log-header">'
+        + '<div class="log-date">'
+          + '<div class="day">' + date.day + '</div>'
+          + '<div class="month">' + date.month + ' ' + date.year + '</div>'
+        + '</div>'
+        + '<div class="log-summary">'
+          + '<h2>' + escHtml(title)
+            + '<a class="sha-link" href="' + shaUrl + '" target="_blank" rel="noopener">'
+            + sha.slice(0,7) + ' ↗</a>'
+          + '</h2>'
+          + '<div class="tag-row">' + tagHtml + '</div>'
+        + '</div>'
+      + '</div>'
+      + (dossHtml || bodyHtml ? '<div class="log-body">' + dossHtml + bodyHtml + '</div>' : '')
+      + '</div>';
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // ── Cache helpers ──────────────────────────────────────────────────────
+  var CACHE_KEY = 'whs_changelog_cache';
+  var CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+
+  function loadCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var obj = JSON.parse(raw);
+      if (Date.now() - obj.ts > CACHE_TTL) return null;
+      return obj.data;
+    } catch(e) { return null; }
+  }
+
+  function saveCache(data) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch(e) {}
+  }
+
+  // ── Main fetch + render ────────────────────────────────────────────────
+  function render(commits) {
+    var feed = document.getElementById('log-feed');
+    if (!commits || !commits.length) {
+      feed.innerHTML = '<div class="log-error">No commits found.</div>';
+      return;
+    }
+
+    var html = commits.map(renderEntry).join('');
+
+    // Rate limit notice
+    html += '<p class="rate-notice">Loaded ' + commits.length + ' commits from GitHub · '
+      + '<a href="https://github.com/Fro-ggy/whetstone/commits/main" target="_blank" rel="noopener" style="color:var(--ink-mute)">full history ↗</a></p>';
+
+    feed.innerHTML = html;
+
+    // Scroll to anchor after render if hash is present
+    if (location.hash) {
+      var target = document.querySelector(location.hash);
+      if (target) { setTimeout(function() { target.scrollIntoView({ behavior: 'smooth' }); }, 50); }
+    }
+  }
+
+  function init() {
+    var cached = loadCache();
+    if (cached) { render(cached); return; }
+
+    fetch('https://api.github.com/repos/Fro-ggy/whetstone/commits?per_page=40')
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function(data) {
+        saveCache(data);
+        render(data);
+      })
+      .catch(function(err) {
+        document.getElementById('log-feed').innerHTML =
+          '<div class="log-error">Could not load commits (' + escHtml(err.message) + '). '
+          + '<a href="https://github.com/Fro-ggy/whetstone/commits/main" target="_blank" rel="noopener">View on GitHub ↗</a></div>';
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 </body>
 </html>
