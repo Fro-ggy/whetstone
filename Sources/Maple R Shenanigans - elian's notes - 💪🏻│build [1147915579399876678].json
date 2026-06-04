@@ -1,0 +1,559 @@
+{
+  "guild": {
+    "id": "1147910020776869929",
+    "name": "Maple R Shenanigans",
+    "iconUrl": "https://cdn.discordapp.com/icons/1147910020776869929/f3ec0bdc0f5439d05dfac040ebfa6849.png?size=512"
+  },
+  "channel": {
+    "id": "1147915579399876678",
+    "type": "GuildTextChat",
+    "categoryId": "1147915174758592552",
+    "category": "elian's notes",
+    "name": "\uD83D\uDCAA\uD83C\uDFFB│build",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-05-21T11:48:10.3983541-04:00",
+  "messages": [
+    {
+      "id": "1147921669218906172",
+      "type": "Default",
+      "timestamp": "2023-09-03T11:50:53.295-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Current build:\n\n0 miss at 513 mulung",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1147921667918675968",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147921667918675968/image0.jpg?ex=6a0fd29c&is=6a0e811c&hm=72b1782111f1d6c93e4496b12a17bfdf79a2fae900208d92c70a2a282ae7999e&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 267923
+        },
+        {
+          "id": "1147921668266799235",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147921668266799235/image1.jpg?ex=6a0fd29d&is=6a0e811d&hm=4a8db961f31c060f690ccb238f6910b980dd785ff3f3a79d1336b50d67ae8c9c&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 280686
+        },
+        {
+          "id": "1147921668619116544",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147921668619116544/image2.jpg?ex=6a0fd29d&is=6a0e811d&hm=1cfde69fb08cad0d70df79fb9efae153d2a5794216a8dfb25746adde5be83324&",
+          "fileName": "image2.jpg",
+          "fileSizeBytes": 285200
+        },
+        {
+          "id": "1147921668921114694",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147921668921114694/image3.jpg?ex=6a0fd29d&is=6a0e811d&hm=5f31ad3ddc4bc9a96fffee5a8c93f4c7c1e84c73a734263e925f0442f2f81d1c&",
+          "fileName": "image3.jpg",
+          "fileSizeBytes": 159424
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1147933097413840958",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:36:17.989-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Just some quick sharing on efficiency of having high hit% \n\nBefore adjustment \n\n1. My monster cards was 25/20/10 (atk guard def) \n\nWas able to clear till dojo 483 only with Hit rate of 178.5% only but.. after adjustment.. \n\n2. Adjusted \n- monster cards was 20/20/20 (atk/guard/def, one def card was still 15 \n- hit rate 220%\n- cleared dojo up to 503\n\nBoth comparison used the same pets \n\nSeruf, Eliza, Viking, goby, android, skull commander and dark goo",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1147933172890341376",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:36:35.984-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In this process, I lost about 30k atk and gained 50% hit rate",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1147933324891926558",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:37:12.224-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Pre adjusted hit rate, dojo was 483",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1147933324573151362",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147933324573151362/image0.jpg?ex=6a0fdd78&is=6a0e8bf8&hm=ec5822e07c3573462118652e1816e5933831b90304c7875724d05c3db2281f46&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 167324
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1147933412959727809",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:37:33.221-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "After adjusting cards and gained lots of hit rate, cleared till Mu Lung 503",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1147933412766793738",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147933412766793738/image0.jpg?ex=6a0fdd8d&is=6a0e8c0d&hm=51c391ed68654997ed6ba1a7be5322414f73150d400234a634ba03c8b9e045b7&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 162950
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1147933570476818502",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:38:10.776-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Current state at 513 dojo",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1147933570241921205",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147933570241921205/image0.jpg?ex=6a0fddb2&is=6a0e8c32&hm=913e6d75301c6778d7d7da7f4fea8f2ea44fd5b2af7b4a8f3e3ba45b918a91f7&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 166796
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1147937028911149127",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:51:55.331-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Additional Comparison, also at Dojo 513",
+      "author": {
+        "id": "212220823031906304",
+        "name": "zanfriege",
+        "discriminator": "0000",
+        "nickname": "Firefighter Ulam, PHD MSR",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280432387956767",
+            "name": "Thief",
+            "color": "#8189FF",
+            "position": 9
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/guilds/1147910020776869929/users/212220823031906304/avatars/71a443abd4df3c583fc9c49debdbf133.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1147937028680470549",
+          "url": "https://cdn.discordapp.com/attachments/1147915579399876678/1147937028680470549/image.png?ex=6a0fe0eb&is=6a0e8f6b&hm=c1b3bdb57cd890c9e80bec6e06c315ce0379e5b630b750b2839634b8626f7515&",
+          "fileName": "image.png",
+          "fileSizeBytes": 58951
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1161858035816337428",
+      "type": "Default",
+      "timestamp": "2023-10-11T22:49:02.017-04:00",
+      "timestampEdited": "2023-10-11T22:49:11.497-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**__Stuff that affect initial rage__**\nAdd self initial rage (max +11)\n- Pet (seruf) up to +3 at +9\n- Wings (exo) +1 at +3\n- Wings (green) +1 at +3\n- Wings (flower) +1 at +5\n- Wings (upcoming thorns) +1 at +3\n- Wings (upcoming feathers) +1 at +3\n- Stigma (prom) +1 at +3\n- Stigma (vampire) up to +2 at +5\n\nReduce enemy initial rage (max -8)\n- Wings (glory) -1 at +7\n- Wings (green) -1 at +5\n- Wings (flower) -1 at +3\n- Wings (upcoming thorns) -1 at +5\n- Wings (upcoming feathers) -1 at +5\n- Stigma (prom) up to -2 at +5\n- Stigma (vampire) -1 at +3\n\n**__Stuff that affect rage gain__**\nAdd self rage\n- Pet (viking) +1 on auto 4\n- Pet (cornian) +1 on auto 4 (& allies)\n- Pet (birk) +3 every 20s\n\nReduce reduction of self rage\n- Pet (eliza) up to -3 at +13\n\nReduce enemy rage\n- Pet (brexton) -1 on auto 3\n\nCredits to @boom",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "697456568886624387",
+          "name": "boom.boy.",
+          "discriminator": "0000",
+          "nickname": "boom",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/697456568886624387/1f524358bd8de1532f963e7a593bd796.png?size=512"
+        }
+      ],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 8
+}

@@ -1,0 +1,514 @@
+{
+  "guild": {
+    "id": "1147910020776869929",
+    "name": "Maple R Shenanigans",
+    "iconUrl": "https://cdn.discordapp.com/icons/1147910020776869929/f3ec0bdc0f5439d05dfac040ebfa6849.png?size=512"
+  },
+  "channel": {
+    "id": "1149173783760998531",
+    "type": "GuildTextChat",
+    "categoryId": "1147915174758592552",
+    "category": "elian's notes",
+    "name": "\uD83E\uDD11│devour-for-everything",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-05-21T11:49:14.9939197-04:00",
+  "messages": [
+    {
+      "id": "1149174328739512340",
+      "type": "Default",
+      "timestamp": "2023-09-06T22:48:30.598-04:00",
+      "timestampEdited": "2023-09-07T04:28:57.705-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "In mandarin. Cause the English is too long and can’t see.\n\nDevour extra maxed advancement SR SSR UR FULL PETS -> level 160 \n\nReconstruct for Stigmata extra fragments -> level 150 and server day 78\n\nFire bird for extra wings fragment -> lvl 162 and server day 71\n\nDevour for orbs -> lvl 172 and 99th day",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1149174328517218425",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1149174328517218425/image0.jpg?ex=6a106cbe&is=6a0f1b3e&hm=2c24539c4383b2c7b29d54595709b32c2f17421650cbdd12a8cdc3972566c50f&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 194589
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1149261425194303569",
+      "type": "Default",
+      "timestamp": "2023-09-07T04:34:36.011-04:00",
+      "timestampEdited": "2023-09-07T10:30:24.767-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Devour opens when you’re at level 160\n\nHow does Devour or creature work? \n\nOnly pets that reached +13, their dupes can be devoured. (Which means any extra copies of that +13 SSR SR UR can be devoured) \n\nAfter maxing the advancement of all your pets, you find out that hey I have spare SSR SR UR lying around, what can I do? Since my pets are all +13? \n\nThe function of devour is to devour the extra pets you have in your bag to gain stats",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1149261424732934195",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1149261424732934195/image0.jpg?ex=6a10151b&is=6a0ec39b&hm=e658fcde52dc124277c44220affeb214c026c79291cf961c1fce81b8030dbb47&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 392338
+        },
+        {
+          "id": "1149261425022345216",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1149261425022345216/image1.jpg?ex=6a10151b&is=6a0ec39b&hm=2ca0ced448abd5d8e072a859acc27faccdcaf958eff9117eaf8c7d942c3b6ebb&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 234268
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1149261509571133490",
+      "type": "Default",
+      "timestamp": "2023-09-07T04:34:56.128-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1149261508946186311",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1149261508946186311/image.png?ex=6a10152f&is=6a0ec3af&hm=779768cd0995d16a378a2b37b98d40df0eb832df9a34d99f53642d40a9bc863e&",
+          "fileName": "image.png",
+          "fileSizeBytes": 770788
+        },
+        {
+          "id": "1149261509256556604",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1149261509256556604/image.png?ex=6a101530&is=6a0ec3b0&hm=85182525e39043eb67cc6351fb14c30b0d9e887438f88d68f163f90725b49c4c&",
+          "fileName": "image.png",
+          "fileSizeBytes": 671294
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1149261633487642704",
+      "type": "Default",
+      "timestamp": "2023-09-07T04:35:25.672-04:00",
+      "timestampEdited": "2023-09-07T04:37:55.264-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "The creature has 2 different devour. \n\n1 for SSR / SR\nSSR : 50 EXP\nSR : 10 EXP\n\nThe other for UR\nMainly focusing on skill bonus such as shield, stuns, atk and def bonuses at later part \n\nBoth with different effects and attribute bonuses",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1156582755761659935",
+      "type": "Default",
+      "timestamp": "2023-09-27T09:26:57.242-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Some minor updates to orb devour",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1156582755539353610",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1156582755539353610/image0.jpg?ex=6a1059a1&is=6a0f0821&hm=11780b953cd6ef68cb81a7c04a1eef327f224e5eca1121a93318c194e1635721&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 37299
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1162063497434251374",
+      "type": "Default",
+      "timestamp": "2023-10-12T12:25:27.884-04:00",
+      "timestampEdited": "2023-10-12T12:25:39.659-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Stigmata Devour, estimate gains from 1x Orange Stigmata\nBefore on Left, After on Right",
+      "author": {
+        "id": "212220823031906304",
+        "name": "zanfriege",
+        "discriminator": "0000",
+        "nickname": "Firefighter Ulam, PHD MSR",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280432387956767",
+            "name": "Thief",
+            "color": "#8189FF",
+            "position": 9
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/guilds/1147910020776869929/users/212220823031906304/avatars/71a443abd4df3c583fc9c49debdbf133.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1162063497190973552",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1162063497190973552/image.png?ex=6a0fdab7&is=6a0e8937&hm=3c70c366c5417be2dea5540ee7aed86055f1ae9a475ba733c204fbcab54e28ec&",
+          "fileName": "image.png",
+          "fileSizeBytes": 46416
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1162188368487141406",
+      "type": "Default",
+      "timestamp": "2023-10-12T20:41:39.463-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Next Unlockable Mask (Top Right of Image)",
+      "author": {
+        "id": "212220823031906304",
+        "name": "zanfriege",
+        "discriminator": "0000",
+        "nickname": "Firefighter Ulam, PHD MSR",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280432387956767",
+            "name": "Thief",
+            "color": "#8189FF",
+            "position": 9
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/guilds/1147910020776869929/users/212220823031906304/avatars/71a443abd4df3c583fc9c49debdbf133.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1162188368281600141",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1162188368281600141/Screenshot_20231013_084052.jpg?ex=6a104f03&is=6a0efd83&hm=a6107cc9d619c69ea3399f263983ead48dd9fa3481762bc91099ef4f6a119b8a&",
+          "fileName": "Screenshot_20231013_084052.jpg",
+          "fileSizeBytes": 38831
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1162188516034359388",
+      "type": "Default",
+      "timestamp": "2023-10-12T20:42:14.641-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "30 Yellow Stigmata Value",
+      "author": {
+        "id": "212220823031906304",
+        "name": "zanfriege",
+        "discriminator": "0000",
+        "nickname": "Firefighter Ulam, PHD MSR",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280432387956767",
+            "name": "Thief",
+            "color": "#8189FF",
+            "position": 9
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/guilds/1147910020776869929/users/212220823031906304/avatars/71a443abd4df3c583fc9c49debdbf133.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1162188515346493501",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1162188515346493501/Screenshot_20231013_074620.jpg?ex=6a104f26&is=6a0efda6&hm=be3ea9ff480a28fd58f8d926f3534a631e84ae0c3aa70b2f621d8b9588185404&",
+          "fileName": "Screenshot_20231013_074620.jpg",
+          "fileSizeBytes": 92216
+        },
+        {
+          "id": "1162188515698810940",
+          "url": "https://cdn.discordapp.com/attachments/1149173783760998531/1162188515698810940/Screenshot_20231013_074632.jpg?ex=6a104f26&is=6a0efda6&hm=ff6009a59de0941666f417920b6d389f81501d080d5b3e773403fbbb665efd66&",
+          "fileName": "Screenshot_20231013_074632.jpg",
+          "fileSizeBytes": 81535
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 8
+}

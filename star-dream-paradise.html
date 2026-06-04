@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Star Dream Paradise · Whetstone</title>
+<meta name="description" content="Dossier 24: Star Dream Paradise gacha event — daily task mechanics, full 30-item prize table, re-claim system, and cumulative draw milestones." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Prize grid */
+  .prize-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+  }
+  @media (max-width: 600px) { .prize-grid { grid-template-columns: repeat(2, 1fr); } }
+  .prize-cell {
+    background: var(--surface);
+    padding: 12px 14px;
+  }
+  .prize-cell .item-name { font-size: 13px; color: var(--paper); font-weight: 600; margin-bottom: 3px; }
+  .prize-cell .item-qty { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); }
+  .prize-cell .item-max { font-size: 11px; color: var(--ink-mute); }
+  .prize-cell.highlight { background: linear-gradient(180deg, rgba(232,158,61,0.07), var(--surface) 60%); }
+
+  /* Category chips on prize cells */
+  .prize-cat {
+    font-size: 9px; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 1px 5px; border-radius: 2px; margin-bottom: 6px; display: inline-block;
+  }
+  .cat-wings { background: rgba(74,179,168,0.15); color: var(--teal); }
+  .cat-stig  { background: rgba(232,158,61,0.12); color: var(--amber); }
+  .cat-orbs  { background: rgba(120,80,200,0.15); color: #b39ddb; }
+  .cat-class { background: rgba(100,160,80,0.15); color: #a5d6a7; }
+  .cat-totem { background: rgba(200,100,80,0.15); color: #ef9a9a; }
+  .cat-mat   { background: rgba(100,140,220,0.15); color: #90caf9; }
+  .cat-misc  { background: rgba(150,150,150,0.1); color: var(--ink-mute); }
+
+  /* Task table */
+  .task-table { border: 1px solid var(--line); width: 100%; border-collapse: collapse; font-size: 13px; }
+  .task-table th {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--amber); text-align: left;
+    padding: 8px 12px; border-bottom: 1px solid var(--line); background: var(--bg-2);
+  }
+  .task-table td { padding: 9px 12px; border-bottom: 1px solid var(--line-soft); color: var(--ink); }
+  .task-table tr:last-child td { border-bottom: none; }
+  .task-table .t-easy { color: var(--teal); font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+  .task-table .t-gated { color: #ef9a9a; font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+
+  /* Flow diagram */
+  .flow { display: flex; align-items: center; gap: 0; flex-wrap: wrap; margin: 18px 0; }
+  .flow-step {
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 10px 16px; font-size: 13px; color: var(--paper);
+    flex: 1; min-width: 120px; text-align: center;
+  }
+  .flow-arrow {
+    color: var(--amber); font-size: 18px; padding: 0 6px; flex-shrink: 0;
+  }
+  @media (max-width: 580px) {
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+  }
+
+  /* Cumulative milestones */
+  .milestone-row {
+    display: grid; grid-template-columns: 80px 1fr;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: center;
+  }
+  .milestone-row:last-child { border-bottom: none; }
+  .ms-count {
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 24px;
+    color: var(--amber); text-align: center; padding: 12px 8px;
+    background: var(--bg-2); border-right: 1px solid var(--line-soft);
+  }
+  .ms-reward { padding: 10px 16px; font-size: 13px; color: var(--ink); }
+  .ms-reward strong { color: var(--paper); display: block; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span class="wordmark">Whet<em>stone</em></span></a>
+      <div class="nav-links">
+        <a href="index.html">Index</a>
+        <a href="index.html#catalog" class="active">Guides</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap wrap-narrow">
+    <div class="breadcrumb">
+      <a href="index.html">Whetstone</a><span class="sep">/</span>
+      <a href="index.html#catalog">Guides</a><span class="sep">/</span>
+      <span>Star Dream Paradise</span>
+    </div>
+  </div>
+
+  <header class="article-head">
+    <div class="wrap wrap-narrow">
+      <div class="dossier">Dossier No. 24</div>
+      <h1>Star Dream <em>Paradise</em></h1>
+      <p class="deck">Daily task lottery event — complete tasks to earn Star Dream Bears, spend 10 Bears per draw, work through a 30-item prize grid covering Wings, Stigmata, Orbs, Class Cards, and Totems.</p>
+      <div class="article-meta">
+        <span><strong>Observed</strong> Jun 4, 2026 · 27 days remaining</span>
+        <span><strong>Source</strong> In-game screenshots · Drive batch IMG_7038–7054</span>
+        <span><strong>Filed</strong> 2026</span>
+        <span><strong>Read</strong> 4 min</span>
+      </div>
+    </div>
+    <div class="hero-float" aria-hidden="true">⭐</div>
+  </header>
+
+  <article class="wrap wrap-narrow article-body">
+
+    <p>Star Dream Paradise is a daily-task lottery event lasting approximately 28 days. The core loop is simple: complete daily tasks to collect Star Dream Bears, spend 10 Bears per draw, and work through a 30-slot jackpot grid until each item reaches its obtainment limit and is removed. The prize pool covers a wide range of upgrade materials — making this worth playing daily regardless of which upgrade system you are currently pushing.</p>
+
+    <div class="skeptic">
+      <span class="label">Event window</span>
+      Screenshots captured Jun 4, 2026 with ~27 days remaining. The event resets daily at 06:00. Prize table and task types are documented from observed screenshots — exact quantities visible in the full prize table below.
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="guide-section" id="mechanics">
+      <div class="section-head">
+        <div class="section-num">§ 01</div>
+        <h2 class="section-title">How it <em>works</em></h2>
+        <div class="section-tag">Core loop</div>
+      </div>
+
+      <div class="flow">
+        <div class="flow-step"><strong>Daily tasks</strong><br><span style="font-size:12px;color:var(--ink-mute)">Complete to earn Bears</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>Star Dream Bears</strong><br><span style="font-size:12px;color:var(--ink-mute)">1 Bear per completed task</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>Draw (10 Bears)</strong><br><span style="font-size:12px;color:var(--ink-mute)">One roll from 30-item grid</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>Prize</strong><br><span style="font-size:12px;color:var(--ink-mute)">3.33% per slot</span></div>
+      </div>
+
+      <div class="card" style="margin-top:0">
+        <h3>Jackpot grid rules</h3>
+        <p class="lede" style="margin-bottom:12px">The grid contains 30 items. Each slot has a flat 3.33% probability per draw. When an item reaches its maximum obtainment limit it is permanently removed from the grid, improving the odds for remaining items.</p>
+        <ul style="font-size:14px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.7">
+          <li>Most items have a limit of 2 — once you obtain the same item twice, it is removed.</li>
+          <li>Scarce items (Wing Fragments, Orb Fragment, Pet Fragment) appear to be limited at 1.</li>
+          <li>If you hold unclaimed cumulative milestones when the event ends, they are reissued by mail.</li>
+          <li>Unused Star Dream Bears are recovered (cleared) when the event ends — spend them before it closes.</li>
+        </ul>
+      </div>
+
+      <div class="figure-pair" style="margin-top:18px">
+        <figure class="figure expandable">
+          <img src="img/event-star-dream/rules.jpg" alt="Star Dream Paradise rules popup showing 30-grid jackpot mechanics, Star Dream Bear draw cost, and max obtainment limits" onerror="this.closest('.figure').style.display='none'" />
+          <figcaption>Event rules — 10 Bears per draw, 30-grid jackpot, max limits per item.</figcaption>
+        </figure>
+        <figure class="figure expandable">
+          <img src="img/event-star-dream/cumulative-draws.jpg" alt="Cumulative draw progress tab showing milestone reward thresholds and re-claim mechanic" onerror="this.closest('.figure').style.display='none'" />
+          <figcaption>Cumulative draw tab — milestone rewards unlock at set total draw counts.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- DAILY TASKS -->
+    <section class="guide-section" id="tasks">
+      <div class="section-head">
+        <div class="section-num">§ 02</div>
+        <h2 class="section-title">Daily <em>tasks</em></h2>
+        <div class="section-tag">Reset at 06:00 · Bear source</div>
+      </div>
+
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 16px">Tasks vary by day. Two task sets were observed. Each task completed awards 1 Star Dream Bear. All standard tasks are free-to-complete; the "Top up" and "Consume diamonds" tasks require spending.</p>
+
+      <table class="task-table">
+        <thead>
+          <tr><th>Task</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Team up with Guild members or friends (co-op)</td><td class="t-easy">Free</td></tr>
+          <tr><td>Participate in Grand Arena 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Like any player 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Complete Quick Battle 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Guild Sign-in 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Challenge World Boss 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Complete Adventurer Training Field 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Complete Expedition Forces 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Receive guests 1 time</td><td class="t-easy">Free</td></tr>
+          <tr><td>Consume 100 red or blue diamonds</td><td class="t-gated">Spend required</td></tr>
+          <tr><td>Top up any amount</td><td class="t-gated">Purchase required</td></tr>
+        </tbody>
+      </table>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Re-claim</strong>
+        If a daily task expires before you claim it, the unclaimed reward moves to the Re-claim tab. Claiming from Re-claim costs <strong>Star Dream Lollipops</strong>. You earn 1 Lollipop per VIP Prestige point gained during the event. Stay on top of your daily tasks to avoid needing to spend Lollipops.
+      </div>
+
+      <div class="figure-pair" style="margin-top:16px">
+        <figure class="figure expandable">
+          <img src="img/event-star-dream/tasks-set1.jpg" alt="Star Dream Paradise daily tasks — set 1: Grand Arena, World Boss, Quick Battle, Guild Sign-in, Like player, team up" onerror="this.closest('.figure').style.display='none'" />
+          <figcaption>Task set A — social and combat tasks, all free.</figcaption>
+        </figure>
+        <figure class="figure expandable">
+          <img src="img/event-star-dream/tasks-set2.jpg" alt="Star Dream Paradise daily tasks — set 2: Adventurer Training Field, Expedition Forces, Receive guests, Top up, Consume diamonds" onerror="this.closest('.figure').style.display='none'" />
+          <figcaption>Task set B — includes spend-gated tasks (top up, consume diamonds).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRIZE TABLE -->
+    <section class="guide-section" id="prizes">
+      <div class="section-head">
+        <div class="section-num">§ 03</div>
+        <h2 class="section-title">Full prize <em>table</em></h2>
+        <div class="section-tag">30 items · 3.33% each · limits apply</div>
+      </div>
+
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 16px">All 30 grid items documented from in-game screenshots. Each starts at 3.33% probability. Items with a max of 1 are removed after a single win; items with max 2 are removed after being obtained twice.</p>
+
+      <div class="prize-grid">
+
+        <!-- Wings -->
+        <div class="prize-cell highlight">
+          <span class="prize-cat cat-wings">Wings</span>
+          <div class="item-name">Green Blessing Wing Fragment</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 1</div>
+        </div>
+        <div class="prize-cell highlight">
+          <span class="prize-cat cat-wings">Wings</span>
+          <div class="item-name">Light Wing</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell highlight">
+          <span class="prize-cat cat-wings">Wings</span>
+          <div class="item-name">Thunder Wing</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell highlight">
+          <span class="prize-cat cat-wings">Wings</span>
+          <div class="item-name">Pure White Wing</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+
+        <!-- Stigmata -->
+        <div class="prize-cell">
+          <span class="prize-cat cat-stig">Stigmata</span>
+          <div class="item-name">White Yaksa Trail Fragment</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 1</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-stig">Stigmata</span>
+          <div class="item-name">ATK Potential Stone</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-stig">Stigmata</span>
+          <div class="item-name">DEF Potential Stone</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-stig">Stigmata</span>
+          <div class="item-name">HP Potential Stone</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+
+        <!-- Soul Orbs -->
+        <div class="prize-cell">
+          <span class="prize-cat cat-orbs">Soul Orbs</span>
+          <div class="item-name">Ephenia Orb Fragment</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 1</div>
+        </div>
+
+        <!-- Class -->
+        <div class="prize-cell">
+          <span class="prize-cat cat-class">Class</span>
+          <div class="item-name">Class Card Optional Fragment</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-class">Class</span>
+          <div class="item-name">Enhancement Core (Random)</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+
+        <!-- Totems -->
+        <div class="prize-cell">
+          <span class="prize-cat cat-totem">Totems</span>
+          <div class="item-name">Golden Totem Fragment</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-totem">Totems</span>
+          <div class="item-name">Totem Essence</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-totem">Totems</span>
+          <div class="item-name">Totem Fragment</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+
+        <!-- Upgrade materials -->
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Enchanting Stone</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Divine Moon Stone</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Magic Crystal</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Magic Solvent</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Abyss Pass</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Soul Crystal</div>
+          <div class="item-qty">×1,000 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Star Soul</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Star Source</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-mat">Materials</span>
+          <div class="item-name">Sewing Wand</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+
+        <!-- Chests / misc -->
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Chest</span>
+          <div class="item-name">Specified Fragment Cute Pet</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 1</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Chest</span>
+          <div class="item-name">Colorful Tinder Chest</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Chest</span>
+          <div class="item-name">Potential Stone Chest</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Chest</span>
+          <div class="item-name">Lucky Gem Giftpack</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Misc</span>
+          <div class="item-name">Monster Certification</div>
+          <div class="item-qty">×1 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Event</span>
+          <div class="item-name">Cake</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+        <div class="prize-cell">
+          <span class="prize-cat cat-misc">Event</span>
+          <div class="item-name">Drinks</div>
+          <div class="item-qty">×2 per win</div>
+          <div class="item-max">Max: 2</div>
+        </div>
+
+      </div>
+
+      <div class="caveat" style="margin-top:16px">
+        <strong class="lab">High-value targets</strong>
+        The four max-1 items are the scarcest: <strong>Green Blessing Wing Fragment</strong>, <strong>White Yaksa Trail Fragment</strong>, <strong>Ephenia Orb Fragment</strong>, and <strong>Specified Fragment Cute Pet</strong>. Once obtained, they leave the pool and your odds on remaining items improve. If you are building any of these systems, play daily — these fragments would otherwise cost coloured diamonds in the shop.
+      </div>
+
+      <div class="figure-pair" style="margin-top:16px">
+        <figure class="figure expandable">
+          <img src="img/event-star-dream/prize-table-1.jpg" alt="Star Dream Paradise prize table page 1 — Wing fragments and Orb fragment" onerror="this.closest('.figure').style.display='none'" />
+          <figcaption>Prize table — Wing and Orb fragments.</figcaption>
+        </figure>
+        <figure class="figure expandable">
+          <img src="img/event-star-dream/prize-table-2.jpg" alt="Star Dream Paradise prize table page 2 — Potential Stones, Class Card fragments" onerror="this.closest('.figure').style.display='none'" />
+          <figcaption>Prize table — Potential Stones and Class Card fragments.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CUMULATIVE DRAWS -->
+    <section class="guide-section" id="cumulative">
+      <div class="section-head">
+        <div class="section-num">§ 04</div>
+        <h2 class="section-title">Cumulative draw <em>milestones</em></h2>
+        <div class="section-tag">Bonus rewards at fixed draw counts</div>
+      </div>
+
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 14px">In addition to the jackpot prizes, cumulative draw milestones award bonus items. Milestones that expire unclaimed are sent by mail after the event ends. The specific milestone rewards were not fully visible in the screenshot — the confirmed threshold numbers are below.</p>
+
+      <div class="card" style="padding:0;border:1px solid var(--line)">
+        <div class="milestone-row">
+          <div class="ms-count">30</div>
+          <div class="ms-reward"><strong>Milestone at 30 draws</strong>Bonus reward — exact item not captured</div>
+        </div>
+        <div class="milestone-row">
+          <div class="ms-count">50</div>
+          <div class="ms-reward"><strong>Milestone at 50 draws</strong>Bonus reward — exact item not captured</div>
+        </div>
+        <div class="milestone-row">
+          <div class="ms-count">600</div>
+          <div class="ms-reward"><strong>Milestone at 600</strong>Bonus reward (currency figure — may be a points reward rather than draw count)</div>
+        </div>
+        <div class="milestone-row">
+          <div class="ms-count">500</div>
+          <div class="ms-reward"><strong>Milestone at 500</strong>Bonus reward — exact item not captured</div>
+        </div>
+        <div class="milestone-row">
+          <div class="ms-count">80K</div>
+          <div class="ms-reward"><strong>Milestone at 80,000</strong>Large milestone — likely a currency or point total rather than draw count</div>
+        </div>
+        <div class="milestone-row">
+          <div class="ms-count">100</div>
+          <div class="ms-reward"><strong>Milestone at 100 draws</strong>Bonus reward — exact item not captured</div>
+        </div>
+        <div class="milestone-row">
+          <div class="ms-count">800</div>
+          <div class="ms-reward"><strong>Milestone at 800</strong>Bonus reward — exact item not captured</div>
+        </div>
+      </div>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Note on milestone numbers</strong>
+        The numbers 30, 50, 600, 500, 80K, 100, 800 appear consistently across multiple prize table screenshots as a recurring UI row. They may represent draw counts, cumulative event points, or a combined reward track rather than purely draw milestones. Confirm in-game by tapping the Cumulative Draw tab.
+      </div>
+    </section>
+
+    <!-- STRATEGY -->
+    <section class="guide-section" id="strategy">
+      <div class="section-head">
+        <div class="section-num">§ 05</div>
+        <h2 class="section-title">Daily <em>priority</em></h2>
+        <div class="section-tag">Maximising Bears per day</div>
+      </div>
+
+      <div class="card">
+        <h3>Free-task floor</h3>
+        <p class="lede">Nine of the eleven observed task types are free — they require only routine daily activity (Grand Arena check-in, World Boss challenge, Guild Sign-in, Quick Battle, etc.). Completing all free tasks before reset gives a reliable floor of approximately <strong>9 Bears per day</strong> without spending anything.</p>
+        <p style="font-size:13px;color:var(--ink-soft);margin:12px 0 0;">At 10 Bears per draw, a full free run over ~28 days yields approximately 25 draws minimum, covering most of the jackpot grid once. The "Top up any amount" and "Consume 100 diamonds" tasks add 1–2 Bears each for players who spend, but skipping them does not significantly change your total grid coverage.</p>
+      </div>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Don't hold Bears</strong>
+        Unused Bears are <em>cleared</em> when the event ends, not returned. Spend Bears as you accumulate them — there is no advantage to holding them, and the jackpot odds improve as items leave the grid, so earlier draws face worse odds than later draws.
+      </div>
+    </section>
+
+    <nav class="article-foot-nav">
+      <a class="prev" href="minigames.html"><div class="dir">← Previous</div><div class="title">D-23 · Mini-Games Reference</div></a>
+      <a class="next" href="index.html#catalog"><div class="dir">Next →</div><div class="title">Back to Catalog</div></a>
+    </nav>
+
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="colophon">
+          <span class="wm">Whet<em>stone</em></span>
+          <p>Unofficial field dispatches for MapleStory R: Evolution. Independent, reader-funded, and verified before posted.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Sections</h5>
+          <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Recent dossiers</h5>
+          <ul>
+            <li><a href="minigames.html">D-23 · Mini-Games Reference</a></li>
+            <li><a href="star-dream-paradise.html">D-24 · Star Dream Paradise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© Whetstone 2026 · No affiliation with Nexon</span>
+        <a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener" style="font-size:12px;color:var(--ink-mute);text-decoration:none;letter-spacing:.03em">GitHub ↗</a>
+        <span>Dossier No. 24</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="whetstone.js" defer></script>
+</body>
+</html>

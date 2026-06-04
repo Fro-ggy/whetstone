@@ -1,0 +1,215 @@
+{
+  "guild": {
+    "id": "1147910020776869929",
+    "name": "Maple R Shenanigans",
+    "iconUrl": "https://cdn.discordapp.com/icons/1147910020776869929/f3ec0bdc0f5439d05dfac040ebfa6849.png?size=512"
+  },
+  "channel": {
+    "id": "1147915752922435700",
+    "type": "GuildTextChat",
+    "categoryId": "1147915174758592552",
+    "category": "elian's notes",
+    "name": "\uD83D\uDCB8│how-to-use-coloured-dias",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-05-21T11:45:18.7556659-04:00",
+  "messages": [
+    {
+      "id": "1147928446148816906",
+      "type": "Default",
+      "timestamp": "2023-09-03T12:17:49.041-04:00",
+      "timestampEdited": "2023-09-08T10:09:29.538-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How does CD (coloured Dias) works? \n\nThey work as alternate currency to purchase in game packs, instead of paying so much to App Store, you can pay less! Here are the rates below \n\n1 CD = 1 USD \n\n1 CD = 1.48 SGD\n3 CD = 4.48 SGD\n5 CD = 6.98 SGD\n10 CD = 12.98 SGD\n15 CD = 20.98 SGD\n20 CD = 28.98 SGD\n26 CD = 35.98 SGD\n50 CD = 66.98 SGD\n100 CD = 139.98 SGD",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1147928445926522940",
+          "url": "https://cdn.discordapp.com/attachments/1147915752922435700/1147928445926522940/image0.jpg?ex=6a0fd8ec&is=6a0e876c&hm=38b43efb0b4ce6f5eea59d4901993bbc5a5eda190f6d89d22484a011eb89bb2a&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 57417
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "▪️",
+            "code": "black_small_square",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/25aa.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "277832943873949696",
+              "name": ".ascen",
+              "discriminator": "0000",
+              "nickname": "acen",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/277832943873949696/bc640d5ea813946e0916a1d40d2ac19b.png?size=512"
+            },
+            {
+              "id": "584449248935018516",
+              "name": "elian4245",
+              "discriminator": "0000",
+              "nickname": "Elian (Top 50)",
+              "color": "#F1C40F",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC8E",
+            "code": "gem",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48e.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "277832943873949696",
+              "name": ".ascen",
+              "discriminator": "0000",
+              "nickname": "acen",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/277832943873949696/bc640d5ea813946e0916a1d40d2ac19b.png?size=512"
+            },
+            {
+              "id": "584449248935018516",
+              "name": "elian4245",
+              "discriminator": "0000",
+              "nickname": "Elian (Top 50)",
+              "color": "#F1C40F",
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148217154840297524",
+      "type": "Default",
+      "timestamp": "2023-09-04T07:25:02.557-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How to buy coloured diamonds? \n\nCheck out #\uD83D\uDC8E│lobang",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 2
+}

@@ -1,0 +1,289 @@
+{
+  "guild": {
+    "id": "1147910020776869929",
+    "name": "Maple R Shenanigans",
+    "iconUrl": "https://cdn.discordapp.com/icons/1147910020776869929/f3ec0bdc0f5439d05dfac040ebfa6849.png?size=512"
+  },
+  "channel": {
+    "id": "1150231291606872134",
+    "type": "GuildTextChat",
+    "categoryId": "1147915174758592552",
+    "category": "elian's notes",
+    "name": "\uD83E\uDDDB│costume-guide",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-05-21T11:51:34.0003911-04:00",
+  "messages": [
+    {
+      "id": "1150231328986505246",
+      "type": "Default",
+      "timestamp": "2023-09-09T20:48:39.095-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "SET - COSTUME | BUFF\nARMOUR\nArmor - Exoskeleton | Petrify Res 5% (Season 1)\nHawaiian - Vacation Shirt | Stun Res 5% (Season 2)\nBritish - Casual Coat | Stun Res 5% (Season ?) \nProm - Silver Button Wing Coat | Hex Time Red 5% (Season ?)\n\nHAIR\nArmor - Unrestrained Sticker | Petrify Res 2.5% (Season 1)\nHawaiian - Short Hair | Stun Res 2.5% (Season 2)\nBritish - Blonde Curly Hair | Stun Res 2.5% (Season ?) \nProm - Chestnut Long Hair | Hex Time Red 2.5% (Season ?)",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1150233390616948827",
+      "type": "Default",
+      "timestamp": "2023-09-09T20:56:50.626-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi guys welcome to the rough guide for costumes, to prevent unnecessary spendings for it, do take a look over here! All costumes resistance stats do not require any star up, JUST UNLOCKING IT WILL DO!!! \n\nHawaiian season notable stats - Stun Res\n\nBritish season -> stun res\n\nAmazing ball season -> hex time reduction \n\nBattle armor season -> petrify res",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1150233388289097728",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233388289097728/image0.jpg?ex=6a105292&is=6a0f0112&hm=88ce9f4ad96fa257267978f747fe7d22b29c937f385898c5a67a5f2a2c82ce7f&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 46361
+        },
+        {
+          "id": "1150233388523995197",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233388523995197/image1.jpg?ex=6a105292&is=6a0f0112&hm=c89d06f9da370ed8a45dd54ed768a89f01b695d7089ee66fece6e61ea68cadb2&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 51069
+        },
+        {
+          "id": "1150233388830175232",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233388830175232/image2.jpg?ex=6a105292&is=6a0f0112&hm=9d94d6862aaf80c13162ead7a7abc635372081d2c1bc69e9719af87c1b87b2d5&",
+          "fileName": "image2.jpg",
+          "fileSizeBytes": 37142
+        },
+        {
+          "id": "1150233389216039033",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233389216039033/image3.jpg?ex=6a105292&is=6a0f0112&hm=cb5d726327b50b10320c893da59e08b8fe74ae1b3d9798e2311c145a07b14589&",
+          "fileName": "image3.jpg",
+          "fileSizeBytes": 44819
+        },
+        {
+          "id": "1150233389471907891",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233389471907891/image4.jpg?ex=6a105292&is=6a0f0112&hm=5d601e3b4a676386aa2a980e553963715e1cdb763d3ef1b630bad639404ca4f8&",
+          "fileName": "image4.jpg",
+          "fileSizeBytes": 44380
+        },
+        {
+          "id": "1150233389853585449",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233389853585449/image5.jpg?ex=6a105292&is=6a0f0112&hm=69aae6ac516cacaa8fe5b7c7dcf2959c20a68ee220a42a423bea26f699c583b2&",
+          "fileName": "image5.jpg",
+          "fileSizeBytes": 40907
+        },
+        {
+          "id": "1150233390147174520",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233390147174520/image6.jpg?ex=6a105292&is=6a0f0112&hm=ee669ac6aaa4232dd560725e51e3e8c73c2ff42106829c32725402f70f0c9169&",
+          "fileName": "image6.jpg",
+          "fileSizeBytes": 51112
+        },
+        {
+          "id": "1150233390403043418",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1150233390403043418/image7.jpg?ex=6a105292&is=6a0f0112&hm=64d1f4781bd1cb88bc92703478adfcde2c6fe2ce2e95f0c7885f0eb93b3c7e7d&",
+          "fileName": "image7.jpg",
+          "fileSizeBytes": 43956
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1155010630223401001",
+      "type": "Default",
+      "timestamp": "2023-09-23T01:19:53.305-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1155010627912355870",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1155010627912355870/IMG_4578.png?ex=6a0fe778&is=6a0e95f8&hm=43ec6a2998a955472667eaa36745e7c811907f3f8a7c831dd85d956fa5bfec42&",
+          "fileName": "IMG_4578.png",
+          "fileSizeBytes": 937135
+        },
+        {
+          "id": "1155010628654739606",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1155010628654739606/IMG_4577.png?ex=6a0fe778&is=6a0e95f8&hm=ea97b95fc961a3e143d2dd1e5fc20430e88dfc8ccc5428c31af1906ca344382b&",
+          "fileName": "IMG_4577.png",
+          "fileSizeBytes": 880157
+        },
+        {
+          "id": "1155010629124493363",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1155010629124493363/IMG_4576.png?ex=6a0fe779&is=6a0e95f9&hm=c95d8bd16d4218c86d6559cd200635fba861c36d975d269706eaaaed15d95054&",
+          "fileName": "IMG_4576.png",
+          "fileSizeBytes": 1111676
+        },
+        {
+          "id": "1155010629531357235",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1155010629531357235/IMG_4574.png?ex=6a0fe779&is=6a0e95f9&hm=d179b1dc33fb5d5d367acb78fd8faaf81e2586d6edc1b78837ec46321d6e59ef&",
+          "fileName": "IMG_4574.png",
+          "fileSizeBytes": 1216706
+        },
+        {
+          "id": "1155010629913030737",
+          "url": "https://cdn.discordapp.com/attachments/1150231291606872134/1155010629913030737/IMG_4575.png?ex=6a0fe779&is=6a0e95f9&hm=82f8fe9eb8cda851251cb4dc713053c1d5c668fd3793c193eccadd8f8f6310fa&",
+          "fileName": "IMG_4575.png",
+          "fileSizeBytes": 1117378
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 3
+}

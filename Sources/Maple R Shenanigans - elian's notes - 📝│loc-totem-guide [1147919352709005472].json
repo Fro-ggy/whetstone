@@ -1,0 +1,664 @@
+{
+  "guild": {
+    "id": "1147910020776869929",
+    "name": "Maple R Shenanigans",
+    "iconUrl": "https://cdn.discordapp.com/icons/1147910020776869929/f3ec0bdc0f5439d05dfac040ebfa6849.png?size=512"
+  },
+  "channel": {
+    "id": "1147919352709005472",
+    "type": "GuildTextChat",
+    "categoryId": "1147915174758592552",
+    "category": "elian's notes",
+    "name": "\uD83D\uDCDD│loc-totem-guide",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-05-21T11:50:00.3088181-04:00",
+  "messages": [
+    {
+      "id": "1148038767207256115",
+      "type": "Default",
+      "timestamp": "2023-09-03T19:36:11.631-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "LAND OF CHAOS ARCHIVE",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148039373821067276",
+      "type": "Default",
+      "timestamp": "2023-09-03T19:38:36.259-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1148039373770727444",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039373770727444/image0.jpg?ex=6a10403c&is=6a0eeebc&hm=1e4986e269ddc81c1830ac81c75df7926644c32f8c3895c2232c9c4021f48634&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 190786
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148039387741950094",
+      "type": "Default",
+      "timestamp": "2023-09-03T19:38:39.578-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1148039387523842088",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039387523842088/image0.jpg?ex=6a10403f&is=6a0eeebf&hm=6daf6d2d561ac475c633e22e5a90fc7b4fa30e60ee6fb2e5953a141f25eaf91c&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 226910
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148039449624719361",
+      "type": "Default",
+      "timestamp": "2023-09-03T19:38:54.332-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1148039445388480642",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039445388480642/image0.jpg?ex=6a10404d&is=6a0eeecd&hm=bce63d4bc06538a8111057e05f7c4222f220730308c02f05a7eeda24da0212a8&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 171651
+        },
+        {
+          "id": "1148039446785179739",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039446785179739/image0.jpg?ex=6a10404d&is=6a0eeecd&hm=4c6487ef62c3eacb3fa3c66a9b684e8e8d609341e93171397e9ecbdd8f3cd913&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 260886
+        },
+        {
+          "id": "1148039448479674409",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039448479674409/image0.jpg?ex=6a10404e&is=6a0eeece&hm=89874576dfe9015e2d1906be09f31d80bc38993f6675ee7522baa84d2da0be26&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 266953
+        },
+        {
+          "id": "1148039448827809844",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039448827809844/image0.jpg?ex=6a10404e&is=6a0eeece&hm=256878d43671e1c8768d8af992270f205b73a16f1f23de83402339e34ec0323a&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 146802
+        },
+        {
+          "id": "1148039449280790678",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039449280790678/image0.jpg?ex=6a10404e&is=6a0eeece&hm=f0eb3be8bc289bbfeddf80478bf1e029241375c410bf92c92e2f1984bd4d846c&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 180889
+        },
+        {
+          "id": "1148039449737973821",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148039449737973821/image0.jpg?ex=6a10404e&is=6a0eeece&hm=c512aea972c847296f29ac1fe45ffca8d59b9b157e0a2784aa1fc7d0003e816b&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 143563
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148115434994937986",
+      "type": "Default",
+      "timestamp": "2023-09-04T00:40:50.656-04:00",
+      "timestampEdited": "2023-09-04T07:15:50.112-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How should I spend my coins? \n- finish gold totem resonance as priority \n\nBut why should I go for steak? They add so little CP…. \n\nWe focus on totems purely because of the effects it carries! \n\nCritical state \n- you cant die when you’re at 1% HP for 0.6s\n\nWhat totem has critical state? \n- steak, celebrity only these 2 have them!",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148115520860737657",
+      "type": "Default",
+      "timestamp": "2023-09-04T00:41:11.128-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1148115520428707911",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148115520428707911/image1.jpg?ex=6a0fde67&is=6a0e8ce7&hm=38ddd3f6f7d2735532207821f45ba2030a6e06b5c2b94552b230f60b7e7f66e4&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 280435
+        },
+        {
+          "id": "1148115520663584778",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148115520663584778/image0.jpg?ex=6a0fde67&is=6a0e8ce7&hm=bea9ea197448a1c84ea0dd48d0975c85782f1408c6d303d0d04039bb716228ee&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 194246
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148115542473969739",
+      "type": "Default",
+      "timestamp": "2023-09-04T00:41:16.281-04:00",
+      "timestampEdited": "2023-09-04T06:16:30.677-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "What about the other totems? What the heck is stability? \n\nStability SHOULD be the immunity to knock backs!\n\nIs it important? Of course! But should you do all of them? No. Purely acquire them from LOC instead of spending guild coins for it, unless you are extremely confident you can get more than 12k coins a weeek from guild. \n\nOtherwise get what you require!",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148115633687502929",
+      "type": "Default",
+      "timestamp": "2023-09-04T00:41:38.028-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1148115633037377576",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148115633037377576/image0.jpg?ex=6a0fde81&is=6a0e8d01&hm=588a8272b48ac67c5de99c77d6105525f60c80e6645c3df05e18b8cc1fed6641&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 274485
+        },
+        {
+          "id": "1148115633372925992",
+          "url": "https://cdn.discordapp.com/attachments/1147919352709005472/1148115633372925992/image0.jpg?ex=6a0fde81&is=6a0e8d01&hm=066f0e9c9e165c44647aaabacbdb8ac823052d5e8c7673e82bdf892323354c23&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 295397
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1148390209944305784",
+      "type": "ThreadCreated",
+      "timestamp": "2023-09-04T18:52:42.109-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1148390209944305784",
+        "guildId": "1147910020776869929"
+      },
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 9
+}

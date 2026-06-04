@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Mini-Games Reference · Whetstone</title>
+<meta name="description" content="Dossier 23: S/A/B difficulty tier ratings for all seven MapleStory R mini-games, with per-game tips for achieving S-grade scores." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Tier ladder */
+  .tier-block { border: 1px solid var(--line); margin-bottom: 28px; }
+  .tier-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px; border-bottom: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .tier-badge {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: 32px; line-height: 1; min-width: 36px; text-align: center;
+  }
+  .tier-badge.s { color: var(--amber); }
+  .tier-badge.a { color: #7ec8e3; }
+  .tier-badge.b { color: var(--teal); }
+  .tier-label { font-size: 13px; color: var(--ink-soft); }
+  .tier-label strong { display: block; color: var(--paper); font-size: 15px; margin-bottom: 2px; }
+
+  /* Game cards within a tier */
+  .game-card {
+    padding: 20px 22px; border-bottom: 1px solid var(--line-soft);
+  }
+  .game-card:last-child { border-bottom: none; }
+  .game-name {
+    font-family: 'Fraunces', serif; font-size: 20px;
+    color: var(--paper); margin: 0 0 4px;
+  }
+  .game-jp {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--ink-mute); letter-spacing: 0.05em; margin-bottom: 12px; display: block;
+  }
+  .game-desc { font-size: 14px; color: var(--ink); line-height: 1.6; margin: 0 0 10px; }
+  .game-tip {
+    font-size: 13px; color: var(--ink-soft); line-height: 1.55;
+    border-left: 3px solid var(--line); padding: 6px 12px; margin: 0;
+  }
+  .game-tip strong { color: var(--amber); font-size: 12px;
+    font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em;
+    text-transform: uppercase; display: block; margin-bottom: 4px; }
+
+  /* Summary table */
+  .tier-summary { border: 1px solid var(--line); width: 100%; border-collapse: collapse; font-size: 13px; }
+  .tier-summary th {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--amber); text-align: left;
+    padding: 8px 12px; border-bottom: 1px solid var(--line);
+    background: var(--bg-2);
+  }
+  .tier-summary td { padding: 9px 12px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  .tier-summary tr:last-child td { border-bottom: none; }
+  .tier-summary .t-tier { font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; }
+  .t-s { color: var(--amber); }
+  .t-a { color: #7ec8e3; }
+  .t-b { color: var(--teal); }
+  .tier-summary .t-name { color: var(--paper); font-weight: 600; }
+  .tier-summary .t-key { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span class="wordmark">Whet<em>stone</em></span></a>
+      <div class="nav-links">
+        <a href="index.html">Index</a>
+        <a href="index.html#catalog" class="active">Guides</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap wrap-narrow">
+    <div class="breadcrumb">
+      <a href="index.html">Whetstone</a><span class="sep">/</span>
+      <a href="index.html#catalog">Guides</a><span class="sep">/</span>
+      <span>Mini-Games Reference</span>
+    </div>
+  </div>
+
+  <header class="article-head">
+    <div class="wrap wrap-narrow">
+      <div class="dossier">Dossier No. 23</div>
+      <h1>Mini-Games <em>Reference</em></h1>
+      <p class="deck">S/A/B difficulty tier ratings for all seven mini-games, with per-game tips on what it actually takes to hit S-grade.</p>
+      <div class="article-meta">
+        <span><strong>Source period</strong> Feb–Mar 2025</span>
+        <span><strong>Source</strong> ハト麦茶のタヌキチ · Official JP Discord #攻略情報共有</span>
+        <span><strong>Compiled</strong> Jun 2026</span>
+        <span><strong>Filed</strong> 2026</span>
+        <span><strong>Read</strong> 4 min</span>
+      </div>
+    </div>
+    <div class="hero-float" aria-hidden="true">🎮</div>
+  </header>
+
+  <article class="wrap wrap-narrow article-body">
+
+    <p>The seven mini-games are not all created equal. This tier list is the assessment of a JP community player who documented what it takes to hit S grade in each. Tier S means you will spend serious time on it; Tier B means most players clear it on the first or second attempt with minimal thought.</p>
+
+    <div class="skeptic">
+      <span class="label">Source note</span>
+      This assessment comes from a player on the JP official server (ハト麦茶のタヌキチ), posted March 2025. English in-game names may differ slightly from the translated names used here. The ratings reflect subjective difficulty — your experience with each game type will shift some tiers up or down for you personally.
+    </div>
+
+    <!-- QUICK REFERENCE TABLE -->
+    <section class="guide-section" id="summary">
+      <div class="section-head">
+        <div class="section-num">§ 00</div>
+        <h2 class="section-title">Quick <em>reference</em></h2>
+        <div class="section-tag">All 7 mini-games</div>
+      </div>
+
+      <div style="overflow-x:auto">
+        <table class="tier-summary">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Game</th>
+              <th>Type</th>
+              <th>Key to S-grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="t-tier t-s">S</td>
+              <td class="t-name">Rainbow Escape</td>
+              <td style="color:var(--ink-soft)">Forced-scroll action</td>
+              <td class="t-key">Collect stars mid-run; some enemy placements may be unavoidable</td>
+            </tr>
+            <tr>
+              <td class="t-tier t-s">S</td>
+              <td class="t-name">Mystic Leap</td>
+              <td style="color:var(--ink-soft)">Hold-to-jump precision</td>
+              <td class="t-key">Land on NPC platforms above/below; NPC score is random</td>
+            </tr>
+            <tr>
+              <td class="t-tier t-a">A</td>
+              <td class="t-name">Fortitude Trial</td>
+              <td style="color:var(--ink-soft)">Survival / dodge</td>
+              <td class="t-key">Read enemy telegraphs; use platforms to avoid AoE</td>
+            </tr>
+            <tr>
+              <td class="t-tier t-a">A</td>
+              <td class="t-name">Monster Capture</td>
+              <td style="color:var(--ink-soft)">Lane tap</td>
+              <td class="t-key">Never hit stumps (they break combo); use two thumbs</td>
+            </tr>
+            <tr>
+              <td class="t-tier t-b">B</td>
+              <td class="t-name">Memory Test</td>
+              <td style="color:var(--ink-soft)">Concentration</td>
+              <td class="t-key">S at ≤20 moves — one miss breaks it, quit and retry</td>
+            </tr>
+            <tr>
+              <td class="t-tier t-b">B</td>
+              <td class="t-name">Monster Operation</td>
+              <td style="color:var(--ink-soft)">Whack-a-mole</td>
+              <td class="t-key">Skip Junior Lich (ghost); tap mushrooms fast</td>
+            </tr>
+            <tr>
+              <td class="t-tier t-b">B</td>
+              <td class="t-name">Music Show Stage</td>
+              <td style="color:var(--ink-soft)">Rhythm</td>
+              <td class="t-key">Lenient timing window — stay calm and tap on beat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TIER S -->
+    <section class="guide-section" id="tier-s">
+      <div class="section-head">
+        <div class="section-num">§ 01</div>
+        <h2 class="section-title">Tier S — <em>hardest</em></h2>
+        <div class="section-tag">Serious time investment required</div>
+      </div>
+
+      <div class="tier-block">
+        <div class="tier-header">
+          <div class="tier-badge s">S</div>
+          <div class="tier-label">
+            <strong>Tier S</strong>
+            Considerable time needed to reach S grade. RNG or precise execution makes these inconsistent even with practice.
+          </div>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Rainbow Escape</h3>
+          <span class="game-jp">虹の脱走 · Forced-scroll action</span>
+          <p class="game-desc">A side-scrolling action game where you move from left to right on a forced scroll. You must collect stars as you progress — simply reaching the end is not enough for S grade. Enemy placement is the variable that makes this tier S: some configurations appear to be unavoidable by design.</p>
+          <p class="game-tip"><strong>What matters for S</strong>Collect every star you can on the way through. The star collection target is strict, and the forced scroll means you cannot backtrack. If enemies block unavoidable sections, your run may be unrecoverable — restart and hope for a better layout next time.</p>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Mystic Leap</h3>
+          <span class="game-jp">秘境飛躍 · Hold-to-jump precision</span>
+          <p class="game-desc">Hold the jump button to charge jump height, then release to leap — similar to classic style jump-power games. You progress left to right. Reaching the goal is not sufficient for S grade: you must also land on NPC-occupied platforms that appear above and below the main path. The score bonus from each NPC interaction is random.</p>
+          <p class="game-tip"><strong>What matters for S</strong>Prioritise NPC platforms over speed. Because the NPC bonus is randomised, runs where the bonus is low may not be recoverable even with perfect platforming. This introduces a luck component that pushes it into Tier S territory.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIER A -->
+    <section class="guide-section" id="tier-a">
+      <div class="section-head">
+        <div class="section-num">§ 02</div>
+        <h2 class="section-title">Tier A — <em>achievable</em></h2>
+        <div class="section-tag">S grade reachable with focused effort</div>
+      </div>
+
+      <div class="tier-block">
+        <div class="tier-header">
+          <div class="tier-badge a">A</div>
+          <div class="tier-label">
+            <strong>Tier A</strong>
+            You can get S grade, but it requires understanding the game's mechanics and executing them consistently. Not first-attempt material for most players.
+          </div>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Fortitude Trial</h3>
+          <span class="game-jp">堅牢の試験 · Survival / dodge</span>
+          <p class="game-desc">Control your character and survive monster attacks for the duration. The objective is pure survival — monsters attack in patterns and you must dodge them. S grade becomes accessible once you learn the enemy telegraph animations and use platform positioning to avoid AoE attacks.</p>
+          <p class="game-tip"><strong>What matters for S</strong>Read telegraphs before they fire, not when they start animating. Jumping to elevated platforms removes you from ground-level AoE. This is a skill game — once the patterns click, S grade is repeatable.</p>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Monster Capture</h3>
+          <span class="game-jp">モンスター捕獲 · Lane tap</span>
+          <p class="game-desc">Enemies appear from both the left and right sides. Tap them to defeat them before they cross the screen. S grade requires a maintained combo — breaking the combo by tapping a stump (tree stump enemies) reduces your score, so stump avoidance is the central skill. The player notes that two-thumb play stabilises performance significantly.</p>
+          <p class="game-tip"><strong>What matters for S</strong>Never tap the stumps — they break your combo and score will fall below S threshold. Use both thumbs so you can cover both sides simultaneously without hesitation. The tap timing is forgiving; combo maintenance is the hard part.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIER B -->
+    <section class="guide-section" id="tier-b">
+      <div class="section-head">
+        <div class="section-num">§ 03</div>
+        <h2 class="section-title">Tier B — <em>accessible</em></h2>
+        <div class="section-tag">S grade achievable in a small number of attempts</div>
+      </div>
+
+      <div class="tier-block">
+        <div class="tier-header">
+          <div class="tier-badge b">B</div>
+          <div class="tier-label">
+            <strong>Tier B</strong>
+            Most players reach S grade quickly. Difficulty comes from one specific rule rather than execution complexity.
+          </div>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Memory Test</h3>
+          <span class="game-jp">記憶大勝負 · Concentration / memory match</span>
+          <p class="game-desc">A concentration game (flip pairs of cards to match them). S grade is achieved at 20 moves or fewer. The mechanic is well-known — the Egachan collab introduced it previously. The S threshold is strict: a single mismatch is almost always unrecoverable within the 20-move limit.</p>
+          <p class="game-tip"><strong>What matters for S</strong>If you flip a non-matching pair, quit the run immediately and restart. Do not try to recover — the move cost makes sub-20 nearly impossible after a miss. Play slowly enough that you are confident before each flip.</p>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Monster Operation</h3>
+          <span class="game-jp">モンスター大作戦 · Whack-a-mole</span>
+          <p class="game-desc">Mushrooms and a Junior Lich (ghost-type character) pop up from holes. Tap the mushrooms — never tap the Junior Lich. Quick, accurate tapping of mushrooms while ignoring the ghost is enough for S grade consistently.</p>
+          <p class="game-tip"><strong>What matters for S</strong>The Junior Lich (ghost) is the only dangerous element — tapping it breaks your score. Mushrooms are the targets. Once you have an eye for which sprite is which, S grade is reliable.</p>
+        </div>
+
+        <div class="game-card">
+          <h3 class="game-name">Music Show Stage</h3>
+          <span class="game-jp">音楽ショーステージ · Rhythm game</span>
+          <p class="game-desc">A rhythm game where you tap notes in time with the music. The timing window is described as lenient enough that missing a few notes does not disqualify you from S grade. There are no brutal back-to-back note configurations.</p>
+          <p class="game-tip"><strong>What matters for S</strong>Tap at a calm, consistent pace in time with the beat. The lenient window means you do not need to be frame-perfect. Rushing or pre-tapping causes more misses than a measured approach.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE AREA -->
+    <section class="guide-section" id="practice">
+      <div class="section-head">
+        <div class="section-num">§ 04</div>
+        <h2 class="section-title">The hidden <em>practice field</em></h2>
+        <div class="section-tag">Community discovery</div>
+      </div>
+
+      <div class="card">
+        <h3>Accessing the practice field</h3>
+        <p class="lede">There is a practice area in the game, though it is not prominently signposted. Enemies are present but the space is useful for familiarising yourself with the movement system before attempting ranked mini-game runs.</p>
+        <p style="font-size:14px;color:var(--ink-soft);margin:12px 0 0;">To access it: <strong>Character → Fashion → Special Decoration tab</strong>. Tap any Font skin or any double-jump skin in the list, then tap <strong>Preview</strong>. You will be placed in the practice field. Enemies are present but the area functions as an open movement sandbox.</p>
+        <div class="caveat" style="margin-top:14px">
+          <strong class="lab">Note</strong>
+          This was documented by a JP community member in March 2025. The path may have changed in later updates — check your Fashion / Appearance menu if the Special Decoration path does not match.
+        </div>
+      </div>
+    </section>
+
+    <nav class="article-foot-nav">
+      <a class="prev" href="el-nath-training.html"><div class="dir">← Previous</div><div class="title">D-22 · El Nath Training</div></a>
+      <a class="next" href="star-dream-paradise.html"><div class="dir">Next →</div><div class="title">D-24 · Star Dream Paradise</div></a>
+    </nav>
+
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="colophon">
+          <span class="wm">Whet<em>stone</em></span>
+          <p>Unofficial field dispatches for MapleStory R: Evolution. Independent, reader-funded, and verified before posted.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Sections</h5>
+          <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Recent dossiers</h5>
+          <ul>
+            <li><a href="el-nath-training.html">D-22 · El Nath Training</a></li>
+            <li><a href="minigames.html">D-23 · Mini-Games Reference</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© Whetstone 2026 · No affiliation with Nexon</span>
+        <a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener" style="font-size:12px;color:var(--ink-mute);text-decoration:none;letter-spacing:.03em">GitHub ↗</a>
+        <span>Dossier No. 23</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="whetstone.js" defer></script>
+</body>
+</html>

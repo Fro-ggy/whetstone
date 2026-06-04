@@ -1,0 +1,677 @@
+{
+  "guild": {
+    "id": "1147910020776869929",
+    "name": "Maple R Shenanigans",
+    "iconUrl": "https://cdn.discordapp.com/icons/1147910020776869929/f3ec0bdc0f5439d05dfac040ebfa6849.png?size=512"
+  },
+  "channel": {
+    "id": "1154186317966618644",
+    "type": "GuildTextChat",
+    "categoryId": "1147915174758592552",
+    "category": "elian's notes",
+    "name": "\uD83D\uDC36│exr-cultivation-guide",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-05-21T11:52:01.9471783-04:00",
+  "messages": [
+    {
+      "id": "1154186788517195818",
+      "type": "Default",
+      "timestamp": "2023-09-20T18:46:14.136-04:00",
+      "timestampEdited": "2023-09-20T20:27:18.893-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Accumulative top up during event gives\n\n5 day daily top up for 600 prestige -> 25 moonstones + 3k reds \n\n3k accumulative prestige -> 57 moonstones + 1.5k reds",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1154186788043247677",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154186788043247677/image0.jpg?ex=6a1033f6&is=6a0ee276&hm=182dcce7f168107ac54e29c5b7c94bd89aec5f5fb7f7afac725d6ebb6ae3e0fc&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 273464
+        },
+        {
+          "id": "1154186788303282316",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154186788303282316/image1.jpg?ex=6a1033f6&is=6a0ee276&hm=d59d03a13dc8fff67bda3b35a3ac3bae2279a1d523a2f0ec05eb04573e4cb227&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 342668
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1154187359349379092",
+      "type": "Default",
+      "timestamp": "2023-09-20T18:48:30.233-04:00",
+      "timestampEdited": "2023-09-20T19:03:09.433-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Daily task coins given is 20 coins \n\nAchieving S grade on rainbow run event -> 25 coins \n\nPer day income 45 coins \n\nFirst unlock 5 moonstones \nSecond unlock 5 moonstones for event coins",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1154187359059968010",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154187359059968010/image0.jpg?ex=6a10347e&is=6a0ee2fe&hm=a8cf9cd3cffbbe3136f10f3f188ee0fdff4d2e074251b4a990ff0c61bcd92879&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 244897
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1154187635183599677",
+      "type": "Default",
+      "timestamp": "2023-09-20T18:49:35.997-04:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "15 mooonstones and 6k reds (20 chest), 20 moonstones + luck",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1154187634961293372",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154187634961293372/image0.jpg?ex=6a1034bf&is=6a0ee33f&hm=993a0d5941083abfbb27562eb766ea9d7fbe1c7726bdf14f4f94b0bf467d4cd7&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 113721
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1154188059122864178",
+      "type": "Default",
+      "timestamp": "2023-09-20T18:51:17.072-04:00",
+      "timestampEdited": "2023-09-20T18:52:39.834-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "82 moonstones in total if you complete task till last (requires full sweep of the packages)",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1154188058112049192",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188058112049192/image0.jpg?ex=6a103524&is=6a0ee3a4&hm=f6b331111286a4b5e3dd6a26676a66147820b0ca17b76b42ef7b36b7f97059be&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 184466
+        },
+        {
+          "id": "1154188058393055242",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188058393055242/image1.jpg?ex=6a103524&is=6a0ee3a4&hm=273748ec2b2eef564471033a27b61a6804651e4cb7d8d4e76059f0b05a4a3d60&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 290322
+        },
+        {
+          "id": "1154188058632134747",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188058632134747/image2.jpg?ex=6a103524&is=6a0ee3a4&hm=80dbddc78b80f78dd414448471fdcd557d2acfd1ed30c498966b788ffcd6e922&",
+          "fileName": "image2.jpg",
+          "fileSizeBytes": 144688
+        },
+        {
+          "id": "1154188058904772739",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188058904772739/image3.jpg?ex=6a103525&is=6a0ee3a5&hm=892d04a81c534fc84ab06ae5ab0cef5d489e787a95f12d79a5f2b55f0de28a32&",
+          "fileName": "image3.jpg",
+          "fileSizeBytes": 146028
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1154188507514929243",
+      "type": "Default",
+      "timestamp": "2023-09-20T18:53:03.977-04:00",
+      "timestampEdited": "2023-09-20T18:56:03.485-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "26 CD pop up pack -> 35 moonstones \n\n676 CD Sweep all packs  \n\nTotal expenditure 702 CD",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1154188504151109662",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188504151109662/IMG_4451.png?ex=6a10358f&is=6a0ee40f&hm=8e21727d08eaf6dc3bc2cfea2b45c77331b158fc892fdb4125e922ff1308b16e&",
+          "fileName": "IMG_4451.png",
+          "fileSizeBytes": 1544460
+        },
+        {
+          "id": "1154188504650219600",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188504650219600/IMG_4450.png?ex=6a10358f&is=6a0ee40f&hm=0d5dc68e60249ee46f14b8882ee7ea7eb45e800c0d6ba7733c078466d6c4523a&",
+          "fileName": "IMG_4450.png",
+          "fileSizeBytes": 1113503
+        },
+        {
+          "id": "1154188505132585063",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188505132585063/IMG_4447.png?ex=6a10358f&is=6a0ee40f&hm=ceeba44578eae89ffa8dc08a9d64031edc086dbd4451a4dbaef2408b35439d8a&",
+          "fileName": "IMG_4447.png",
+          "fileSizeBytes": 1177141
+        },
+        {
+          "id": "1154188505908523090",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188505908523090/IMG_4448.png?ex=6a10358f&is=6a0ee40f&hm=f48385bb5792e5af837898e1e40d36811d86257ab583255a6ae1633a6e7bf878&",
+          "fileName": "IMG_4448.png",
+          "fileSizeBytes": 1177378
+        },
+        {
+          "id": "1154188506382467183",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188506382467183/IMG_4449.png?ex=6a10358f&is=6a0ee40f&hm=3bc2beecab9d453b1234a43f1bda4e1638f4d65ce9bfe34571a7b63c2be1576c&",
+          "fileName": "IMG_4449.png",
+          "fileSizeBytes": 1179172
+        },
+        {
+          "id": "1154188506835472414",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188506835472414/IMG_4446.png?ex=6a10358f&is=6a0ee40f&hm=3a2a44d1d6dae4bb657eef9f4315b074aac8bf61e6bd61f386f4fbed4c116f9b&",
+          "fileName": "IMG_4446.png",
+          "fileSizeBytes": 1167031
+        },
+        {
+          "id": "1154188507275866153",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154188507275866153/IMG_4445.png?ex=6a10358f&is=6a0ee40f&hm=3b64c45481070b7325342889f205f23b0a33740d42f5db27aabfb6d45da1c957&",
+          "fileName": "IMG_4445.png",
+          "fileSizeBytes": 1164490
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1154189871485820979",
+      "type": "Default",
+      "timestamp": "2023-09-20T18:58:29.173-04:00",
+      "timestampEdited": "2023-09-20T19:19:31.546-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "So in total how many moonstones can I get? \n\nAccumulative and daily top up -> 82 moonstones \n\nCompleting event task till last milestone -> 10 + 82 + 15 + 20 = 127 moonstones \n\n26 CD pack -> 35 moonstones \n\n676 CD equivalent to blue Dias -> 43.8k blues -> 162 moonstones \n\nGrand total of 406 moonstones",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1154190552473010236",
+      "type": "Default",
+      "timestamp": "2023-09-20T19:01:11.533-04:00",
+      "timestampEdited": "2023-09-20T19:08:25.095-04:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "——————————————————————\n\nExpenditure of 702 CD purely on event and moonstone packs \n\nTotal summons -> 525, 0 pre pities. \n\n7 copies of EXR Soul teddy \n\n4 copies of EXR soul teddy from exchanging 480 pieces from rainbow escape event shop.\n\nWinning event rank 1 -> 1 exr\n\nTotal exrs per event -> 12 exr",
+      "author": {
+        "id": "584449248935018516",
+        "name": "elian4245",
+        "discriminator": "0000",
+        "nickname": "Elian (Top 50)",
+        "color": "#F1C40F",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1147924468367368352",
+            "name": "Elian",
+            "color": "#F1C40F",
+            "position": 20
+          },
+          {
+            "id": "1147911356675260508",
+            "name": "Admin",
+            "color": "#F1C40F",
+            "position": 18
+          },
+          {
+            "id": "1148280158848028692",
+            "name": "Bowman",
+            "color": "#E67E22",
+            "position": 8
+          },
+          {
+            "id": "1148280780859134043",
+            "name": "Identity Crisis",
+            "color": "#607D8B",
+            "position": 5
+          },
+          {
+            "id": "1147911453899235539",
+            "name": "Toxic Gamers",
+            "color": "#2ECC71",
+            "position": 4
+          },
+          {
+            "id": "1148270486720102450",
+            "name": "Events Noti",
+            "color": null,
+            "position": 2
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/584449248935018516/39a4ae0741c717530968ebf6d42b1076.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1154190551990685696",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154190551990685696/image0.jpg?ex=6a103777&is=6a0ee5f7&hm=2520a4bbf80276a9d4a860c65d6cf5a93977207a3c030f4001a7a6dde289fc26&",
+          "fileName": "image0.jpg",
+          "fileSizeBytes": 163281
+        },
+        {
+          "id": "1154190552229757029",
+          "url": "https://cdn.discordapp.com/attachments/1154186317966618644/1154190552229757029/image1.jpg?ex=6a103777&is=6a0ee5f7&hm=0a3bec675ff5051817f6db29cea37e9b11f6eb818f070ef0a0f7cb61a48cc1bd&",
+          "fileName": "image1.jpg",
+          "fileSizeBytes": 267506
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDEE1",
+            "code": "\uD83E\uDEE1",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fae1.svg"
+          },
+          "count": 11,
+          "users": [
+            {
+              "id": "143247413824585728",
+              "name": "haenjin",
+              "discriminator": "0000",
+              "nickname": "Haenjin",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/143247413824585728/b14b86ec8de5a3a1497f30113d4fe737.png?size=512"
+            },
+            {
+              "id": "242011396018012160",
+              "name": ".mojito.",
+              "discriminator": "0000",
+              "nickname": "moji \uD83E\uDDAD",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/242011396018012160/d735d76d6ab7e3e1b3b7868f7c600184.png?size=512"
+            },
+            {
+              "id": "329244311784783884",
+              "name": "chonkypengu",
+              "discriminator": "0000",
+              "nickname": "Pengu",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/329244311784783884/1f33457ed07a5e56ccadbf364f372a3a.png?size=512"
+            },
+            {
+              "id": "385491161269403670",
+              "name": "e.for.eggie",
+              "discriminator": "0000",
+              "nickname": "Eggie\uD83C\uDF73",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/385491161269403670/4aaf2f6913f88fcb7f9074584a5d5294.png?size=512"
+            },
+            {
+              "id": "407684029031120896",
+              "name": "tw_2013",
+              "discriminator": "0000",
+              "nickname": "Pitlord S151",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+            },
+            {
+              "id": "423442432705822731",
+              "name": "foxie13",
+              "discriminator": "0000",
+              "nickname": "MaryAnne",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/423442432705822731/995012ac099d90497b1090b6164c7f04.png?size=512"
+            },
+            {
+              "id": "488102074874069022",
+              "name": "mrm0m0",
+              "discriminator": "0000",
+              "nickname": "MrM0M0",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/488102074874069022/71f9fcc1f2f046244f7b2d05ec99e3f9.png?size=512"
+            },
+            {
+              "id": "656330603108499478",
+              "name": "blackxyber91",
+              "discriminator": "0000",
+              "nickname": "BlackXyber",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+            },
+            {
+              "id": "772086089670328331",
+              "name": "argos_sky",
+              "discriminator": "0000",
+              "nickname": "Argos (S37)",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+            },
+            {
+              "id": "812352484341186580",
+              "name": "isono7862",
+              "discriminator": "0000",
+              "nickname": "iSono",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/812352484341186580/9866eaf90be15d2665d79f3f8ba46144.png?size=512"
+            },
+            {
+              "id": "887687479031898165",
+              "name": "bisjuit7787",
+              "discriminator": "0000",
+              "nickname": "PakSuUrutBatin",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/887687479031898165/6854df409c1e8393762a5839ae5c6e53.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 7
+}

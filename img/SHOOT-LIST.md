@@ -461,3 +461,63 @@ All 36 frames from 3 MP4 recordings re-examined. **No monster card content exist
 | `pet-elm-skill.jpg` (Eliza +7) | ✅ wired in — Thunder Stomp Lv8 |
 | `pet-stumpy-skill.jpg` | ✅ wired in — Craze Batmania Lv12 |
 | `pet-panda-skill.jpg` + `pet-panda-bonds.jpg` | ✅ wired in — Boxing King Panda UR 09 (new entry) |
+
+---
+
+## Batch review — IMG_6995–IMG_7018 (Jun 3, 2026)
+
+**20 PNGs uploaded. All confirmed as El Nath Training screenshots — supplemental/alternate angles of existing placed images.**
+
+### Identification summary
+
+| Drive file | Content | Action |
+|---|---|---|
+| IMG_6995 | Von Leon — Boss Info tab, Raging Rend tactics popup | Supplemental angle; existing `von-leon-tactics-1.jpg` already covers this |
+| IMG_6996 | Von Leon — Raging Rend / Energetic / Claw Assault ability descriptions | Supplemental; existing `von-leon-tactics-2.jpg` covers this |
+| IMG_7007 | El Nath Training rules — Gameplay Time + Weather system tabs | Supplemental; existing `rules-schedule.jpg` covers this |
+| IMG_7009 | El Nath Training rules — Ranking tab | Supplemental; existing `rules-ranking.jpg` covers this |
+| IMG_7011–7012 | El Nath Training background story text (two nearly-identical frames) | Supplemental; existing `background-tab.jpg` covers this |
+| IMG_6997–7006, 7008, 7010, 7013–7018 | Additional El Nath angles (boss lobby, overview UI, etc.) | All confirmed supplemental — el-nath-training.html is fully imaged |
+
+### Status after review
+
+El Nath Training (`img/el-nath-training/`) is **fully imaged** — 10 images placed, all HTML `<img>` references active. No action needed from this batch.
+
+---
+
+## Batch review — IMG_7038–IMG_7054 (Jun 4, 2026)
+
+**16 PNGs + 1 missing (IMG_7039). Identified via Drive contentSnippet OCR.** Batch covered two distinct subjects: Wings cultivation and Star Dream Paradise gacha event.
+
+### Identification summary
+
+| Drive file | Content | Guide | Action |
+|---|---|---|---|
+| IMG_7038 | Wings cultivation — Firewing upgrade screen. Tabs: Wing / Pairwing / Firewing / Battle / Character / Pet / Collect / Summon. "Add full level Golden Wing Fragment" button visible. Stats: 159, 125.96M, 46.8K, 13.01K | D-15 Wings | Save as `wings-cultivation/firewing-screen.jpg` when convenient |
+| IMG_7040 | Star Dream Paradise — Daily Tasks screen (6 tasks: Grand Arena, World Boss, Quick Battle, Guild Sign-in, Guild team-up, Like player). "600" prestige noted. 1/10 draws completed. | Event | Document only — not a shoot-list target |
+| IMG_7041 | Star Dream Paradise — Daily Tasks screen (alternate set: Adventurer Training Field, Expedition Forces, Receive guests, Top up, Consume 100 diamonds). | Event | Document only |
+| IMG_7042 | Star Dream Paradise — Event Rules popup. 30-grid jackpot with per-item max. Star Dream Bears (10/draw). Star Dream Lollipop re-claim mechanic. | Event | Document only |
+| IMG_7043 | Star Dream Paradise — Cumulative Draw Progress + Re-claim tab detail. VIP Prestige → Lollipop conversion. | Event | Document only |
+| IMG_7044 | Event Calendar, week of Jun 2–8, 2026. Events: Desert Treasure Design, Empress's Beckon, Showdown at The God Temple, Final Duel: Lotus, Star Dream Paradise, Neverland Treasure. Weekly: Memory Test. | D-03 | Save as `event-timeline/event-calendar-jun2.jpg` when convenient |
+| IMG_7045 | Event Calendar, same week, slightly different scroll showing Weekly Events section. | D-03 | Save as `event-timeline/event-calendar-jun2b.jpg` when convenient |
+| IMG_7046 | Large file (2.97 MB), no OCR text — likely an image-heavy screen (full-art character or decoration). | Unknown | Review manually |
+| IMG_7047–7054 | Star Dream Paradise — Full prize table (8 sequential screens showing all 30 grid items at 3.33% each). Items include: Green Blessing Wing Fragment, White Yaksa Trail Fragment, Ephenia Orb Fragment, Specified Fragment Cute Pet, Colorful Tinder Chest, Potential Stone Chest (ATK/DEF/HP), Enchanting Stone, Divine Moon Stone, Class Card Optional Fragment, Enhancement Core, Sewing Wand, Lucky Gem Giftpack, Monster Certification, Golden Totem Fragment, Cake, Drinks, Light Wing, Thunder Wing, Pure White Wing, ATK/DEF/HP Potential Stone, Soul Crystal, Star Soul, Star Source, Magic Crystal, Totem Essence, Totem Fragment, Abyss Pass, Magic Solvent. | Event | Document for Star Dream Paradise event reference |
+
+### New shoot-list target identified
+
+| Filename | Guide | Where to go | What to capture |
+|---|---|---|---|
+| `firewing-screen.jpg` | D-15 Wings | Wings menu → Firewing tab | Cultivation upgrade screen showing Firewing with level/stars and "Add full level Golden Wing Fragment" |
+| `event-calendar-jun2.jpg` | D-03 Event Timeline | Home → Event Calendar | Current week overview showing all active events |
+
+### Notes on Star Dream Paradise event
+
+The Star Dream Paradise gacha runs for ~28 days (Remaining: 27d 22-23h at time of capture). Mechanics:
+- Daily tasks award Star Dream Bears (1 bear per task, tasks vary by day)
+- 10 Star Dream Bears = 1 draw from 30-item jackpot grid
+- Each item has a 3.33% probability
+- Items obtained up to max count are removed from future draws
+- Expired task rewards go to Re-claim; reclaiming costs Star Dream Lollipops (1 per VIP Prestige point earned)
+- Cumulative draw milestones award bonus prizes
+
+The event's prize pool covers multiple upgrade systems (Wings, Stigmata, Soul Orbs, Class Cards, Totems) making it a cross-system event worth tracking for resource planning.
