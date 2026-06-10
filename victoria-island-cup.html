@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Victoria Island Cup · Whetstone</title>
+<meta name="description" content="Dossier 26: Victoria Island Cup (2026 FIFA World Cup crossover) — full Turf Challenge 41-stage difficulty table, Group Stage match schedule for all 48 nations, Team Cheer mechanics, and World Shop reference." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍄</text></svg>" />
+<style>
+  /* Difficulty table */
+  .diff-table { border: 1px solid var(--line); width: 100%; border-collapse: collapse; font-size: 12px; }
+  .diff-table th {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--amber); text-align: left;
+    padding: 7px 10px; border-bottom: 1px solid var(--line); background: var(--bg-2);
+  }
+  .diff-table td { padding: 7px 10px; border-bottom: 1px solid var(--line-soft); color: var(--ink); vertical-align: top; }
+  .diff-table tr:last-child td { border-bottom: none; }
+  .diff-table .d-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); white-space: nowrap; }
+  .diff-table .d-day { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--teal); white-space: nowrap; }
+  .diff-table .d-mod { color: var(--ink-soft); font-size: 12px; }
+  .diff-table .d-goals { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--paper); white-space: nowrap; }
+  .diff-table .phase-break td { background: var(--bg-2); font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mute); padding: 4px 10px; }
+
+  /* Match schedule */
+  .match-day { margin-bottom: 20px; }
+  .match-date {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--amber);
+    padding: 4px 10px; background: var(--bg-2); border-left: 2px solid var(--amber);
+    margin-bottom: 0;
+  }
+  .match-row {
+    display: grid; grid-template-columns: 32px 1fr auto;
+    border-bottom: 1px solid var(--line-soft);
+    padding: 7px 10px; font-size: 12px; align-items: center; gap: 8px;
+    background: var(--surface);
+  }
+  .match-row:last-child { border-bottom: none; }
+  .match-group { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .08em; }
+  .match-teams { color: var(--paper); font-size: 13px; }
+  .match-teams em { color: var(--ink-mute); font-style: normal; margin: 0 5px; }
+  .match-time { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--teal); white-space: nowrap; }
+
+  /* Group table */
+  .group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+  @media (max-width: 600px) { .group-grid { grid-template-columns: repeat(2, 1fr); } }
+  .group-cell { background: var(--surface); padding: 10px 12px; }
+  .group-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); margin-bottom: 5px; }
+  .group-teams { font-size: 12px; color: var(--ink); line-height: 1.7; }
+
+  /* Shop table */
+  .shop-table { border: 1px solid var(--line); width: 100%; border-collapse: collapse; font-size: 12px; }
+  .shop-table th {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--amber); text-align: left;
+    padding: 7px 10px; border-bottom: 1px solid var(--line); background: var(--bg-2);
+  }
+  .shop-table td { padding: 7px 10px; border-bottom: 1px solid var(--line-soft); color: var(--ink); }
+  .shop-table tr:last-child td { border-bottom: none; }
+  .shop-table .s-item { color: var(--paper); font-weight: 500; }
+  .shop-table .s-cost { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); }
+  .shop-table .s-limit { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-mute); }
+  .shop-table .s-priority { font-size: 10px; color: var(--teal); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; }
+
+  /* Rank table */
+  .rank-table { border: 1px solid var(--line); width: 100%; border-collapse: collapse; font-size: 12px; }
+  .rank-table th {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--amber); text-align: left;
+    padding: 7px 10px; border-bottom: 1px solid var(--line); background: var(--bg-2);
+  }
+  .rank-table td { padding: 7px 10px; border-bottom: 1px solid var(--line-soft); color: var(--ink); }
+  .rank-table tr:last-child td { border-bottom: none; }
+  .rank-table .r-rank { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--amber); white-space: nowrap; }
+  .rank-table .r-top { color: #f5c842; font-weight: 600; }
+
+  /* Phase banner */
+  .phase-banner {
+    background: var(--bg-2); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+    padding: 8px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--ink-mute); letter-spacing: .05em; text-transform: uppercase;
+    margin: 18px 0 0;
+  }
+  .phase-banner strong { color: var(--amber); }
+</style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span class="wordmark">Whet<em>stone</em></span></a>
+      <div class="nav-links">
+        <a href="index.html">Index</a>
+        <a href="index.html#catalog" class="active">Guides</a>
+        <a href="changelog.html">Log</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap wrap-narrow">
+    <div class="breadcrumb">
+      <a href="index.html">Whetstone</a><span class="sep">/</span>
+      <a href="index.html#catalog">Guides</a><span class="sep">/</span>
+      <span>Victoria Island Cup</span>
+    </div>
+  </div>
+
+  <header class="article-head">
+    <div class="wrap wrap-narrow">
+      <div class="dossier">Dossier No. 26</div>
+      <h1>Victoria Island <em>Cup</em></h1>
+      <p class="deck">2026 FIFA World Cup crossover event — soccer shooting mini-game with 41 difficulty stages, Group Stage match predictions for all 48 nations, Team Cheer pack mechanics, and a full World Shop reference.</p>
+      <div class="article-meta">
+        <span><strong>Observed</strong> Jun 10, 2026 · 17 days remaining</span>
+        <span><strong>Source</strong> In-game screenshots · Drive batch IMG_7196–7333</span>
+        <span><strong>Filed</strong> 2026</span>
+        <span><strong>Read</strong> 10 min</span>
+      </div>
+    </div>
+    <div class="hero-float" aria-hidden="true">⚽</div>
+  </header>
+
+  <article class="wrap wrap-narrow article-body">
+
+    <p>The Victoria Island Cup is a ~41-day limited event tied to the real 2026 FIFA World Cup. Lore-wise, a hyper-dimensional wormhole opens on Victoria Island as the Black Mage's forces subside — a football flies through and Empress Cygnus calls all warriors to compete. In practice, four independent systems run simultaneously: a soccer shooting mini-game (Turf Challenge), a prediction market on real World Cup matches, a team popularity contest (Team Cheer), and an event-exclusive shop.</p>
+
+    <div class="skeptic">
+      <span class="label">Event window</span>
+      Screenshots captured Jun 10, 2026 with ~17 days remaining — event started approximately Jun 1 and runs ~41 days total. Difficulty unlock timers, match schedule, and shop prices are verified from in-game UI. All times listed are in-game server time.
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 01  CURRENCIES
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="currencies">
+      <div class="section-head">
+        <div class="section-num">§ 01</div>
+        <h2 class="section-title">Event <em>currencies</em></h2>
+        <div class="section-tag">Two things to track</div>
+      </div>
+
+      <div class="card">
+        <h3>Prediction Coins</h3>
+        <p class="lede">The primary event currency. Earned from correct match predictions, completing Daily Tasks in the Prediction tab, and Prediction Packs. Used for placing match bets, buying Basic Cheer Packs, and shopping in the World Shop.</p>
+        <p style="font-size:13px;color:var(--ink-soft);margin:10px 0 0">⚠️ Prediction Coins are event-exclusive. When the event ends they are returned to you temporarily — spend them in the World Shop before the timer expires.</p>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Golden Football</h3>
+        <p class="lede">A secondary tracker earned exclusively by completing Daily Tasks in the Prediction tab. Does not serve as a currency — it fills the <strong>Turf Benefit</strong> reward track instead. The more you earn, the further you progress along the benefit milestones.</p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 02  TURF CHALLENGE
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="turf">
+      <div class="section-head">
+        <div class="section-num">§ 02</div>
+        <h2 class="section-title">Turf <em>Challenge</em></h2>
+        <div class="section-tag">Shooting mini-game · 41 stages</div>
+      </div>
+
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 16px">Turf Challenge is a soccer shooting mini-game. Score the required number of goals within limited attempts to clear each stage's reward tiers. The keeper gets harder as stages unlock over the event's 41-day schedule.</p>
+
+      <div class="card">
+        <h3>How to play</h3>
+        <p class="lede" style="margin-bottom:10px">Each shot has two alternating phases. The phases alternate until all attempts are used or you exit.</p>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li><strong style="color:var(--paper)">Direction phase</strong> — Hold the on-screen button to adjust shot direction and power, release to confirm.</li>
+          <li><strong style="color:var(--paper)">Power phase</strong> — A vertical bar (red → yellow → green → blue) shows power level. Release at the desired level.</li>
+          <li>The goalkeeper adjusts on their own during setup. Once your adjustments are complete, the keeper attempts the save. If they succeed: Shot Failed. If not: goal scored.</li>
+          <li>Each difficulty has a fixed number of <strong>Remaining Attempts</strong> (starts at 10). You must reach the goal target in a single game session.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Stage unlock rules</h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li>Stages 1–3 are available from day one. Stages 4–41 unlock on a fixed daily timer.</li>
+          <li>You must complete <strong>all three goal tiers</strong> of the current stage before the next difficulty becomes accessible.</li>
+          <li><strong style="color:var(--paper)">Goal rewards are not automatic</strong> — tap the reward button to claim each tier manually.</li>
+          <li>Returning to the Turf Challenge main screen after clearing a stage auto-advances your selection to the next difficulty.</li>
+        </ul>
+      </div>
+
+      <div class="phase-banner" style="margin-top:18px">
+        <strong>Each difficulty has 3 goal tiers.</strong> The third tier (max goals) on some stages rewards a <span style="color:var(--teal)">rare item</span> instead of standard coins — watch for the distinct icon.
+      </div>
+
+      <h3 style="margin:24px 0 10px;font-size:15px;color:var(--paper)">Full difficulty table</h3>
+
+      <table class="diff-table">
+        <thead>
+          <tr>
+            <th>Diff</th>
+            <th>Modifier</th>
+            <th>Targets</th>
+            <th>Unlock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="phase-break"><td colspan="4">Phase 1 — Speed scaling (Diff 1–16)</td></tr>
+          <tr><td class="d-num">D-01</td><td class="d-mod">Beginner Difficulty</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 1</td></tr>
+          <tr><td class="d-num">D-02</td><td class="d-mod">Normal Difficulty</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 1</td></tr>
+          <tr><td class="d-num">D-03</td><td class="d-mod">Goalkeeper Speed 110%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 1</td></tr>
+          <tr><td class="d-num">D-04</td><td class="d-mod">Goalkeeper Speed 120%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 1</td></tr>
+          <tr><td class="d-num">D-05</td><td class="d-mod">Goalkeeper Speed 130%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 2</td></tr>
+          <tr><td class="d-num">D-06</td><td class="d-mod">Goalkeeper Speed 140%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 3</td></tr>
+          <tr><td class="d-num">D-07</td><td class="d-mod">Goalkeeper Speed 150%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 4</td></tr>
+          <tr><td class="d-num">D-08</td><td class="d-mod">Goalkeeper Speed 160%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 5</td></tr>
+          <tr><td class="d-num">D-09</td><td class="d-mod">Goalkeeper Speed 170%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 6</td></tr>
+          <tr><td class="d-num">D-10</td><td class="d-mod">Goalkeeper Speed 180%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 7</td></tr>
+          <tr><td class="d-num">D-11</td><td class="d-mod">Goalkeeper Speed 190%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 8</td></tr>
+          <tr><td class="d-num">D-12</td><td class="d-mod">Goalkeeper Speed 200% + Defensive Range 150%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 9</td></tr>
+          <tr><td class="d-num">D-13</td><td class="d-mod">Goalkeeper Speed 210% + Defensive Range 150%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 10</td></tr>
+          <tr><td class="d-num">D-14</td><td class="d-mod">Goalkeeper Speed 220% + Defensive Range 150%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 11</td></tr>
+          <tr><td class="d-num">D-15</td><td class="d-mod">Goalkeeper Speed 230% + Defensive Range 150%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 12</td></tr>
+          <tr><td class="d-num">D-16</td><td class="d-mod">Goalkeeper Speed 240% + Defensive Range 150%</td><td class="d-goals">5 / 8 / 10</td><td class="d-day">Day 13</td></tr>
+
+          <tr class="phase-break"><td colspan="4">Phase 2 — Control difficulty (Diff 17–31) · Targets drop to 3/5/8 then 2/4/7</td></tr>
+          <tr><td class="d-num">D-17</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 14</td></tr>
+          <tr><td class="d-num">D-18</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 15</td></tr>
+          <tr><td class="d-num">D-19</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 16</td></tr>
+          <tr><td class="d-num">D-20</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 17</td></tr>
+          <tr><td class="d-num">D-21</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 18</td></tr>
+          <tr><td class="d-num">D-22</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 19</td></tr>
+          <tr><td class="d-num">D-23</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 20</td></tr>
+          <tr><td class="d-num">D-24</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 21</td></tr>
+          <tr><td class="d-num">D-25</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 22</td></tr>
+          <tr><td class="d-num">D-26</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">3 / 5 / 8</td><td class="d-day">Day 23</td></tr>
+          <tr><td class="d-num">D-27</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">2 / 4 / 7</td><td class="d-day">Day 24</td></tr>
+          <tr><td class="d-num">D-28</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">2 / 4 / 7</td><td class="d-day">Day 25</td></tr>
+          <tr><td class="d-num">D-29</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">2 / 4 / 7</td><td class="d-day">Day 26</td></tr>
+          <tr><td class="d-num">D-30</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">2 / 4 / 7</td><td class="d-day">Day 27</td></tr>
+          <tr><td class="d-num">D-31</td><td class="d-mod">Direction Control +150% · Power Control +150%</td><td class="d-goals">2 / 4 / 7</td><td class="d-day">Day 28</td></tr>
+
+          <tr class="phase-break"><td colspan="4">Phase 3 — Maximum difficulty (Diff 32–41) · Targets drop to 1/3/5 then 1/2/3</td></tr>
+          <tr><td class="d-num">D-32</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 29</td></tr>
+          <tr><td class="d-num">D-33</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 30</td></tr>
+          <tr><td class="d-num">D-34</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 31</td></tr>
+          <tr><td class="d-num">D-35</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 32</td></tr>
+          <tr><td class="d-num">D-36</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 33</td></tr>
+          <tr><td class="d-num">D-37</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 34</td></tr>
+          <tr><td class="d-num">D-38</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 3 / 5</td><td class="d-day">Day 35</td></tr>
+          <tr><td class="d-num">D-39</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 2 / 3</td><td class="d-day">Day 36</td></tr>
+          <tr><td class="d-num">D-40</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 2 / 3</td><td class="d-day">Day 37</td></tr>
+          <tr><td class="d-num">D-41</td><td class="d-mod">Direction Control +200% · Power Control +200%</td><td class="d-goals">1 / 2 / 3</td><td class="d-day">Day 38</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 03  TURF CHECK-IN AND BENEFIT
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="checkin">
+      <div class="section-head">
+        <div class="section-num">§ 03</div>
+        <h2 class="section-title">Check-In &amp; <em>Benefit</em></h2>
+        <div class="section-tag">Daily login · Cumulative track</div>
+      </div>
+
+      <div class="card">
+        <h3>Turf Check-In</h3>
+        <p class="lede">A standard 41-day login calendar. Log in each day to claim the reward — no additional action required. Rewards rotate across Prediction Coins, Red Gems, Triangle crafting materials, and cosmetic items on milestone days (approximately every 5–6 days).</p>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Turf Benefit</h3>
+        <p class="lede">A cumulative reward track filled by collecting <strong>Golden Footballs</strong>, which are earned by completing Daily Tasks in the Prediction tab. Three parallel reward columns exist:</p>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:10px 0 0;padding-left:1.2em;line-height:1.8">
+          <li><strong style="color:var(--paper)">Basic Benefits</strong> (free) — Includes the <em>Victoria Island Training</em> avatar frame (Permanent), Moon Stones, Red Gems, Triangle items, and Prediction Coins. Available to everyone.</li>
+          <li><strong style="color:var(--paper)">Intermediate Benefits</strong> (5 Hira) — Additional rewards unlocked at the same progress thresholds. Includes Red Gems, Triangle items, Soccer Ball fragments, Magic Solvents, Moon Stones.</li>
+          <li><strong style="color:var(--paper)">Advanced Benefits</strong> (8 Hira) — Includes the <em>Turf Passion</em> chat frame (Permanent) and the <em>Football</em> avatar (Permanent), plus Red Gems, Moon Stones, and Coins.</li>
+        </ul>
+        <p style="font-size:13px;color:var(--ink-soft);margin:12px 0 0">Milestones run from ~50 Golden Footballs up to 3,000+. Unclaimed rewards when the event ends are sent by mail.</p>
+      </div>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Free floor</strong>
+        The Basic track gives a permanent avatar frame at no cost. If you complete Daily Tasks consistently, you will reach it without spending anything. Intermediate and Advanced packs are optional cosmetic upgrades.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 04  PREDICTION
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="prediction">
+      <div class="section-head">
+        <div class="section-num">§ 04</div>
+        <h2 class="section-title">Match <em>Prediction</em></h2>
+        <div class="section-tag">Bet coins · Earn points · Climb ranks</div>
+      </div>
+
+      <div class="card">
+        <h3>Core mechanic</h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li>Consume Prediction Coins to place a bet on a match outcome (win / draw / loss).</li>
+          <li><strong style="color:var(--teal)">Correct prediction:</strong> Coins are fully refunded + you earn Prediction Points equal to the amount wagered.</li>
+          <li><strong style="color:#ef9a9a)">Wrong prediction:</strong> Coins are lost.</li>
+          <li>Predictions lock <strong>30 minutes before kickoff</strong>.</li>
+          <li>Results update daily at <strong>13:00 and 19:00</strong>. Rewards for successful predictions are distributed at these two times only.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Prediction Ranking</h3>
+        <p class="lede">Prediction Points = the amount of Prediction Coins used on correct predictions only. Points determine your rank on the server leaderboard. Ranking rewards are mailed after the event ends.</p>
+
+        <table class="rank-table" style="margin-top:12px">
+          <thead><tr><th>Rank</th><th>Notable reward</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="r-rank r-top">No. 1</td>
+              <td style="color:var(--paper)"><strong>"The King of Football F"</strong> exclusive title — ATK 1600 · DEF 400 · HP 30,000 · LTK Bonus 15% + Moon Stones + Red Gems + Calendar items</td>
+            </tr>
+            <tr><td class="r-rank">No. 2–3</td><td>Moon Stones + Red Gems + Calendar items</td></tr>
+            <tr><td class="r-rank">No. 4–5</td><td>Moon Stones + Red Gems</td></tr>
+            <tr><td class="r-rank">No. 6–10</td><td>Moon Stones + Red Gems</td></tr>
+            <tr><td class="r-rank">No. 11–20</td><td>Moon Stones + Red Gems (reduced quantity)</td></tr>
+            <tr><td class="r-rank">No. 21–50</td><td>Moon Stones + Red Gems</td></tr>
+            <tr><td class="r-rank">No. 51–200</td><td>Moon Stones + Red Gems</td></tr>
+            <tr><td class="r-rank">No. 201+</td><td>Moon Stones</td></tr>
+          </tbody>
+        </table>
+
+        <p style="font-size:12px;color:var(--ink-mute);margin:10px 0 0">The No. 1 title (ATK 1600 / HP 30,000 / 15% LTK bonus) is one of the strongest stat items in the event and is exclusive to rank 1.</p>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Daily Tasks <span style="font-size:11px;color:var(--ink-mute);font-weight:400;margin-left:6px">(reset daily · reward Prediction Coins + Golden Footballs)</span></h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8;columns:2">
+          <li>Team up with Guild members or friends (1×)</li>
+          <li>Guild Sign-in (1×)</li>
+          <li>Send 1 Friendship Point</li>
+          <li>Complete Adventurer Training Field (1×)</li>
+          <li>Complete Quick Battle (1×)</li>
+          <li>Like any player (1×)</li>
+          <li>Complete Expedition Forces (1×)</li>
+          <li>Challenge World Boss (1×)</li>
+          <li>Message in any chat channel (1×)</li>
+          <li>Consume 100 red or blue diamonds</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Challenge Tasks <span style="font-size:11px;color:var(--ink-mute);font-weight:400;margin-left:6px">(one-time milestones · reward Prediction Coins)</span></h3>
+        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 8px">Two milestone ladders exist:</p>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li><strong style="color:var(--paper)">Make a prediction X times</strong> — milestones at 1, 2, 4, 6, 8 … 64 total predictions (even increments). Each rewards a stack of Prediction Coins (increasing at higher milestones).</li>
+          <li><strong style="color:var(--paper)">Successfully predict X times</strong> — milestones at 1 through 24 successful predictions. Each rewards a stack of Prediction Coins.</li>
+        </ul>
+        <div class="caveat" style="margin-top:12px;margin-bottom:0">
+          <strong class="lab">Manual claim required</strong>
+          The "Successfully predict X times" milestones will <em>not</em> advance unless you manually open each correct prediction result and claim it. Auto-distribution at 13:00/19:00 does not count toward quest completion. Check the Prediction tab after each results window.
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Prediction Pack</h3>
+        <table class="shop-table">
+          <thead><tr><th>Pack</th><th>Cost</th><th>Immediate rewards</th></tr></thead>
+          <tbody>
+            <tr><td class="s-item">Intermediate Pack</td><td class="s-cost">5 Hira</td><td>600 Prediction Coins + Red Gem, Triangle, Soccer Ball, Moon Stone, Blue Gem</td></tr>
+            <tr><td class="s-item">Advanced Pack</td><td class="s-cost">8 Hira</td><td>600 Prediction Coins + Moon Stone, Calendar items, Soccer Ball, Triangle, Blue Gem, Red Gem</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 05  MATCH SCHEDULE
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="schedule">
+      <div class="section-head">
+        <div class="section-num">§ 05</div>
+        <h2 class="section-title">Group Stage <em>schedule</em></h2>
+        <div class="section-tag">48 nations · Groups A–L · All times server time</div>
+      </div>
+
+      <h3 style="font-size:14px;color:var(--paper);margin:0 0 12px">Group compositions</h3>
+
+      <div class="group-grid">
+        <div class="group-cell"><div class="group-label">Group A</div><div class="group-teams">Mexico<br>South Africa<br>South Korea<br>Czech Republic</div></div>
+        <div class="group-cell"><div class="group-label">Group B</div><div class="group-teams">Canada<br>Bosnia and Herzegovina<br>Qatar<br>Switzerland</div></div>
+        <div class="group-cell"><div class="group-label">Group C</div><div class="group-teams">Brazil<br>Morocco<br>Haiti<br>Scotland</div></div>
+        <div class="group-cell"><div class="group-label">Group D</div><div class="group-teams">United States<br>Paraguay<br>Australia<br>Türkiye</div></div>
+        <div class="group-cell"><div class="group-label">Group E</div><div class="group-teams">Germany<br>Curaçao<br>Côte d'Ivoire<br>Ecuador</div></div>
+        <div class="group-cell"><div class="group-label">Group F</div><div class="group-teams">Netherlands<br>Japan<br>Sweden<br>Tunisia</div></div>
+        <div class="group-cell"><div class="group-label">Group G</div><div class="group-teams">Belgium<br>Egypt<br>Iran<br>New Zealand</div></div>
+        <div class="group-cell"><div class="group-label">Group H</div><div class="group-teams">Spain<br>Cabo Verde<br>Saudi Arabia<br>Uruguay</div></div>
+        <div class="group-cell"><div class="group-label">Group I</div><div class="group-teams">France<br>Senegal<br>Iraq<br>Norway</div></div>
+        <div class="group-cell"><div class="group-label">Group J</div><div class="group-teams">Argentina<br>Algeria<br>Austria<br>Jordan</div></div>
+        <div class="group-cell"><div class="group-label">Group K</div><div class="group-teams">Portugal<br>DR Congo<br>Uzbekistan<br>Colombia</div></div>
+        <div class="group-cell"><div class="group-label">Group L</div><div class="group-teams">England<br>Croatia<br>Ghana<br>Panama</div></div>
+      </div>
+
+      <h3 style="font-size:14px;color:var(--paper);margin:24px 0 10px">Full match listing</h3>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.11</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">A</span><span class="match-teams">Mexico <em>vs</em> South Africa</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">A</span><span class="match-teams">South Korea <em>vs</em> Czech Republic</span><span class="match-time">22:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.12</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">B</span><span class="match-teams">Canada <em>vs</em> Bosnia and Herzegovina</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">D</span><span class="match-teams">United States <em>vs</em> Paraguay</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.13</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">B</span><span class="match-teams">Qatar <em>vs</em> Switzerland</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">C</span><span class="match-teams">Brazil <em>vs</em> Morocco</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">C</span><span class="match-teams">Haiti <em>vs</em> Scotland</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.14</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">D</span><span class="match-teams">Australia <em>vs</em> Türkiye</span><span class="match-time">00:00</span></div>
+          <div class="match-row"><span class="match-group">E</span><span class="match-teams">Germany <em>vs</em> Curaçao</span><span class="match-time">13:00</span></div>
+          <div class="match-row"><span class="match-group">F</span><span class="match-teams">Netherlands <em>vs</em> Japan</span><span class="match-time">16:00</span></div>
+          <div class="match-row"><span class="match-group">E</span><span class="match-teams">Côte d'Ivoire <em>vs</em> Ecuador</span><span class="match-time">19:00</span></div>
+          <div class="match-row"><span class="match-group">F</span><span class="match-teams">Sweden <em>vs</em> Tunisia</span><span class="match-time">22:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.15</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">H</span><span class="match-teams">Spain <em>vs</em> Cabo Verde</span><span class="match-time">12:00</span></div>
+          <div class="match-row"><span class="match-group">G</span><span class="match-teams">Belgium <em>vs</em> Egypt</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">H</span><span class="match-teams">Saudi Arabia <em>vs</em> Uruguay</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">G</span><span class="match-teams">Iran <em>vs</em> New Zealand</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.16</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">I</span><span class="match-teams">France <em>vs</em> Senegal</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">I</span><span class="match-teams">Iraq <em>vs</em> Norway</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">J</span><span class="match-teams">Argentina <em>vs</em> Algeria</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.17</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">J</span><span class="match-teams">Austria <em>vs</em> Jordan</span><span class="match-time">00:00</span></div>
+          <div class="match-row"><span class="match-group">K</span><span class="match-teams">Portugal <em>vs</em> DR Congo</span><span class="match-time">13:00</span></div>
+          <div class="match-row"><span class="match-group">L</span><span class="match-teams">England <em>vs</em> Croatia</span><span class="match-time">16:00</span></div>
+          <div class="match-row"><span class="match-group">L</span><span class="match-teams">Ghana <em>vs</em> Panama</span><span class="match-time">19:00</span></div>
+          <div class="match-row"><span class="match-group">K</span><span class="match-teams">Uzbekistan <em>vs</em> Colombia</span><span class="match-time">22:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.18</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">A</span><span class="match-teams">Czech Republic <em>vs</em> South Africa</span><span class="match-time">12:00</span></div>
+          <div class="match-row"><span class="match-group">B</span><span class="match-teams">Switzerland <em>vs</em> Bosnia and Herzegovina</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">B</span><span class="match-teams">Canada <em>vs</em> Qatar</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">A</span><span class="match-teams">Mexico <em>vs</em> South Korea</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.19</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">D</span><span class="match-teams">United States <em>vs</em> Australia</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">C</span><span class="match-teams">Scotland <em>vs</em> Morocco</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">C</span><span class="match-teams">Brazil <em>vs</em> Haiti</span><span class="match-time">20:30</span></div>
+          <div class="match-row"><span class="match-group">D</span><span class="match-teams">Türkiye <em>vs</em> Paraguay</span><span class="match-time">23:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.20</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">F</span><span class="match-teams">Netherlands <em>vs</em> Sweden</span><span class="match-time">13:00</span></div>
+          <div class="match-row"><span class="match-group">E</span><span class="match-teams">Germany <em>vs</em> Côte d'Ivoire</span><span class="match-time">16:00</span></div>
+          <div class="match-row"><span class="match-group">E</span><span class="match-teams">Ecuador <em>vs</em> Curaçao</span><span class="match-time">20:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.21</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">F</span><span class="match-teams">Tunisia <em>vs</em> Japan</span><span class="match-time">00:00</span></div>
+          <div class="match-row"><span class="match-group">H</span><span class="match-teams">Spain <em>vs</em> Saudi Arabia</span><span class="match-time">12:00</span></div>
+          <div class="match-row"><span class="match-group">G</span><span class="match-teams">Belgium <em>vs</em> Iran</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">H</span><span class="match-teams">Uruguay <em>vs</em> Cabo Verde</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">G</span><span class="match-teams">New Zealand <em>vs</em> Egypt</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.22</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">J</span><span class="match-teams">Argentina <em>vs</em> Austria</span><span class="match-time">13:00</span></div>
+          <div class="match-row"><span class="match-group">I</span><span class="match-teams">France <em>vs</em> Iraq</span><span class="match-time">17:00</span></div>
+          <div class="match-row"><span class="match-group">I</span><span class="match-teams">Norway <em>vs</em> Senegal</span><span class="match-time">20:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.23</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">K</span><span class="match-teams">Portugal <em>vs</em> Uzbekistan</span><span class="match-time">13:00</span></div>
+          <div class="match-row"><span class="match-group">L</span><span class="match-teams">England <em>vs</em> Ghana</span><span class="match-time">16:00</span></div>
+          <div class="match-row"><span class="match-group">L</span><span class="match-teams">Panama <em>vs</em> Croatia</span><span class="match-time">19:00</span></div>
+          <div class="match-row"><span class="match-group">K</span><span class="match-teams">Colombia <em>vs</em> Republic of the Congo</span><span class="match-time">22:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.24</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">B</span><span class="match-teams">Switzerland <em>vs</em> Canada</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">B</span><span class="match-teams">Bosnia and Herzegovina <em>vs</em> Qatar</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">C</span><span class="match-teams">Scotland <em>vs</em> Brazil</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">C</span><span class="match-teams">Morocco <em>vs</em> Haiti</span><span class="match-time">18:00</span></div>
+          <div class="match-row"><span class="match-group">A</span><span class="match-teams">Czech Republic <em>vs</em> Mexico</span><span class="match-time">21:00</span></div>
+          <div class="match-row"><span class="match-group">A</span><span class="match-teams">South Africa <em>vs</em> South Korea</span><span class="match-time">21:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.25</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">E</span><span class="match-teams">Curaçao <em>vs</em> Côte d'Ivoire</span><span class="match-time">16:00</span></div>
+          <div class="match-row"><span class="match-group">E</span><span class="match-teams">Ecuador <em>vs</em> Germany</span><span class="match-time">16:00</span></div>
+          <div class="match-row"><span class="match-group">F</span><span class="match-teams">Japan <em>vs</em> Sweden</span><span class="match-time">19:00</span></div>
+          <div class="match-row"><span class="match-group">F</span><span class="match-teams">Tunisia <em>vs</em> Netherlands</span><span class="match-time">19:00</span></div>
+          <div class="match-row"><span class="match-group">D</span><span class="match-teams">Türkiye <em>vs</em> United States</span><span class="match-time">22:00</span></div>
+          <div class="match-row"><span class="match-group">D</span><span class="match-teams">Paraguay <em>vs</em> Australia</span><span class="match-time">22:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.26</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">I</span><span class="match-teams">Norway <em>vs</em> France</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">I</span><span class="match-teams">Senegal <em>vs</em> Iraq</span><span class="match-time">15:00</span></div>
+          <div class="match-row"><span class="match-group">H</span><span class="match-teams">Cabo Verde <em>vs</em> Saudi Arabia</span><span class="match-time">20:00</span></div>
+          <div class="match-row"><span class="match-group">H</span><span class="match-teams">Uruguay <em>vs</em> Spain</span><span class="match-time">20:00</span></div>
+          <div class="match-row"><span class="match-group">G</span><span class="match-teams">Egypt <em>vs</em> Iran</span><span class="match-time">23:00</span></div>
+          <div class="match-row"><span class="match-group">G</span><span class="match-teams">New Zealand <em>vs</em> Belgium</span><span class="match-time">23:00</span></div>
+        </div>
+      </div>
+
+      <div class="match-day">
+        <div class="match-date">2026.06.27</div>
+        <div style="border:1px solid var(--line);border-top:none">
+          <div class="match-row"><span class="match-group">L</span><span class="match-teams">Panama <em>vs</em> England</span><span class="match-time">17:00</span></div>
+          <div class="match-row"><span class="match-group">L</span><span class="match-teams">Croatia <em>vs</em> Ghana</span><span class="match-time">17:00</span></div>
+          <div class="match-row"><span class="match-group">K</span><span class="match-teams">Colombia <em>vs</em> Portugal</span><span class="match-time">19:30</span></div>
+          <div class="match-row"><span class="match-group">K</span><span class="match-teams">DR Congo <em>vs</em> Uzbekistan</span><span class="match-time">19:30</span></div>
+          <div class="match-row"><span class="match-group">J</span><span class="match-teams">Algeria <em>vs</em> Austria</span><span class="match-time">22:00</span></div>
+          <div class="match-row"><span class="match-group">J</span><span class="match-teams">Jordan <em>vs</em> Argentina</span><span class="match-time">22:00</span></div>
+        </div>
+      </div>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Jun 28–29+</strong>
+        Additional matches (remaining Group Stage matchdays) appear as "No Record" / TBD in-game until the real-world schedule is confirmed. Check the Prediction tab daily. Elimination Stage matches populate in the separate Elimination tab once the Group Stage concludes.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 06  TEAM CHEER
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="cheer">
+      <div class="section-head">
+        <div class="section-num">§ 06</div>
+        <h2 class="section-title">Team <em>Cheer</em></h2>
+        <div class="section-tag">Back a team · Win Championship Rewards</div>
+      </div>
+
+      <div class="card">
+        <h3>How it works</h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li>Buy a Cheer Pack for any of the 48 teams. This grants Cheer Points to that team, contributing to the server popularity ranking.</li>
+          <li>If your chosen team wins the 2026 World Cup, you receive a <strong>Championship Reward</strong> mailed at event end.</li>
+          <li>Eliminated teams grant no Championship Reward — but still accumulate popularity points and can win the server popularity contest.</li>
+          <li><strong style="color:var(--amber)">Earlier purchase = better Championship Reward.</strong> Group Stage purchase beats a Round of 32 purchase, which beats later rounds.</li>
+          <li>Each team has <strong>2 pack types</strong>, so a single winning team can yield up to 2 Championship Rewards.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Pack types (Group Stage pricing)</h3>
+        <table class="shop-table">
+          <thead><tr><th>Type</th><th>Cost</th><th>Obtain</th><th>Championship Reward</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="s-item">Basic Cheer Pack</td>
+              <td class="s-cost">2,000 Prediction Coins</td>
+              <td>Moon Stones, Prediction Coins, Triangle items</td>
+              <td>Moon Stone + Triangle item (if team wins)</td>
+            </tr>
+            <tr>
+              <td class="s-item">Advanced Cheer Pack</td>
+              <td class="s-cost">500 Diamonds</td>
+              <td>Exclusive Team Jersey costume (ATK 700 / HP 13,500 / DEF 0.3%), Divine Moon Stone</td>
+              <td>Superior Moon Stone + Triangle item (if team wins)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:12px;color:var(--ink-mute);margin:10px 0 0">The Team Jersey (Part Clothes type) is a permanent cosmetic with solid stats. "You've probably never seen such a beautiful jersey before."</p>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>All 48 teams</h3>
+        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 8px">Server popularity at time of data capture (Jun 10) — France 18, Argentina 12, Portugal 5, USA/Brazil 3 each, others at 0–1.</p>
+        <p style="font-size:12px;color:var(--ink-mute);line-height:1.8">Algeria · Argentina · Australia · Austria · Belgium · Bosnia and Herzegovina · Brazil · Cabo Verde · Canada · Colombia · Côte d'Ivoire · Croatia · Curaçao · Czech Republic · Democratic Republic of Congo · Ecuador · Egypt · England · France · Germany · Ghana · Haiti · Iran · Iraq · Japan · Jordan · Mexico · Morocco · Netherlands · New Zealand · Norway · Panama · Paraguay · Portugal · Qatar · Saudi Arabia · Scotland · Senegal · South Africa · South Korea · Spain · Sweden · Switzerland · Tunisia · Türkiye · United States · Uruguay · Uzbekistan</p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 07  WORLD SHOP
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="shop">
+      <div class="section-head">
+        <div class="section-num">§ 07</div>
+        <h2 class="section-title">World <em>Shop</em></h2>
+        <div class="section-tag">Prediction Coins · Closes with event</div>
+      </div>
+
+      <p style="font-size:14px;color:var(--ink-soft);margin:0 0 14px">The World Shop accepts Prediction Coins and closes when the event ends. The shop rule: complete corresponding shop tasks to unlock purchasing access.</p>
+
+      <h3 style="font-size:14px;color:var(--paper);margin:0 0 10px">Premium / one-time limited items</h3>
+      <table class="shop-table">
+        <thead><tr><th>Item</th><th>Cost</th><th>Limit</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="s-item">Phoenix Tournament Fragment</td><td class="s-cost">20,000</td><td class="s-limit">20 total</td><td class="s-priority">HIGH</td></tr>
+          <tr><td class="s-item">Specified Fragment Cute Pet (L)</td><td class="s-cost">3,000</td><td class="s-limit">3,000 total</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Wings Cyclone Pack</td><td class="s-cost">3,000</td><td class="s-limit">3,000 total</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">White Snow Trail Fragment</td><td class="s-cost">3,000</td><td class="s-limit">3,000 total</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Ephemeral Orb Fragment</td><td class="s-cost">3,000</td><td class="s-limit">3,000 total</td><td class="s-priority">—</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:14px;color:var(--paper);margin:20px 0 10px">Weekly-limited items</h3>
+      <table class="shop-table">
+        <thead><tr><th>Item</th><th>Cost</th><th>Weekly limit</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="s-item">Divine Moon Stone</td><td class="s-cost">100</td><td class="s-limit">20/week</td><td class="s-priority">HIGH</td></tr>
+          <tr><td class="s-item">ATK Potential Stone</td><td class="s-cost">530</td><td class="s-limit">10/week</td><td class="s-priority">HIGH</td></tr>
+          <tr><td class="s-item">DEF Potential Stone</td><td class="s-cost">510</td><td class="s-limit">30/week</td><td class="s-priority">MED</td></tr>
+          <tr><td class="s-item">Sewing Wand</td><td class="s-cost">250</td><td class="s-limit">20/week</td><td class="s-priority">MED</td></tr>
+          <tr><td class="s-item">Abyss Flies</td><td class="s-cost">144</td><td class="s-limit">30/week</td><td class="s-priority">MED</td></tr>
+          <tr><td class="s-item">Cake</td><td class="s-cost">450</td><td class="s-limit">50/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Light Wing</td><td class="s-cost">400</td><td class="s-limit">50/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Star Soul</td><td class="s-cost">304</td><td class="s-limit">100/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Magic Crystal</td><td class="s-cost">120</td><td class="s-limit">120/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Magic Solvent</td><td class="s-cost">100</td><td class="s-limit">300/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Light Blue Ore</td><td class="s-cost">100</td><td class="s-limit">100/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Totem Fragment</td><td class="s-cost">60</td><td class="s-limit">60/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Totem Essence</td><td class="s-cost">~60</td><td class="s-limit">60/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">HP Potential Stone</td><td class="s-cost">60</td><td class="s-limit">100/week</td><td class="s-priority">—</td></tr>
+          <tr><td class="s-item">Coin (in-game gold)</td><td class="s-cost">30</td><td class="s-limit">No limit</td><td class="s-priority">SINK</td></tr>
+        </tbody>
+      </table>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Buy order</strong>
+        Phoenix Fragments (20 total) are the scarcest. ATK Potential Stones cap at 10/week — buy these first each reset. Divine Moon Stones are strong value at 100 coins. Use Coin purchases as a coin sink for any leftover balance before the event ends rather than letting it expire.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════
+         § 08  DAILY PRIORITY
+    ══════════════════════════════════════════════════ -->
+    <section class="guide-section" id="priority">
+      <div class="section-head">
+        <div class="section-num">§ 08</div>
+        <h2 class="section-title">Daily <em>priority</em></h2>
+        <div class="section-tag">What to do each session</div>
+      </div>
+
+      <div class="card">
+        <h3>Non-negotiables</h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.9">
+          <li><strong style="color:var(--paper)">Complete all Daily Tasks</strong> — they award both Prediction Coins and Golden Footballs in the same action. Skipping compounds daily.</li>
+          <li><strong style="color:var(--paper)">Claim Turf Check-In</strong> — one tap, no action required.</li>
+          <li><strong style="color:var(--paper)">Place predictions before kickoff</strong> — predictions lock 30 min before each match. Missed matches are coins left on the table.</li>
+          <li><strong style="color:var(--paper)">Manually claim successful prediction rewards</strong> — results appear at 13:00 and 19:00. Open each correct result and claim it. Without this, the "Successfully predict X times" Challenge Task will not advance.</li>
+          <li><strong style="color:var(--paper)">Clear current Turf Challenge stage</strong> — always clear your highest unlocked difficulty before the next one opens. Falling behind means double work.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Weekly reset actions</h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li>Buy ATK Potential Stones (10 weekly cap — prioritise first).</li>
+          <li>Buy Divine Moon Stones (20 weekly cap, 100 coins each — strong value).</li>
+          <li>Buy remaining high-priority items (DEF Stones, Sewing Wand) in the World Shop.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Before the event ends</h3>
+        <ul style="font-size:13px;color:var(--ink-soft);margin:0;padding-left:1.2em;line-height:1.8">
+          <li>Spend all remaining Prediction Coins in the World Shop — Coin purchases (30 coins, no limit) absorb any leftover balance.</li>
+          <li>Back a team with a Basic Cheer Pack if you believe they will win and haven't yet — deadline is whenever that team is eliminated.</li>
+          <li>Claim all unclaimed Turf Challenge rewards manually before the timer hits zero.</li>
+        </ul>
+      </div>
+
+      <div class="caveat" style="margin-top:14px">
+        <strong class="lab">Ranking strategy</strong>
+        Prediction Points = coins wagered on correct predictions only. The ranking is won by large correct bets, not by volume of small ones. Identify the most predictable matchups — dominant teams in weak groups — and concentrate your maximum coin bet there.
+      </div>
+    </section>
+
+    <nav class="article-foot-nav">
+      <a class="prev" href="reverse-pink-bean.html"><div class="dir">← Previous</div><div class="title">D-25 · Reverse Pink Bean</div></a>
+    </nav>
+
+  </article>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="colophon">
+          <span class="wm">Whet<em>stone</em></span>
+          <p>Unofficial field dispatches for MapleStory R: Evolution. Independent, reader-funded, and verified before posted.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Sections</h5>
+          <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="index.html#catalog">Catalog</a></li>
+            <li><a href="changelog.html">Log</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Recent dossiers</h5>
+          <ul>
+            <li><a href="star-dream-paradise.html">D-24 · Star Dream Paradise</a></li>
+            <li><a href="reverse-pink-bean.html">D-25 · Reverse Pink Bean</a></li>
+            <li><a href="victoria-island-cup.html">D-26 · Victoria Island Cup</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© Whetstone 2026 · No affiliation with Nexon</span>
+        <a href="https://github.com/Fro-ggy/whetstone" target="_blank" rel="noopener" style="font-size:12px;color:var(--ink-mute);text-decoration:none;letter-spacing:.03em">GitHub ↗</a>
+        <span>Dossier No. 26</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="whetstone.js" defer></script>
+</body>
+</html>
