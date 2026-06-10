@@ -6,6 +6,25 @@ Mark each item ✅ as you capture it.
 
 ---
 
+## D-26 · Victoria Island Cup  `img/victoria-island-cup/`
+11 screenshots placed (sourced from `C:\Users\ASUS\Documents\Victoria cup event\`, Jun 2026).
+
+| # | Filename | Source file | Section | What it shows |
+|---|---|---|---|---|
+| 1 ✅ | `turf-rules.png` | IMG_7196.PNG | §02 Turf Challenge | Rules/background popup — event intro and mechanic overview |
+| 2 ✅ | `turf-d1-cleared.png` | IMG_7200.PNG | §02 Turf Challenge | Difficulty 1 (Beginner) — all three goal tiers cleared |
+| 3 ✅ | `turf-gk-speed.png` | IMG_7205.PNG | §02 Turf Challenge | Difficulty 6 — Goalkeeper Speed 140%, unlocks after 3 days |
+| 4 ✅ | `turf-control-phase.png` | IMG_7217.PNG | §02 Turf Challenge | Difficulty 18 — Direction Control +150% / Power Control +150% |
+| 5 ✅ | `turf-gameplay.png` | IMG_7333.PNG | §02 Turf Challenge | Live gameplay — "Shot Successful", power bar, remaining attempts |
+| 6 ✅ | `prediction-rules.png` | IMG_7250.PNG | §04 Match Prediction | Rules popup — coins, points, schedules, result timing |
+| 7 ✅ | `prediction-schedule.png` | IMG_7260.PNG | §04 Match Prediction | Group Stage fixture list — groups, teams, kickoff times |
+| 8 ✅ | `prediction-groups.png` | IMG_7280.PNG | §04 Match Prediction | Group standings table — Groups I and J shown |
+| 9 ✅ | `cheer-jersey.png` | IMG_7305.PNG | §06 Team Cheer | France jersey stats — ATK 700, HP 13500, DEF 0.3% |
+| 10 ✅ | `cheer-basic-pack.png` | IMG_7310.PNG | §06 Team Cheer | Switzerland Basic/Advanced packs with Championship Rewards |
+| 11 ✅ | `world-shop.png` | IMG_7315.PNG | §07 World Shop | Full shop view — Prediction Coin prices and weekly limits |
+
+---
+
 ## D-08 · Pets  `img/pets/`
 21 image-bearing messages. Highest-value guide for visuals.
 
