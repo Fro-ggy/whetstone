@@ -218,6 +218,68 @@
         </figure>
       </div>
 
+      <div style="margin:22px 0 24px">
+        <svg viewBox="0 0 600 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block" aria-label="Turf Challenge difficulty escalation chart">
+          <style>
+            .tcc { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: var(--ink-mute); }
+            .tcl { font-family: 'JetBrains Mono', monospace; font-size: 8px; }
+            .tcp { font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: .09em; text-transform: uppercase; }
+          </style>
+          <!-- Phase background bands -->
+          <rect x="50" y="30" width="208" height="135" fill="var(--amber)" opacity="0.05"/>
+          <rect x="258" y="30" width="195" height="135" fill="var(--teal)" opacity="0.05"/>
+          <rect x="453" y="30" width="117" height="135" fill="#ef5350" opacity="0.04"/>
+          <!-- Phase labels -->
+          <text x="154" y="46" text-anchor="middle" class="tcp" fill="var(--amber)" opacity="0.85">Phase 1 · GK Speed</text>
+          <text x="355" y="46" text-anchor="middle" class="tcp" fill="var(--teal)" opacity="0.85">Phase 2 · Control</text>
+          <text x="511" y="46" text-anchor="middle" class="tcp" fill="#ef5350" opacity="0.85">Phase 3</text>
+          <!-- Grid lines -->
+          <line x1="50" y1="30" x2="570" y2="30" stroke="var(--line)" stroke-width="0.5"/>
+          <line x1="50" y1="69" x2="570" y2="69" stroke="var(--line-soft)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="50" y1="88" x2="570" y2="88" stroke="var(--line-soft)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="50" y1="126" x2="570" y2="126" stroke="var(--line-soft)" stroke-width="0.5" stroke-dasharray="3,3"/>
+          <line x1="50" y1="165" x2="570" y2="165" stroke="var(--line)" stroke-width="0.5"/>
+          <!-- Phase dividers -->
+          <line x1="258" y1="30" x2="258" y2="165" stroke="var(--line)" stroke-width="0.75" stroke-dasharray="4,3"/>
+          <line x1="453" y1="30" x2="453" y2="165" stroke="var(--line)" stroke-width="0.75" stroke-dasharray="4,3"/>
+          <!-- Goal target area fill (stepped) -->
+          <path d="M50,30 H258 V69 H388 V88 H453 V126 H544 V165 H570 V165 H50Z" fill="var(--amber)" opacity="0.13"/>
+          <!-- Goal target step line -->
+          <path d="M50,30 H258 V69 H388 V88 H453 V126 H544 V165 H570" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linejoin="round"/>
+          <!-- GK Speed line — Phase 1 solid rise -->
+          <polyline points="50,165 63,165 76,155 89,146 102,136 115,126 128,117 141,107 154,98 167,88 180,78 193,69 206,59 219,49 232,40 245,30" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- GK Speed plateau Phase 2–3 dashed (modifier type shifts) -->
+          <line x1="245" y1="30" x2="570" y2="30" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
+          <!-- Left Y-axis: goal target values -->
+          <text x="44" y="33" text-anchor="end" class="tcl" fill="var(--amber)">10</text>
+          <text x="44" y="72" text-anchor="end" class="tcl" fill="var(--amber)">8</text>
+          <text x="44" y="91" text-anchor="end" class="tcl" fill="var(--amber)">7</text>
+          <text x="44" y="129" text-anchor="end" class="tcl" fill="var(--amber)">5</text>
+          <text x="44" y="168" text-anchor="end" class="tcl" fill="var(--amber)">3</text>
+          <text x="25" y="100" text-anchor="middle" class="tcc" transform="rotate(-90,25,100)">Max Goals</text>
+          <!-- Right Y-axis: GK speed -->
+          <text x="574" y="33" class="tcl" fill="var(--teal)">240%</text>
+          <text x="574" y="168" class="tcl" fill="var(--teal)">100%</text>
+          <text x="595" y="100" text-anchor="middle" class="tcc" transform="rotate(90,595,100)">GK Speed</text>
+          <!-- X-axis stage labels -->
+          <text x="50"  y="178" text-anchor="middle" class="tcl" fill="var(--ink-mute)">1</text>
+          <text x="167" y="178" text-anchor="middle" class="tcl" fill="var(--ink-mute)">10</text>
+          <text x="284" y="178" text-anchor="middle" class="tcl" fill="var(--ink-mute)">20</text>
+          <text x="401" y="178" text-anchor="middle" class="tcl" fill="var(--ink-mute)">30</text>
+          <text x="570" y="178" text-anchor="middle" class="tcl" fill="var(--ink-mute)">41</text>
+          <text x="310" y="192" text-anchor="middle" class="tcc">Stage</text>
+          <!-- Legend -->
+          <rect x="50" y="199" width="14" height="3" fill="var(--amber)" opacity="0.5"/>
+          <line x1="50" y1="200.5" x2="64" y2="200.5" stroke="var(--amber)" stroke-width="2"/>
+          <text x="70" y="205" class="tcc" fill="var(--ink-soft)">Max goal target (tier 3)</text>
+          <line x1="204" y1="200.5" x2="218" y2="200.5" stroke="var(--teal)" stroke-width="1.5"/>
+          <text x="224" y="205" class="tcc" fill="var(--ink-soft)">GK Speed %</text>
+          <line x1="298" y1="200.5" x2="312" y2="200.5" stroke="var(--teal)" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <text x="318" y="205" class="tcc" fill="var(--ink-mute)">plateau (modifier type shifts)</text>
+        </svg>
+        <p style="font-size:11px;color:var(--ink-mute);margin:4px 0 0;text-align:center">GK Speed climbs steadily through Phase 1 while goal targets stay high — both metrics peak at D16, then goal targets drop as control modifiers take over.</p>
+      </div>
+
       <h3 style="margin:24px 0 10px;font-size:15px;color:var(--paper)">Full difficulty table</h3>
 
       <table class="diff-table">
@@ -669,6 +731,40 @@
         <figure class="figure expandable" style="flex:1;min-width:140px;max-width:220px;margin:0">
           <img src="img/victoria-island-cup/cheer-basic-pack.png" alt="Switzerland Basic and Advanced Cheer Packs — Championship Reward contents and pack pricing shown" onerror="this.closest('.figure').style.display='none'" />
         </figure>
+      </div>
+
+      <div style="margin:14px 0 14px">
+        <svg viewBox="0 0 400 136" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;height:auto;display:block" aria-label="Server team popularity chart">
+          <style>
+            .pcl { font-family: 'Manrope', sans-serif; font-size: 10px; fill: var(--ink); }
+            .pcv { font-family: 'JetBrains Mono', monospace; font-size: 9px; }
+            .pcm { font-family: 'JetBrains Mono', monospace; font-size: 8px; fill: var(--ink-mute); }
+          </style>
+          <!-- France: 18 → 300px -->
+          <text x="76" y="27" text-anchor="end" class="pcl">France</text>
+          <rect x="80" y="16" width="300" height="14" fill="var(--amber)" opacity="0.75" rx="2"/>
+          <text x="385" y="27" class="pcv" fill="var(--amber)">18</text>
+          <!-- Argentina: 12 → 200px -->
+          <text x="76" y="48" text-anchor="end" class="pcl">Argentina</text>
+          <rect x="80" y="37" width="200" height="14" fill="var(--amber)" opacity="0.55" rx="2"/>
+          <text x="285" y="48" class="pcv" fill="var(--amber)">12</text>
+          <!-- Portugal: 5 → 83px -->
+          <text x="76" y="69" text-anchor="end" class="pcl">Portugal</text>
+          <rect x="80" y="58" width="83" height="14" fill="var(--amber)" opacity="0.4" rx="2"/>
+          <text x="168" y="69" class="pcv" fill="var(--amber)">5</text>
+          <!-- USA: 3 → 50px -->
+          <text x="76" y="90" text-anchor="end" class="pcl">USA</text>
+          <rect x="80" y="79" width="50" height="14" fill="var(--amber)" opacity="0.3" rx="2"/>
+          <text x="135" y="90" class="pcv" fill="var(--amber)">3</text>
+          <!-- Brazil: 3 → 50px -->
+          <text x="76" y="111" text-anchor="end" class="pcl">Brazil</text>
+          <rect x="80" y="100" width="50" height="14" fill="var(--amber)" opacity="0.3" rx="2"/>
+          <text x="135" y="111" class="pcv" fill="var(--amber)">3</text>
+          <!-- Others row -->
+          <text x="76" y="130" text-anchor="end" class="pcm">36 others</text>
+          <line x1="80" y1="124" x2="110" y2="124" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="115" y="128" class="pcm">0–1 each · server popularity only, not Championship Reward outcome</text>
+        </svg>
       </div>
 
       <div class="card" style="margin-top:12px">
